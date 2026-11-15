@@ -610,3 +610,5 @@ body.v2 img{max-width:100%}
 .v2-cmd-row:hover{background:#1a1a1a}
 .v2-cmd-row span{font:10px/14px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--sky);width:56px;flex-shrink:0}
 .cmdk-item small{display:none}
+/* mid widths: keep the two inner app icons clear of the centred search */
+@media (min-width:761px) and (max-width:1180px){.float-ico:nth-of-type(3),.float-ico:nth-of-type(7){display:none}}
