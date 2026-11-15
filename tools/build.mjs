@@ -130,7 +130,7 @@ function cover(a, cls = '') {
   if (a.cover && a.cover.url) return `<div class="cover ${cls}" style="${style}" data-light><img class="shot" src="${esc(img(a.cover.url, 900))}" alt="${esc(a.cover.alt || '')}" loading="lazy" decoding="async"></div>`
   return `<div class="cover cover-word ${cls}" style="${style}" data-light><span class="word">${esc(P[a.p] ? P[a.p].shortLabel || PILLAR[a.p].code : 'AI')}</span></div>`
 }
-const byline = (a, small) => `<div class="byline"><span class="who"><img src="${esc(a.author.avatarUrl || AVATAR)}" alt="" width="28" height="28" loading="lazy"><span>${esc(a.author.name)}</span></span><span class="when">${small ? '' : clock}<b>${a.readingTime || 0} min</b><em>· ${shortDate(a.datePublished)}</em></span></div>`
+const byline = (a, small) => `<div class="byline"><span class="who"><img src="${esc(a.author.avatarUrl || AVATAR)}" alt="" width="40" height="40" loading="lazy"><span>${esc(a.author.name)}</span></span><span class="when">${small ? '' : clock}<b>${a.readingTime || 0} min</b><em>· ${shortDate(a.datePublished)}</em></span></div>`
 
 function articleCard(pre, a, extra = '') {
   const p = P[a.p], c = C(a.p, a.c)
@@ -167,8 +167,8 @@ function pillarCard(pre, p, mode) {
   const sc = (scenes[p.slug] || scenes.glossary)(pre, mode === 'featured')
   const href = `${pre}${urlOf.pillar(p.slug)}`
   if (mode === 'area') return `<a class="card area-card reveal" href="${href}"><div class="cover scene-cover" style="${glass(p.slug, p.slug)}" data-light>${sc}</div><div class="body">${label(`${plural(p.clusters.length, 'cluster')} · ${plural(p.articles.length, 'guide')}`)}<h3>${esc(p.title)}</h3><p>${esc(p.summary || '')}</p></div><div class="byline"><span class="when"><b>${hm(p.minutes)} read</b></span><span class="go">Explore ${arrow()}</span></div></a>`
-  if (mode === 'featured') return `<a class="card pillar-card featured reveal" href="${href}"><div class="cover scene-cover" style="${glass(p.slug, p.slug)}" data-light>${sc}</div><div class="body two"><div class="bl">${label(`Pillar ${pad2(p.n)}`, 'Start here')}<h3 class="big">${esc(p.title)}</h3><p>${esc(p.summary || '')}</p></div><div class="stats"><div><span>Clusters</span><b class="px" data-count="${p.clusters.length}">${p.clusters.length}</b></div><div><span>Guides</span><b class="px" data-count="${p.articles.length}">${p.articles.length}</b></div><div><span>Reading</span><b class="px">${hm(p.minutes)}</b></div></div></div><div class="byline"><span class="who"><img src="${AVATAR}" alt="" width="28" height="28"><span>Written by <strong>Krishna Kaanth M</strong>, CEO</span></span><span class="go">Explore ${esc(p.shortLabel || p.title)} ${arrow()}</span></div></a>`
-  return `<a class="card pillar-card reveal" href="${href}"><div class="cover scene-cover" style="${glass(p.slug, p.slug)}" data-light>${sc}</div><div class="body">${label(`Pillar ${pad2(p.n)}`, `${plural(p.clusters.length, 'cluster')} · ${plural(p.articles.length, 'guide')}`)}<h3>${esc(p.title)}</h3><p>${esc(p.summary || '')}</p></div><div class="byline"><span class="who"><img src="${AVATAR}" alt="" width="28" height="28"><span class="mono">${hm(p.minutes)} read</span></span><span class="go">Explore ${esc(p.shortLabel || '')} ${arrow()}</span></div></a>`
+  if (mode === 'featured') return `<a class="card pillar-card featured reveal" href="${href}"><div class="cover scene-cover" style="${glass(p.slug, p.slug)}" data-light>${sc}</div><div class="body two"><div class="bl">${label(`Pillar ${pad2(p.n)}`, 'Start here')}<h3 class="big">${esc(p.title)}</h3><p>${esc(p.summary || '')}</p></div><div class="stats"><div><span>Clusters</span><b class="px" data-count="${p.clusters.length}">${p.clusters.length}</b></div><div><span>Guides</span><b class="px" data-count="${p.articles.length}">${p.articles.length}</b></div><div><span>Reading</span><b class="px">${hm(p.minutes)}</b></div></div></div><div class="byline"><span class="who"><img src="${AVATAR}" alt="" width="40" height="40"><span>Written by <strong>Krishna Kaanth M</strong>, CEO</span></span><span class="go">Explore ${esc(p.shortLabel || p.title)} ${arrow()}</span></div></a>`
+  return `<a class="card pillar-card reveal" href="${href}"><div class="cover scene-cover" style="${glass(p.slug, p.slug)}" data-light>${sc}</div><div class="body">${label(`Pillar ${pad2(p.n)}`, `${plural(p.clusters.length, 'cluster')} · ${plural(p.articles.length, 'guide')}`)}<h3>${esc(p.title)}</h3><p>${esc(p.summary || '')}</p></div><div class="byline"><span class="who"><img src="${AVATAR}" alt="" width="40" height="40"><span class="mono">${hm(p.minutes)} read</span></span><span class="go">Explore ${esc(p.shortLabel || '')} ${arrow()}</span></div></a>`
 }
 
 function clusterCard(pre, c) {
@@ -177,7 +177,7 @@ function clusterCard(pre, c) {
   ${cover(first, 'short')}
   <div class="body"><div class="row-sb">${label(`Cluster ${pad2(c.n)}`, c.level || '')}${meter(c.level)}</div><h3>${esc(c.title)}</h3><p>${esc(clean(c.summary || ''))}</p>
   <ol class="preview">${c.articles.slice(0, 3).map((a, i) => `<li><span class="n">${pad2(i + 1)}</span><span class="t">${esc(a.title)}</span><span class="m">${a.readingTime || 0}m</span></li>`).join('')}</ol></div>
-  <div class="byline"><span class="who"><img src="${AVATAR}" alt="" width="26" height="26"><span class="mono">${plural(c.articles.length, 'guide')} · ${hm(c.minutes)}</span></span><span class="go">Open ${arrow()}</span></div>
+  <div class="byline"><span class="who"><img src="${AVATAR}" alt="" width="40" height="40"><span class="mono">${plural(c.articles.length, 'guide')} · ${hm(c.minutes)}</span></span><span class="go">Open ${arrow()}</span></div>
 </a>`
 }
 
@@ -187,16 +187,16 @@ function startWith(pre, list, head = 'Start with these') {
 }
 
 /* ---------- page shell ---------- */
-function page({ pre, title, desc, body, fx, kind }) {
+function page({ pre, seo, body, fx, kind }) {
   const ch = chrome(pre)
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)}</title>
-<meta name="description" content="${esc(desc || '')}">
-<meta name="robots" content="noindex">
+${headTags(seo)}
+<meta name="theme-color" content="#080808">
+<link rel="preconnect" href="https://cdn.content.maximuslabs.ai">
 <link rel="icon" href="${pre}assets/live/logo-full.svg">
 <link rel="stylesheet" href="${pre}assets/css/live-nav-plan.css">
 <link rel="stylesheet" href="${pre}assets/css/live-baselayout.css">
@@ -208,7 +208,6 @@ ${ch.nav}
 ${ch.drawer}
 ${ch.cmdk}
 <div class="toast" id="toast">This page is coming soon.</div>
-<div class="proto-flag" role="note">Design prototype · v2 · real content from AI Search 101</div>
 <main id="main">
 ${body}
 </main>
@@ -227,6 +226,202 @@ const CAL_LINK = 'krishna-kaanth/exploring-aeo-geo' // the same Cal.com event th
 const authored = articlesRaw.filter((x) => x.author && x.author.name === 'Krishna Kaanth M').length
 const proof = (pre) => `<div class="ask-proof"><small>Results with</small><span><img src="${pre}assets/live/clients/explorium.png" alt="Explorium" height="14"><img src="${pre}assets/live/clients/oliv-ai.svg" alt="Oliv AI" height="16"><img src="${pre}assets/live/clients/luca.png" alt="Luca AI" height="14"></span></div>`
 const liIcon = (pre) => `<a class="ask-li" href="${LINKEDIN}" target="_blank" rel="noopener" aria-label="MaximusLabs on LinkedIn"><img src="${S(pre, 'linkedin')}" alt="" width="13" height="13"></a>`
+
+/* ---------- SEO: title, description, canonical, sharing tags and schema.org ---------- */
+// Canonical URLs are the production addresses on maximuslabs.ai, without a trailing slash, as the
+// live app serves them. The prototype itself stays noindex so it never competes with those pages;
+// production uses ROBOTS_LIVE. Titles and descriptions prefer the Sanity SEO fields, like the live app.
+const SITE = `${LIVE}/ai-search-101`
+const canon = (rel = '') => `${SITE}${rel ? '/' + rel.replace(/\/$/, '') : ''}`
+const ROBOTS_PROTOTYPE = 'noindex, follow'
+// eslint-disable-next-line no-unused-vars
+const ROBOTS_LIVE = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+const OG_DEFAULT = { url: `${LIVE}/assets/og-image.png`, alt: 'MaximusLabs AI: rank everywhere people search' }
+const KRISHNA_LI = 'https://www.linkedin.com/in/krishna-kaanth-kk/'
+const ORG_ID = `${LIVE}/#organization`, WEBSITE_ID = `${LIVE}/#website`
+const ORG = { '@type': 'Organization', '@id': ORG_ID, name: 'MaximusLabs AI', alternateName: 'MaximusLabs', url: `${LIVE}/`, logo: { '@type': 'ImageObject', '@id': `${LIVE}/#logo`, url: `${LIVE}/assets/favicon.svg`, caption: 'MaximusLabs AI' }, sameAs: [LINKEDIN] }
+const WEBSITE = { '@type': 'WebSite', '@id': WEBSITE_ID, url: `${LIVE}/`, name: 'MaximusLabs AI', publisher: { '@id': ORG_ID }, inLanguage: 'en' }
+const personId = (name) => `${LIVE}/#person-${slugify(name)}`
+const person = (au) => ({
+  '@type': 'Person', '@id': personId(au.name), name: au.name, jobTitle: au.designation || 'CEO',
+  worksFor: { '@id': ORG_ID }, image: au.avatarUrl || AVATAR,
+  ...(au.name === 'Krishna Kaanth M' ? { url: KRISHNA_LI, sameAs: [KRISHNA_LI] } : {}),
+  ...(au.bio ? { description: plain(au.bio) } : {}),
+})
+// Plain text for meta tags: no markup, no entities, no em or en dashes.
+const plain = (s = '') => clean(String(s).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#0?39;|&#x27;|&rsquo;|&lsquo;/g, "'").replace(/&ldquo;|&rdquo;/g, '"').replace(/&amp;/g, '&'))
+// Scraped titles sometimes end with their source site, like "... - weareiowa.com". Search titles drop it.
+const SOURCE_TAIL = /\s+[-|:]\s+[\w-]+(?:\.[\w-]+)*\.(?:com|digital|ai|io|net|org|co|news|in)\s*$/i
+// Search title: keep it near 60 characters. A long title keeps its lead phrase (the part before the
+// first ":" or "?"), and the brand is added only when it still fits.
+const searchTitle = (t, brand = 'MaximusLabs') => {
+  let s = plain(t).replace(SOURCE_TAIL, '')
+  if (s.length > 60) { const m = s.match(/^(.{20,}?)([:?])\s/); if (m && m[1].length <= 60) s = m[1] + (m[2] === '?' ? '?' : '') }
+  return s.length + brand.length + 3 <= 60 ? `${s} | ${brand}` : s
+}
+// Meta description: 120 to 160 characters where the content allows. A short one gets the longest
+// extra line that still fits; a long one ends at a sentence (or a word, with an ellipsis).
+const metaDesc = (s, extras = []) => {
+  let d = plain(s)
+  if (d.length < 120) for (const e of [].concat(extras)) { const t = `${d}${d && !/[.!?]$/.test(d) ? '.' : ''} ${e}`.trim(); if (t.length <= 160) { d = t; break } }
+  if (d.length > 160) {
+    const cut = d.slice(0, 159), end = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('? '), cut.lastIndexOf('! '))
+    d = end >= 110 ? cut.slice(0, end + 1) : cut.slice(0, 157).replace(/\s+\S*$/, '').replace(/[\s,;:.]+$/, '') + '…'
+  }
+  return d
+}
+const bodyText = (a) => a.bodyHtml ? plain(a.bodyHtml) : plain((a.body || []).filter((b) => b._type === 'block').map((b) => (b.children || []).map((c) => c.text || '').join('')).join(' '))
+const crumbList = (items) => ({
+  '@type': 'BreadcrumbList', '@id': `${items.at(-1).url}#breadcrumb`,
+  itemListElement: items.map((x, i) => ({ '@type': 'ListItem', position: i + 1, name: x.name, item: x.url })),
+})
+const trail = (...items) => [{ name: 'MaximusLabs', url: `${LIVE}/` }, { name: 'AI Search 101', url: canon() }, ...items]
+const webPage = (type, url, name, description, extra = {}) => ({
+  '@type': type, '@id': `${url}#webpage`, url, name, description, inLanguage: 'en',
+  isPartOf: { '@id': WEBSITE_ID }, breadcrumb: { '@id': `${url}#breadcrumb` }, publisher: { '@id': ORG_ID }, ...extra,
+})
+const itemList = (url, items) => ({
+  '@type': 'ItemList', '@id': `${url}#list`, numberOfItems: items.length,
+  itemListElement: items.map((x, i) => ({ '@type': 'ListItem', position: i + 1, name: x.name, url: x.url })),
+})
+const imageNode = (url, image) => image ? { '@type': 'ImageObject', '@id': `${url}#primaryimage`, url: image.url, contentUrl: image.url, ...(image.alt ? { caption: image.alt } : {}) } : null
+const coverOf = (a) => a && a.cover && a.cover.url ? { url: img(a.cover.url, 1200), alt: plain(a.cover.alt || a.title) } : null
+const isoMinutes = (m) => `PT${Math.max(1, Math.round(m || 0))}M`
+// Reading time in words for descriptions: "13 minutes", "1 hour 4 minutes".
+const minutesWords = (m) => { m = Math.round(m || 0); const h = Math.floor(m / 60), r = m % 60; return [h ? plural(h, 'hour') : '', r ? plural(r, 'minute') : ''].filter(Boolean).join(' ') }
+// Two guide titles are long questions with no natural break. These are suggested search titles;
+// the real fix is to put them in each guide's SEO > Meta title field in Sanity.
+const TITLE_SUGGESTIONS = {
+  'aeo-platforms-beyond-chatgpt-perplexity': 'AEO Platforms Beyond ChatGPT and Perplexity',
+  'aeo-query-types-answer-engines-prioritize': 'What Queries Do Answer Engines Prioritize?',
+}
+// Topic (cluster) pages read "<topic> Guides" so they never share a title with one of their guides.
+const topicTitle = (t) => /(guides?|glossary|playbooks?)$/i.test(t) ? t : `${t} Guides`
+function headTags(s) {
+  const image = s.image || OG_DEFAULT
+  const graph = [ORG, WEBSITE, ...s.graph].filter(Boolean)
+  const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')
+  const tags = [
+    `<title>${esc(s.title)}</title>`,
+    `<meta name="description" content="${esc(s.desc)}">`,
+    `<meta name="robots" content="${ROBOTS_PROTOTYPE}">`,
+    `<link rel="canonical" href="${s.url}">`,
+    s.author ? `<meta name="author" content="${esc(s.author)}">` : '',
+    `<meta property="og:site_name" content="MaximusLabs AI">`,
+    `<meta property="og:locale" content="en_US">`,
+    `<meta property="og:type" content="${s.type === 'article' ? 'article' : 'website'}">`,
+    `<meta property="og:title" content="${esc(s.ogTitle || s.title)}">`,
+    `<meta property="og:description" content="${esc(s.desc)}">`,
+    `<meta property="og:url" content="${s.url}">`,
+    `<meta property="og:image" content="${esc(image.url)}">`,
+    `<meta property="og:image:alt" content="${esc(image.alt || '')}">`,
+    ...(s.type === 'article' ? [
+      s.published ? `<meta property="article:published_time" content="${s.published}">` : '',
+      s.modified ? `<meta property="article:modified_time" content="${s.modified}">` : '',
+      s.authorUrl ? `<meta property="article:author" content="${s.authorUrl}">` : '',
+      s.section ? `<meta property="article:section" content="${esc(s.section)}">` : '',
+      ...(s.tags || []).map((t) => `<meta property="article:tag" content="${esc(t)}">`),
+    ] : []),
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${esc(s.ogTitle || s.title)}">`,
+    `<meta name="twitter:description" content="${esc(s.desc)}">`,
+    `<meta name="twitter:image" content="${esc(image.url)}">`,
+    `<meta name="twitter:image:alt" content="${esc(image.alt || '')}">`,
+    `<script type="application/ld+json">${json}</script>`,
+  ]
+  return tags.filter(Boolean).join('\n')
+}
+
+// One builder per page type. Each returns the object page() turns into head tags.
+const seoHub = () => {
+  const url = canon(), first = newest[0]
+  const title = 'AI Search 101: Guides to GEO, AEO and AI SEO | MaximusLabs'
+  const desc = metaDesc(`Learn GEO, AEO, SEO, Agentic SEO and Agentic Commerce in ${live.length} free guides. A structured library for turning AI search into a revenue engine.`)
+  const list = pillars.map((p) => ({ name: p.title, url: canon(p.slug) }))
+  return {
+    title, ogTitle: 'AI Search 101', desc, url, image: OG_DEFAULT,
+    graph: [
+      webPage('CollectionPage', url, 'AI Search 101', desc, { mainEntity: { '@id': `${url}#list` }, about: pillars.map((p) => ({ '@type': 'Thing', name: p.title })), ...(first && first.dateModified ? { dateModified: first.dateModified } : {}) }),
+      itemList(url, list),
+      crumbList(trail().slice(0, 2)),
+    ],
+  }
+}
+const seoPillar = (p) => {
+  const url = canon(p.slug), lead = p.articles[0]
+  const topics = p.clusters.slice(0, 3).map((c) => c.title).join(', ') + (p.clusters.length > 3 ? ' and more' : '')
+  const desc = metaDesc(p.seo?.metaDescription || p.summary, [`${plural(p.articles.length, 'free guide')} by MaximusLabs on ${topics}.`, `${plural(p.articles.length, 'free guide')} by MaximusLabs across ${plural(p.clusters.length, 'topic')}.`, `${plural(p.articles.length, 'free guide')} by MaximusLabs.`])
+  const image = coverOf(lead)
+  return {
+    title: searchTitle(p.seo?.metaTitle || p.title, 'AI Search 101'), ogTitle: p.title, desc, url, image,
+    graph: [
+      webPage('CollectionPage', url, p.title, desc, { mainEntity: { '@id': `${url}#list` }, ...(image ? { primaryImageOfPage: { '@id': `${url}#primaryimage` } } : {}) }),
+      itemList(url, p.clusters.map((c) => ({ name: c.title, url: canon(`${p.slug}/${c.slug}`) }))),
+      imageNode(url, image),
+      crumbList(trail({ name: p.shortLabel || p.title, url })),
+    ],
+  }
+}
+const seoCluster = (p, c) => {
+  const url = canon(`${p.slug}/${c.slug}`), lead = c.articles[0]
+  const desc = metaDesc(c.seo?.metaDescription || c.summary, (() => { const n = c.articles.length === 1 ? 'an expert guide' : `${c.articles.length} expert guides`, N = n[0].toUpperCase() + n.slice(1); return [`Learn ${c.title} from ${n} by MaximusLabs, about ${minutesWords(c.minutes)} of reading.`, `${N} by MaximusLabs, about ${minutesWords(c.minutes)} of reading.`, `${N} by MaximusLabs.`] })())
+  const image = coverOf(lead)
+  return {
+    title: searchTitle(c.seo?.metaTitle || topicTitle(c.title), 'AI Search 101'), ogTitle: c.title, desc, url, image,
+    graph: [
+      webPage('CollectionPage', url, c.title, desc, { mainEntity: { '@id': `${url}#list` }, isPartOf: [{ '@id': WEBSITE_ID }, { '@id': `${canon(p.slug)}#webpage` }], ...(image ? { primaryImageOfPage: { '@id': `${url}#primaryimage` } } : {}) }),
+      itemList(url, c.articles.map((a) => ({ name: a.title, url: canon(urlOf.article(a)) }))),
+      imageNode(url, image),
+      crumbList(trail({ name: p.shortLabel || p.title, url: canon(p.slug) }, { name: c.title, url })),
+    ],
+  }
+}
+const seoArticle = (a, p, c, faq) => {
+  const url = canon(urlOf.article(a)), au = a.author
+  const desc = metaDesc(a.seo?.metaDescription || a.excerpt || a.answer)
+  const image = coverOf(a) || OG_DEFAULT
+  const published = a.datePublished || undefined
+  const modified = [a.dateModified, a.datePublished].filter(Boolean).sort().at(-1) // some guides store a modified date before the publish date
+  const tags = [...new Set([a.seo?.focusKeyword, c.title, p.shortLabel || p.title].filter(Boolean).map(plain))]
+  const words = bodyText(a).split(/\s+/).filter(Boolean).length
+  const headline = plain(a.title).replace(SOURCE_TAIL, '')
+  return {
+    title: searchTitle(TITLE_SUGGESTIONS[a.slug] || a.seo?.metaTitle || a.title), ogTitle: plain(a.seo?.metaTitle || a.title).replace(SOURCE_TAIL, ''), desc, url, image, type: 'article',
+    published, modified, section: p.title, tags, author: au.name, authorUrl: au.name === 'Krishna Kaanth M' ? KRISHNA_LI : undefined,
+    graph: [
+      webPage('WebPage', url, headline, desc, { isPartOf: [{ '@id': WEBSITE_ID }, { '@id': `${canon(`${p.slug}/${c.slug}`)}#webpage` }], ...(image ? { primaryImageOfPage: { '@id': `${url}#primaryimage` } } : {}), ...(published ? { datePublished: published } : {}), ...(modified ? { dateModified: modified } : {}) }),
+      imageNode(url, image),
+      {
+        '@type': 'Article', '@id': `${url}#article`, isPartOf: { '@id': `${url}#webpage` }, mainEntityOfPage: { '@id': `${url}#webpage` },
+        headline: headline.length > 110 ? headline.slice(0, 107).replace(/\s+\S*$/, '') + '…' : headline,
+        description: desc, ...(image ? { image: [image.url] } : {}),
+        ...(published ? { datePublished: published } : {}), ...(modified ? { dateModified: modified } : {}),
+        author: { '@id': personId(au.name) }, publisher: { '@id': ORG_ID },
+        articleSection: p.title, keywords: tags, wordCount: words, timeRequired: isoMinutes(a.readingTime),
+        inLanguage: 'en', isAccessibleForFree: true, copyrightHolder: { '@id': ORG_ID },
+      },
+      person(au),
+      faq.length ? {
+        '@type': 'FAQPage', '@id': `${url}#faq`, isPartOf: { '@id': `${url}#webpage` },
+        mainEntity: faq.map((f) => ({ '@type': 'Question', name: plain(f.question), acceptedAnswer: { '@type': 'Answer', text: plain(f.answer || '') } })),
+      } : null,
+      crumbList(trail({ name: p.shortLabel || p.title, url: canon(p.slug) }, { name: c.title, url: canon(`${p.slug}/${c.slug}`) }, { name: headline, url })),
+    ],
+  }
+}
+const seoBook = () => {
+  const url = canon('book-a-call')
+  const desc = metaDesc('Book a free 15 minute call with Krishna Kaanth M, CEO of MaximusLabs and author of AI Search 101. Bring one question about getting cited in AI search.')
+  const krishna = { name: 'Krishna Kaanth M', designation: 'CEO', avatarUrl: AVATAR }
+  return {
+    title: 'Book a 15 Minute Call With the Author | MaximusLabs', ogTitle: 'Talk to the author of AI Search 101', desc, url, image: OG_DEFAULT,
+    graph: [
+      webPage('ContactPage', url, 'Book a call with the author', desc, { about: { '@id': personId(krishna.name) }, mainEntity: { '@id': personId(krishna.name) } }),
+      person(krishna),
+      crumbList(trail({ name: 'Book a call', url })),
+    ],
+  }
+}
 function askCard(pre, a, c, mode) {
   const data = `action="${pre}book-a-call/" data-ask data-guide="${esc(a.title)}" data-topic="${esc(c.title)}" data-url="${esc(urlOf.article(a))}"`
   const id = `ask-${mode}`
@@ -273,7 +468,7 @@ function bookPage() {
     </div>
   </div>
 </div></section>`
-  return page({ pre, title: 'Book a call with the author | AI Search 101', desc: '15 minutes with Krishna Kaanth M, author of AI Search 101.', body, fx: 'signal', kind: 'book' })
+  return page({ pre, seo: seoBook(), body, fx: 'signal', kind: 'book' })
 }
 
 const ctaBand = () =>`<section class="cta-wrap reveal"><div class="cta-card glass-bg"><h2 class="px">Ready to turn AI search into a revenue engine?</h2><p>See how MaximusLabs gets your brand cited and chosen across ChatGPT, Perplexity, Gemini, and Google AI. Book a call for a tailored plan.</p><a class="btn-white" href="${LIVE}/contact-us">Book a call ${arrow('#080808')}</a></div></section>`
@@ -334,7 +529,7 @@ function hub() {
   <ol class="ranked">${popular.map((a, i) => `<li class="reveal"><a href="${pre}${urlOf.article(a)}"><span class="rk px">${pad2(i + 1)}</span>${a.cover ? `<img src="${esc(img(a.cover.url, 300))}" alt="" loading="lazy">` : `<span class="noimg" style="${glass(a.p, a.slug)}"></span>`}<span class="rt"><b>${esc(a.title)}</b><small>${esc(P[a.p].shortLabel || '')} · ${a.readingTime} min</small></span>${arrow()}</a></li>`).join('')}</ol>
 </div></section>
 ${ctaBand()}`
-  return page({ pre, title: 'AI Search 101 | MaximusLabs', desc: 'The AI Search 101 library', body, fx: 'signal', kind: 'hub' })
+  return page({ pre, seo: seoHub(), body, fx: 'signal', kind: 'hub' })
 }
 
 /* ---------- L2 pillar ---------- */
@@ -359,7 +554,7 @@ function pillarPage(p) {
   <div class="grid g-3">${p.clusters.map((c) => clusterCard(pre, c)).join('')}</div>
 </div></section>
 ${ctaBand()}`
-  return page({ pre, title: `${p.title} | AI Search 101`, desc: p.summary, body, fx: PILLAR[p.slug]?.fx, kind: 'pillar' })
+  return page({ pre, seo: seoPillar(p), body, fx: PILLAR[p.slug]?.fx, kind: 'pillar' })
 }
 
 /* ---------- L3 cluster ---------- */
@@ -387,7 +582,7 @@ function clusterPage(p, c) {
   ${rest.length ? `<div class="grid g-4 sortable" data-sortable>${rest.map((a, i) => `<a class="card g-card reveal" href="${pre}${urlOf.article(a)}" data-date="${esc(a.datePublished || '')}" data-order="${i + 2}">${cover(a, 'short')}<div class="body"><span class="px g-n">${pad2(i + 2)}</span><h3>${esc(a.title)}</h3><p>${esc(a.excerpt)}</p></div><div class="byline"><span class="when"><b>${a.readingTime || 0} min</b><em>· ${shortDate(a.datePublished)}</em></span><span class="go">${arrow()}</span></div></a>`).join('')}</div>` : ''}
 </div></section>
 ${ctaBand()}`
-  return page({ pre, title: `${c.title} | AI Search 101`, desc: c.summary, body, fx: PILLAR[p.slug]?.fx, kind: 'cluster' })
+  return page({ pre, seo: seoCluster(p, c), body, fx: PILLAR[p.slug]?.fx, kind: 'cluster' })
 }
 
 /* ---------- L4 article ---------- */
@@ -512,7 +707,7 @@ function articlePage(a) {
   ${prev || next ? `<div class="prevnext">${prev ? `<a class="pn" href="${pre}${urlOf.article(prev)}"><span class="pn-ic">${arrow()}</span><span><small>Previous guide</small><b>${esc(prev.title)}</b></span></a>` : '<span></span>'}${next ? `<a class="pn next" href="${pre}${urlOf.article(next)}"><span><small>Next guide</small><b>${esc(next.title)}</b></span><span class="pn-ic">${arrow()}</span></a>` : '<span></span>'}</div>` : ''}
 </div></section>
 ${ctaBand()}`
-  return page({ pre, title: `${a.title} | AI Search 101`, desc: a.excerpt, body, fx: 'signal', kind: 'article' })
+  return page({ pre, seo: seoArticle(a, p, c, faq), body, fx: 'signal', kind: 'article' })
 }
 
 /* ---------- write ---------- */
