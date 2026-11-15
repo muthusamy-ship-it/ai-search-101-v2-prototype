@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI's Role in Enhancing Core Web Vitals for Better Search Rankings - weareiowa.com | AI Search 101</title>
+<meta name="description" content="How AI tooling is speeding up the diagnosis and repair of LCP, INP, and CLS problems.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../../assets/live/logo-full.svg">
+<link rel="stylesheet" href="../../../assets/css/live-nav-plan.css">
+<link rel="stylesheet" href="../../../assets/css/live-baselayout.css">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+</head>
+<body class="v2 k-article" data-root="../../../" data-fx="signal">
+<div class="page">
+<header class="nav is-fluid" id="nav"><div class="nav-left"><a href="https://www.maximuslabs.ai/" class="nav-logo" aria-label="MaximusLabs home"></a></div><nav class="nav-center" aria-label="Primary"><button type="button" class="nav-item" data-menu="services" aria-expanded="false" aria-controls="menu-services">Services <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-services"><div class="mega-grid"><div class="col"><div class="col-label">Optimization</div><a class="mi" href="https://www.maximuslabs.ai/services/geo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#7FB5FF" stroke-width="1.3"/><circle cx="8" cy="8" r="2.2" fill="#7FB5FF"/></svg></span><span><span class="mi-t">Generative Engine Optimization</span><span class="mi-d">Get named and recommended across ChatGPT, Gemini, Perplexity and Google.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/aeo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Answer Engine Optimization</span><span class="mi-d">Own the answer box and AI Overviews, in your own words.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/b2b-seo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">B2B SEO</span><span class="mi-d">Buying-stage pages, written for Google and AI answers, traced to pipeline.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/technical-seo-website-audit"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Technical SEO foundation</span><span class="mi-d">Rendering, Markdown for agents, schema, bot access and agent protocols.</span></span></a><a class="mi muted" href="https://www.maximuslabs.ai/services/agentic-commerce"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 2.5h2l1.6 7.5h7l1.4-5.2H4.6" fill="none" stroke="#6E6E6E" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6.2" cy="12.8" r="1" fill="#6E6E6E"/><circle cx="11.4" cy="12.8" r="1" fill="#6E6E6E"/></svg></span><span><span class="mi-t">Agentic commerce</span><span class="mi-d">Make your product readable by the AI agents that shop for buyers.</span></span></a></div><div class="col w" style="--w:200px"><div class="col-label">By AI platform</div><div class="links"><a href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a><a href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a><a href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a><a href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a><a href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></div><div class="col-label">By industry</div><div class="links"><a href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a><a href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a><a href="https://www.maximuslabs.ai/services/industries/ecommerce">Ecommerce</a></div></div><div class="col"><div class="col-label">Brand strategy</div><a class="mi" href="https://www.maximuslabs.ai/services/ai-perception-audit"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><circle cx="8" cy="8" r="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">AI perception audit</span><span class="mi-d">How AI describes you today, who it compares you to, which sources it trusts.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/positioning-messaging"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M10.6 5.4L9.1 9.1 5.4 10.6 6.9 6.9z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Positioning &amp; messaging</span><span class="mi-d">ICP, buyer journey and positioning, written so AI repeats your story.</span></span></a></div></div><div class="mega-foot"><a href="https://www.maximuslabs.ai/#services">All services <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span>Full-service GEO led by brand strategists. Inbound only: we never run paid media.</span></div></div><button type="button" class="nav-item" data-menu="products" aria-expanded="false" aria-controls="menu-products">Products <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-products"><div class="mega-grid"><div class="col"><div class="col-label">AI visibility</div><a class="mi" href="https://www.maximuslabs.ai/max-visibility"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><span class="mi-t">Max Visibility <span class="tag">AI visibility</span></span><span class="mi-d">See what ChatGPT, Claude, Gemini, Perplexity and every major AI model say about your brand, and what to fix next.</span></span></a><div class="col-label" style="padding-top:18px">Client workspace</div><a class="mi" href="https://www.maximuslabs.ai/products/max-console"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2 6h12M6.5 6v7.5" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">Max Console</span><span class="mi-d">Your engagement in one place: meeting notes, decisions, tasks and results.</span></span></a></div><div class="col w" style="--w:260px"><div class="col-label">Max Visibility</div><div class="links"><a href="https://www.maximuslabs.ai/max-visibility#ai-visibility">AI visibility &amp; share of voice</a><a href="https://www.maximuslabs.ai/max-visibility#models">Every AI model</a><a href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a><a href="https://www.maximuslabs.ai/max-visibility#competitors">Competitors &amp; sources</a><a href="https://www.maximuslabs.ai/max-visibility#brand-perception">Brand perception</a><a href="https://www.maximuslabs.ai/max-visibility#actions">Actions</a><a href="https://www.maximuslabs.ai/max-visibility#agent-analytics">Agent analytics</a><a href="https://www.maximuslabs.ai/pricing#max-visibility">Pricing</a></div><div class="col-label">For clients</div><div class="links"><a href="https://www.maximuslabs.ai/#how-we-work">How the engagement works</a></div></div><div class="feature"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></i>Our instrument</div><h4>Max Visibility</h4><p>Change your positioning, then watch how AI&#39;s story about you moves across every major model. Experiments, not dashboards.</p></div><a class="f-cta" href="https://www.maximuslabs.ai/max-visibility">See Max Visibility <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><button type="button" class="nav-item" data-menu="resources" aria-expanded="false" aria-controls="menu-resources">Resources <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-resources"><div class="mega-grid"><div class="col"><div class="col-label">Learn</div><a class="mi" href="../../../"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5c2-.8 3.8-.8 5.5.4 1.7-1.2 3.5-1.2 5.5-.4v9c-2-.8-3.8-.8-5.5.4-1.7-1.2-3.5-1.2-5.5-.4z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 3.9v9" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">AI Search 101</span><span class="mi-d">How AI search works, from first principles.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/blog"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">Blog</span><span class="mi-d">What we test and learn, published openly.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/resources/reports"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#A9B5C9" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><span class="mi-t">Research reports</span><span class="mi-d">Benchmarks on how B2B brands show up in AI answers.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/company/case-studies"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Case studies</span><span class="mi-d">How B2B SaaS and AI brands earned their place in AI answers.</span></span></a></div><div class="col w" style="--w:230px"><div class="col-label">Platform guides</div><div class="links"><a href="https://www.maximuslabs.ai/chatgpt-seo-guide">ChatGPT SEO guide</a><a href="https://www.maximuslabs.ai/perplexity-seo-guide">Perplexity SEO guide</a><a href="https://www.maximuslabs.ai/google-gemini-ai-mode-guide">Gemini &amp; AI Mode guide</a><a href="https://www.maximuslabs.ai/technical-seo-guide">Technical SEO guide</a><a href="https://www.maximuslabs.ai/resources/guides">All guides</a></div><div class="col-label">GEO &amp; AEO library</div><div class="links"><a href="https://www.maximuslabs.ai/blog/what-is-generative-engine-optimization-geo">What is GEO?</a><a href="../../../aeo/fundamentals/what-is-aeo/">What is AEO?</a><a href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison">GEO vs SEO</a><a href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></div></div><div class="col w" style="--w:230px"><div class="col-label">Free tools</div><div class="links"><a href="https://www.maximuslabs.ai/resources/free-tools/ai-crawlability-checker">AI Crawlability Checker</a><a href="https://www.maximuslabs.ai/resources/free-tools/reddit-threads-finder">Reddit Threads Finder</a><a href="https://www.maximuslabs.ai/resources/free-tools/ai-content-optimizer">AI Content Optimizer</a><a href="https://www.maximuslabs.ai/resources/free-tools/llms-txt-generator">LLMs.txt Generator</a><a href="https://www.maximuslabs.ai/resources/free-tools/ai-content-humanizer">AI Content Humanizer</a><a href="https://www.maximuslabs.ai/resources/ai-tool-directory">AI Tool Directory</a><a href="https://www.maximuslabs.ai/resources/free-tools">All free tools</a></div></div><div class="feature" style="min-height:300px"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></i>Industry report</div><h4>How 200+ B2B SaaS and AI companies show up in AI search</h4></div><a class="f-cta" href="https://www.maximuslabs.ai/resources/research-reports/ai-search-in-b2b-saas-2026/interactive-html">Read the report <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><button type="button" class="nav-item" data-menu="company" aria-expanded="false" aria-controls="menu-company">Company <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-company"><div class="mega-grid"><div class="col"><div class="col-label">Company</div><a class="mi" href="https://www.maximuslabs.ai/company/about-us"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.5" r="2.6" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M3 13.5c.8-2.6 2.8-3.8 5-3.8s4.2 1.2 5 3.8" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">About us</span><span class="mi-d">Brand strategists for the AI search era.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/company/case-studies"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Case studies</span><span class="mi-d">The work, the numbers and how we got there.</span></span></a></div><div class="col"><div class="col-label"> </div><a class="mi" href="https://www.maximuslabs.ai/company/careers"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="5" width="12" height="8.5" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5.8 5V3.6c0-.6.5-1.1 1.1-1.1h2.2c.6 0 1.1.5 1.1 1.1V5" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">Careers</span><span class="mi-d">Join a team that experiments every day.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/contact-us"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2.6 4.5L8 8.6l5.4-4.1" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Contact</span><span class="mi-d">Talk to a strategist about your AI search story.</span></span></a></div><div class="col w" style="--w:220px"><div class="col-label">For AI agents</div><div class="links"><a href="https://www.maximuslabs.ai/llms.txt">Information for AI (llms.txt)</a></div></div><div class="feature" style="min-height:280px"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 9.5c0-2.5 1.2-4.2 3.2-5M9.3 9.5c0-2.5 1.2-4.2 3.2-5" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></i>From the founder</div><p class="quote">AI search is a positioning problem before it&#39;s a technical one.</p><p>Krishna Kaanth M, Founder</p></div><a class="f-cta" href="https://www.maximuslabs.ai/company/about-us">Read our story <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><a class="nav-item" href="https://www.maximuslabs.ai/pricing">Pricing</a></nav><div class="nav-right"><button type="button" class="icon-btn nav-search" data-cmdk-open aria-label="Search" aria-haspopup="dialog" aria-controls="cmdk"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="#fff" stroke-width="1.8"></circle><path d="M20 20l-4.4-4.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"></path></svg></button><a class="pill-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button type="button" class="icon-btn nav-burger" data-drawer-open aria-label="Open menu" aria-haspopup="dialog" aria-expanded="false" aria-controls="site-drawer" popovertarget="site-drawer"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2.5 5.5h13M2.5 9h13M2.5 12.5h13" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg></button></div></header>
+<dialog class="drawer" id="site-drawer" aria-label="Menu" popover><div class="drawer-panel"><div class="drawer-head"><a href="https://www.maximuslabs.ai/" class="nav-logo" aria-label="MaximusLabs home"></a><button type="button" class="icon-btn drawer-close" data-drawer-close aria-label="Close menu" popovertarget="site-drawer" popovertargetaction="hide" autofocus><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg></button></div><nav class="drawer-body" aria-label="Primary (mobile)"><details class="acc" name="drawer-menu"><summary class="acc-sum">Services<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Optimization</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/services/geo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#7FB5FF" stroke-width="1.3"/><circle cx="8" cy="8" r="2.2" fill="#7FB5FF"/></svg></span><span class="acc-t">Generative Engine Optimization</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/aeo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Answer Engine Optimization</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/b2b-seo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">B2B SEO</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/technical-seo-website-audit"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Technical SEO foundation</span></a></li><li><a class="acc-link muted" href="https://www.maximuslabs.ai/services/agentic-commerce"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 2.5h2l1.6 7.5h7l1.4-5.2H4.6" fill="none" stroke="#6E6E6E" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6.2" cy="12.8" r="1" fill="#6E6E6E"/><circle cx="11.4" cy="12.8" r="1" fill="#6E6E6E"/></svg></span><span class="acc-t">Agentic commerce</span></a></li></ul></div><div class="acc-group"><div class="acc-label">By AI platform</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></li></ul></div><div class="acc-group"><div class="acc-label">By industry</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/ecommerce">Ecommerce</a></li></ul></div><div class="acc-group"><div class="acc-label">Brand strategy</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/services/ai-perception-audit"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><circle cx="8" cy="8" r="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">AI perception audit</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/positioning-messaging"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M10.6 5.4L9.1 9.1 5.4 10.6 6.9 6.9z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Positioning &amp; messaging</span></a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/#services">All services <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Products<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">AI visibility</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/max-visibility"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="acc-t">Max Visibility</span><span class="tag">AI visibility</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Client workspace</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/products/max-console"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2 6h12M6.5 6v7.5" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">Max Console</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Max Visibility</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#ai-visibility">AI visibility &amp; share of voice</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#models">Every AI model</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#competitors">Competitors &amp; sources</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#brand-perception">Brand perception</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#actions">Actions</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#agent-analytics">Agent analytics</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/pricing#max-visibility">Pricing</a></li></ul></div><div class="acc-group"><div class="acc-label">For clients</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/#how-we-work">How the engagement works</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/max-visibility">See Max Visibility <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Resources<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Learn</div><ul><li><a class="acc-link" href="../../../"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5c2-.8 3.8-.8 5.5.4 1.7-1.2 3.5-1.2 5.5-.4v9c-2-.8-3.8-.8-5.5.4-1.7-1.2-3.5-1.2-5.5-.4z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 3.9v9" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">AI Search 101</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/blog"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">Blog</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/resources/reports"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#A9B5C9" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="acc-t">Research reports</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/company/case-studies"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Case studies</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Platform guides</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/chatgpt-seo-guide">ChatGPT SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/perplexity-seo-guide">Perplexity SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/google-gemini-ai-mode-guide">Gemini &amp; AI Mode guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/technical-seo-guide">Technical SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/guides">All guides</a></li></ul></div><div class="acc-group"><div class="acc-label">GEO &amp; AEO library</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/blog/what-is-generative-engine-optimization-geo">What is GEO?</a></li><li><a class="acc-link is-plain" href="../../../aeo/fundamentals/what-is-aeo/">What is AEO?</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison">GEO vs SEO</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></li></ul></div><div class="acc-group"><div class="acc-label">Free tools</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-crawlability-checker">AI Crawlability Checker</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/reddit-threads-finder">Reddit Threads Finder</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-content-optimizer">AI Content Optimizer</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/llms-txt-generator">LLMs.txt Generator</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-content-humanizer">AI Content Humanizer</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/ai-tool-directory">AI Tool Directory</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools">All free tools</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/resources/research-reports/ai-search-in-b2b-saas-2026/interactive-html">Read the report <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Company<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Company</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/company/about-us"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.5" r="2.6" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M3 13.5c.8-2.6 2.8-3.8 5-3.8s4.2 1.2 5 3.8" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">About us</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/company/case-studies"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Case studies</span></a></li></ul></div><div class="acc-group"><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/company/careers"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="5" width="12" height="8.5" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5.8 5V3.6c0-.6.5-1.1 1.1-1.1h2.2c.6 0 1.1.5 1.1 1.1V5" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">Careers</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/contact-us"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2.6 4.5L8 8.6l5.4-4.1" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Contact</span></a></li></ul></div><div class="acc-group"><div class="acc-label">For AI agents</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/llms.txt">Information for AI (llms.txt)</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/company/about-us">Read our story <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><a class="acc-row" href="https://www.maximuslabs.ai/pricing">Pricing</a></nav><div class="drawer-foot"><a class="pill-cta drawer-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></dialog>
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Search" hidden><div class="cmdk-box"><div class="cmdk-in"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="#ABABAB" stroke-width="1.8"></circle><path d="M20 20l-4.4-4.4" stroke="#ABABAB" stroke-width="1.8" stroke-linecap="round"></path></svg><input id="cmdkInput" type="search" enterkeyhint="go" aria-label="Search the site" placeholder="Search services, sections, resources…" autocomplete="off"><button type="button" class="cmdk-esc" data-cmdk-close aria-label="Close search">ESC</button></div><div class="cmdk-list" id="cmdkList"></div></div></div>
+<div class="toast" id="toast">This page is coming soon.</div>
+<div class="proto-flag" role="note">Design prototype · v2 · real content from AI Search 101</div>
+<main id="main">
+
+<div class="read-progress" aria-hidden="true"><i></i></div>
+<section class="inner-hero-wrap"><div class="inner-hero art" data-fx-host>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../">AI Search 101</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><a href="../../../technical/">Technical</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><a href="../../../technical/performance/">Technical Performance</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><span aria-current="page">AI's Role in Enhancing Core Web Vitals for B…</span></nav>
+  <div class="art-title">
+    <div class="at-l">
+      <div class="chips"><span class="chip-b">Technical Performance</span><span class="chip-o">Technical</span></div>
+      <h1 class="art-h1">AI's Role in Enhancing Core Web Vitals for Better Search Rankings - weareiowa.com</h1>
+      <p class="ih-sub">How AI tooling is speeding up the diagnosis and repair of LCP, INP, and CLS problems.</p>
+    </div>
+    <div class="share"><button type="button" class="ic-btn" data-copy aria-label="Copy link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button><a class="ic-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.maximuslabs.ai%2Fai-search-101%2Ftechnical%2Fperformance%2Fai-for-core-web-vitals-optimization" aria-label="Share on LinkedIn"><img src="../../../assets/live/platforms/linkedin.svg" alt="" width="15" height="15"></a></div>
+  </div>
+  <div class="art-meta">
+    <span class="who"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="44" height="44"><span><b>Krishna Kaanth M</b><small>CEO, MaximusLabs</small></span></span>
+    <span class="vr"></span>
+    <span class="mi"><small>Published</small><b>3 August 2026</b></span>
+    <span class="mi"><small>Reading time</small><b>13 minutes</b></span>
+    <span class="mi"><small>Last updated</small><b>3 August 2026</b></span>
+  </div>
+  
+</div></section>
+
+<div class="m-toc" data-mtoc><button type="button" class="m-toc-bar" aria-expanded="false"><span class="m-n">01/08</span><span class="m-t">AI CWV Defined</span><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 4.5 6 7.5 9 4.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><i class="m-prog"></i></button><ol class="m-list"><li><a href="#q1-what-does-ai-for-core-web-vitals-optimization-actually-mean-in-the-geo-era"><span>01</span>AI CWV Defined</a></li><li><a href="#q2-do-core-web-vitals-still-drive-rankings-or-are-they-the-industrys-security-blanket"><span>02</span>Ranking Lever or Busywork</a></li><li><a href="#q3-which-speed-signals-actually-gate-ai-crawlers-instead-of-googlebot"><span>03</span>What AI Crawlers Gate On</a></li><li><a href="#q4-how-does-gemini-inside-chrome-devtools-change-cwv-diagnosis"><span>04</span>Gemini in DevTools</a></li><li><a href="#q5-can-an-ai-agent-fix-core-web-vitals-end-to-end-or-only-suggest-fixes"><span>05</span>Agentic CWV Runbook</a></li><li><a href="#q6-which-lcp-inp-and-cls-fixes-can-ai-reliably-automate"><span>06</span>Fixes AI Can Automate</a></li><li><a href="#q7-where-does-ai-get-core-web-vitals-wrong"><span>07</span>AI Failure Modes</a></li><li><a href="#q8-what-is-the-right-budget-split-between-technical-polish-and-content-velocity"><span>08</span>Polish vs Velocity Budget</a></li></ol></div>
+
+<section class="art-body"><div class="art-rail">
+  <aside class="toc" aria-label="On this page"><div class="toc-in">
+    <div class="toc-h"><span>On this page</span><span class="toc-count">1 / 8</span></div>
+    <div class="toc-prog"><i></i></div>
+    <ol><li><a href="#q1-what-does-ai-for-core-web-vitals-optimization-actually-mean-in-the-geo-era"><span class="n">01</span><span>AI CWV Defined</span></a></li><li><a href="#q2-do-core-web-vitals-still-drive-rankings-or-are-they-the-industrys-security-blanket"><span class="n">02</span><span>Ranking Lever or Busywork</span></a></li><li><a href="#q3-which-speed-signals-actually-gate-ai-crawlers-instead-of-googlebot"><span class="n">03</span><span>What AI Crawlers Gate On</span></a></li><li><a href="#q4-how-does-gemini-inside-chrome-devtools-change-cwv-diagnosis"><span class="n">04</span><span>Gemini in DevTools</span></a></li><li><a href="#q5-can-an-ai-agent-fix-core-web-vitals-end-to-end-or-only-suggest-fixes"><span class="n">05</span><span>Agentic CWV Runbook</span></a></li><li><a href="#q6-which-lcp-inp-and-cls-fixes-can-ai-reliably-automate"><span class="n">06</span><span>Fixes AI Can Automate</span></a></li><li><a href="#q7-where-does-ai-get-core-web-vitals-wrong"><span class="n">07</span><span>AI Failure Modes</span></a></li><li><a href="#q8-what-is-the-right-budget-split-between-technical-polish-and-content-velocity"><span class="n">08</span><span>Polish vs Velocity Budget</span></a></li></ol>
+    <a class="toc-faq" href="#faq">7 questions answered</a>
+    <div class="toc-cta glass-bg"><b>Want ChatGPT to name you, not just list you?</b><a class="btn-white sm" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div></aside>
+  <article class="prose">
+    
+    <div class="tldr reveal"><div class="px">TL;DR</div><ul><li>AI for Core Web Vitals optimization means using LLM tooling to detect, diagnose, and patch LCP, INP, and CLS instead of hand-auditing templates, validated against CrUX field data.</li><li>Core Web Vitals behave as a Google entry ticket rather than a growth lever, and contribute close to zero marginal citation gain once a page is already in the retrieval candidate pool.</li><li>AI crawlers gate on Time to First Byte under 200ms and server-rendered HTML, since no AI crawler except Google's and Bing's executes JavaScript.</li><li>ChatGPT wastes roughly 34.8% and Claude roughly 34.2% of fetches on 404s versus Googlebot's 8.22%, making URL hygiene more urgent than CLS tuning.</li><li>Agents reliably automate mechanical fixes like fetchpriority, WebP conversion, explicit dimensions, and font-display swap, but architectural calls still need human review before merge.</li><li>MaximusLabs AI caps speed work at one sprint on revenue-carrying templates, then redirects the budget into original research, bottom-of-funnel content, and citation building.</li></ul></div>
+    <h2 id="q1-what-does-ai-for-core-web-vitals-optimization-actually-mean-in-the-geo-era" data-n=""><a class="anchor" href="#q1-what-does-ai-for-core-web-vitals-optimization-actually-mean-in-the-geo-era" aria-label="Link to section"></a>Q1. What Does AI for Core Web Vitals Optimization Actually Mean in the GEO Era?</h2>
+
+<p>A Head of Organic Growth opens Search Console on a Monday, sees the Core Web Vitals report glowing red across 4,000 URLs, and forwards it to engineering. The reply lands two days later: "We can scope this next quarter." That gap, between the audit and the fix, is where most Core Web Vitals programs quietly die.</p>
+
+<p><strong>AI for Core Web Vitals optimization means using LLM-powered tooling to detect, diagnose, and remediate LCP, INP, and CLS instead of hand-auditing templates. Google's bar: LCP under 2.5 seconds, INP under 200 milliseconds, CLS under 0.1, at the 75th percentile of real users. INP replaced FID in March 2024. Validate against CrUX field data, never Lighthouse lab scores alone.</strong></p>
+
+<h4>⭐ The three metrics, and the one the industry still gets wrong</h4>
+
+<p>Core Web Vitals are Google's three real-user experience metrics. Largest Contentful Paint (LCP) measures loading, Interaction to Next Paint (INP) measures responsiveness, and Cumulative Layout Shift (CLS) measures visual stability.</p>
+
+<p>INP replaced First Input Delay in March 2024. Several currently ranking guides still list FID beside INP, which is a quiet signal that the page has not been touched in two years. If your <a href="https://maximuslabs.ai/technical-seo-website-audit/">technical SEO and website audit</a> still references FID, it is overdue for a refresh.</p>
+
+<h4>⚠️ Why your green Lighthouse score still fails</h4>
+
+<p>Lighthouse runs a simulated test on one machine. The Chrome User Experience Report (CrUX) records what actual visitors experienced on real devices and real networks.</p>
+
+<p>Google grades you on the field data, not the lab run. A page can score 98 in Lighthouse and still fail CrUX, because your users are on mid-range Android phones and you tested on a MacBook.</p>
+
+<h4>✅ What AI genuinely does here (three jobs)</h4>
+
+<p>The tooling now covers three distinct jobs. Each has a different reliability level, so treat them separately.</p>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>What AI Does in Core Web Vitals Work</caption>
+<thead>
+<tr>
+<th>Job</th>
+<th>What AI does</th>
+<th>Reliability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">Detect</td>
+<td>Flags regressions across templates from field data</td>
+<td>High</td>
+</tr>
+<tr>
+<td class="highlight">Diagnose</td>
+<td>Reads a full performance trace and explains the bottleneck</td>
+<td>High</td>
+</tr>
+<tr>
+<td class="highlight">Patch</td>
+<td>Generates and applies code fixes via agent tooling</td>
+<td>Medium, needs review</td>
+</tr>
+<tr>
+<td class="highlight">Prioritise by revenue</td>
+<td>Decides which template deserves the sprint</td>
+<td>None. Human job.</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<h4>💰 The job AI cannot do</h4>
+
+<p>AI has no idea which of your templates carries pipeline. It will happily spend an afternoon optimising a glossary page that has never produced a demo request.</p>
+
+<p>That prioritisation call sits with you. Group your Search Console CWV URLs by template, then sort that list by pipeline contribution rather than session volume, the same logic that drives a revenue-focused <a href="https://maximuslabs.ai/services/b2b-seo/">B2B SEO service</a>.</p>
+
+<h4>🎯 Where this fits in a GEO-era stack</h4>
+
+<p>Here is the frame for the rest of this article. Core Web Vitals are Google's goal, expressed as a metric that Google can measure at scale.</p>
+
+<p>AI answer engines have a different goal. They score whether your passage answers the question, which is why speed work behaves like an entry ticket rather than a growth lever, a distinction covered in depth in our <a href="https://maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison/">GEO vs traditional SEO</a> breakdown. MaximusLabs AI's read is that treating the two as one workstream is the single most expensive framing error in technical SEO right now, though I would rather be proven wrong on that than right.</p>
+
+<p>MaximusLabs AI runs its technical audit inside the first seven days of an engagement, with the first article live by day four. The point is not speed for its own sake. It is refusing to let a fixable render-blocking script become a nine-month conversation.</p>
+
+<h2 id="q2-do-core-web-vitals-still-drive-rankings-or-are-they-the-industrys-security-blanket" data-n=""><a class="anchor" href="#q2-do-core-web-vitals-still-drive-rankings-or-are-they-the-industrys-security-blanket" aria-label="Link to section"></a>Q2. Do Core Web Vitals Still Drive Rankings, or Are They the Industry's Security Blanket?</h2>
+
+<p><strong>Core Web Vitals are a Google tiebreaker, not a growth lever, and near-irrelevant to AI citation. Practitioners who built SEO into a dominant channel report never seeing CWV scores drive a traffic increase alone. AI retrieval scores semantic query-passage relevance, not paint timings. Treat Core Web Vitals as an entry ticket you buy once, then redeploy the hours into Information Gain and bottom-of-funnel depth.</strong></p>
+
+<h3>The situation: everyone audits speed first</h3>
+
+<p>Walk into any SEO engagement and the first deliverable is a technical audit. It is measurable, it produces a satisfying red-to-green chart, and nobody argues with it.</p>
+
+<p>That is exactly what makes it comfortable. Ethan Smith, CEO of Graphite, calls most of this category of work true but inert.</p>
+
+<h3>The complication: fifteen years and no traffic lift</h3>
+
+<p>Smith's position, built across SEO programs at companies like Thumbtack and MasterClass, is blunt: technical SEO is the biggest waste of time, and in fifteen years he has never seen Core Web Vitals drive a traffic increase. He extends the same logic forward, arguing that technical AEO will create significant work with little to no impact.</p>
+
+<p>That is one named practitioner, not a dataset. But it is a practitioner with fifteen years of before-and-after traffic charts, which is more evidence than most CWV advocacy carries. It is also why an <a href="https://maximuslabs.ai/answer-engine-optimization-aeo/">answer engine optimization</a> program should not begin with paint timings.</p>
+
+<h4>💬 What operators are saying</h4>
+
+<blockquote><cite>"Google treats Core Web Vitals as a page experience signal, not a relevance signal. That means good scores will not push a low-quality or irrelevant page up."</cite><br><cite>u/anonymous, r/TechSEO <a href="https://www.reddit.com/r/TechSEO/"><strong><em> Reddit Thread</em></strong></a></cite></blockquote>
+
+<blockquote><cite>"I just find it hard to believe that this actually becomes a greater part of the ranking algo. Has anyone seen dramatic gains or decreases based on it so far?"</cite><br><cite>u/anonymous, r/SEO <a href="https://www.reddit.com/r/SEO/"><strong><em> Reddit Thread</em></strong></a></cite></blockquote>
+
+<blockquote><cite>"We've been working on our core web vitals and our Lab Data is flawless but our Field Data does not pass. I keep hearing it takes time but we..."</cite><br><cite>u/anonymous, r/SEO <a href="https://www.reddit.com/r/SEO/"><strong><em> Reddit Thread</em></strong></a></cite></blockquote>
+
+<h3>The honest counter-argument</h3>
+
+<p>Search Engine Land and several 2026 technical guides maintain that Core Web Vitals still matter for both AI Overviews and blue links. I am not going to pretend that disagreement away.</p>
+
+<p>Here is the fit condition that reconciles both camps. Core Web Vitals matter for Google ranking as an entry ticket, and deliver close to zero marginal citation gain once you are already in the candidate pool.</p>
+
+<h3>The resolution: buy the ticket, then stop</h3><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/29862deb-4455-47c6-87e1-0a5bc760bb9e.png" alt="Comparison showing Core Web Vitals as a one-time ranking entry ticket versus a growth lever" loading="lazy"></div><figcaption>Core Web Vitals buy you a seat in the candidate pool. Past that threshold, the next hour of speed tuning returns almost nothing.</figcaption></figure></div>
+
+<p>Past the threshold, the next hour of speed tuning buys almost nothing. The same hour spent producing something genuinely new buys Information Gain, which is what retrieval models actually score, the core premise of our <a href="https://maximuslabs.ai/services/geo/">GEO service</a>.</p>
+
+<p>MaximusLabs AI measures content programs on pipeline contribution rather than impressions, which is why low-intent technical polish gets capped rather than expanded. Our data points one way here, and I hold it loosely, because the counterfactual is hard to run cleanly.</p>
+
+<h4>🎯 The one-line decision rule</h4>
+
+<p>If a template fails Google's thresholds and touches revenue, fix it this sprint. If it passes, or it never touches a buying decision, leave it alone and go write something nobody else has published.</p>
+
+<p>MaximusLabs AI caps Core Web Vitals work at the templates carrying bottom-of-funnel and middle-of-funnel pages. Everything past that threshold gets redirected into <a href="https://maximuslabs.ai/content-marketing/">original research and content</a>, because that is the work that compounds.</p>
+
+<h2 id="q3-which-speed-signals-actually-gate-ai-crawlers-instead-of-googlebot" data-n=""><a class="anchor" href="#q3-which-speed-signals-actually-gate-ai-crawlers-instead-of-googlebot" aria-label="Link to section"></a>Q3. Which Speed Signals Actually Gate AI Crawlers Instead of Googlebot?</h2>
+
+<p><strong>AI crawlers ignore your Lighthouse score. They gate on Time to First Byte, where staying under 200ms earns more frequent re-crawls, and on server-rendered HTML, because no AI crawler except Google's and Bing's executes JavaScript. Crawl waste compounds it: ChatGPT wastes roughly 34.8% and Claude 34.2% of fetches on 404s versus Googlebot's 8.22%. Fix URL hygiene before CLS.</strong></p>
+
+<h4>⚠️ The scene: green vitals, invisible reviews</h4>
+
+<p>A brand passes all three Core Web Vitals. Their product pages carry 400 verified reviews. ChatGPT cannot see a single one.</p>
+
+<p>The reviews load asynchronously through JavaScript. Turn JavaScript off in the browser and half the page disappears, including every trust signal the brand paid for. An <a href="https://maximuslabs.ai/tools/ai-crawlability-checker/">AI crawlability checker</a> surfaces exactly this gap.</p>
+
+<h4>⭐ The rule that decides everything</h4><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/c0239c31-6821-4299-8029-5a253d456342.png" alt="Radial diagram of AI crawler gates: server-rendered HTML, TTFB under 200ms, and URL hygiene" loading="lazy"></div><figcaption>AI crawlers ignore your Lighthouse score entirely. They gate on rendered HTML, server response time, and whether your URLs resolve.</figcaption></figure></div>
+
+<p>Server-render everything you want cited. No AI crawler except Google's and Bing's executes JavaScript.</p>
+
+<p>If the content is not in the raw HTML response, it does not enter the retrieval candidate pool. Paint timings are irrelevant to a bot that never renders the page.</p>
+
+<h4>📊 Crawl behaviour is not equal</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Crawler Fetch Behaviour Compared</caption>
+<thead>
+<tr>
+<th>Crawler</th>
+<th>Fetches wasted on 404s</th>
+<th>Executes JavaScript</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">Googlebot</td>
+<td>8.22%</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td class="highlight">ChatGPT</td>
+<td>~34.8%</td>
+<td>No</td>
+</tr>
+<tr>
+<td class="highlight">Claude</td>
+<td>~34.2%</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<p>AI crawlers waste roughly four times more of their budget on dead URLs than Googlebot does. Every 404 chain, every stale redirect, every orphaned parameter URL burns fetches that could have retrieved a page you care about.</p>
+
+<h4>✅ Time to First Byte is the real gate</h4>
+
+<p>Keep Time to First Byte (TTFB, the delay before the server sends its first byte) under 200 milliseconds. Faster responses get re-crawled more frequently, which means your fresh content enters the index sooner.</p>
+
+<p>This is a different reason to care about speed than ranking. It is about refresh rate, not position, and it is a recurring theme across our <a href="https://maximuslabs.ai/ai-search-101/technical/ai-crawlers/ai-crawlers-guide-optimization/">AI crawlers guide and optimization</a> work.</p>
+
+<h4>💰 Why latency is becoming infrastructure, not SEO</h4>
+
+<p>Microsoft's Web IQ grounding layer benchmarks at 164ms p95 across the full pipeline, roughly 2.5 times faster than the nearest alternative. That number is not a ranking factor. It is the latency budget an agent needs to answer in real time.</p>
+
+<p>As agentic retrieval matures, sub-200ms stops being a nice-to-have and becomes an API-level requirement, a shift we track through our <a href="https://maximuslabs.ai/services/agentic-commerce/">agentic commerce service</a>. MaximusLabs AI's engagements increasingly treat TTFB as an availability metric rather than a search metric, which is a reframing I did not expect to be making two years ago.</p>
+
+<h4>🎯 Your three-item Monday checklist</h4>
+
+<ol><li>Turn JavaScript off in your browser and load your five highest-value pages. Anything that vanishes is invisible to AI crawlers.</li><li>Pull your 404 report and kill the chains. Redirect or remove, do not leave them hanging.</li><li>Measure TTFB from three geographies. If it is over 200ms, look at server response before you look at images.</li></ol>
+
+<p>MaximusLabs AI audits JavaScript minimisation first on every technical engagement, alongside unblocking GPTBot and OAI-SearchBot in robots.txt. The HTML version is the only version an AI crawler ever reads, so that is where we start.</p>
+
+<h2 id="q4-how-does-gemini-inside-chrome-devtools-change-cwv-diagnosis" data-n=""><a class="anchor" href="#q4-how-does-gemini-inside-chrome-devtools-change-cwv-diagnosis" aria-label="Link to section"></a>Q4. How Does Gemini Inside Chrome DevTools Change CWV Diagnosis?</h2>
+
+<p><strong>Chrome DevTools embeds Gemini across the Elements, Network, Sources, and Performance panels. Since Chrome 142 you can chat about a full performance trace, including Performance Insights and field data, without pre-selecting context, then drill into a single trace event in the same conversation. Enterprises gate access through the DevToolsGenAiSettings policy. Trace-reading drops from specialist skill to conversation.</strong></p>
+
+<h4>⚠️ The bottleneck was never the data</h4>
+
+<p>Chrome has exposed detailed performance traces for over a decade. The waterfall was always there, showing every long task and layout shift.</p>
+
+<p>Reading it was the problem. A performance trace is a specialist artifact, and most marketing teams had exactly nobody who could interpret one.</p>
+
+<h4>⏰ The capability timeline (dated, from the changelog)</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Gemini in DevTools Capability Timeline</caption>
+<thead>
+<tr>
+<th>When</th>
+<th>What shipped</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">May 2025</td>
+<td>Ask AI announced across DevTools at Google I/O, covering styling, network, sources, and performance debugging</td>
+</tr>
+<tr>
+<td class="highlight">Ongoing</td>
+<td>Gemini assistance documented in the Elements, Network, Sources, and Performance panels, with enterprise policy controls</td>
+</tr>
+<tr>
+<td class="highlight">Chrome 142</td>
+<td>Full performance trace chat with Gemini, including related Performance Insights and field data, plus drill-down into individual trace events. All Performance Insights entries became chat-enabled</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<p>That last row is the meaningful one. Before it, you had to pre-select context and ask about one slice. Now you hand Gemini the whole trace and ask what is slow.</p>
+
+<h4>✅ The exact click path</h4>
+
+<ol><li>Open DevTools and go to the Performance panel.</li><li>Record a page load, or import an existing trace file.</li><li>Open the Insights sidebar and pick any insight, or use the Ask AI entry point on the trace itself.</li><li>Ask a plain question: "What is causing the LCP delay on this page, and which resource is responsible?"</li><li>Drill into a specific trace event in the same conversation to get file-level detail.</li></ol>
+
+<p>This is the kind of workflow our <a href="https://maximuslabs.ai/services/platforms/google-ai-gemini/">Google AI and Gemini optimization</a> engagements lean on before touching a single template.</p>
+
+<h4>🔒 The enterprise question nobody covers</h4>
+
+<p>If you work somewhere regulated, your engineering org has probably disabled this by default. Google documents an explicit enterprise policy key, DevToolsGenAiSettings, for enabling Gemini in DevTools across macOS, Linux, and Windows.</p>
+
+<p>That is the ticket to file with IT. Not a vague request for AI tooling, but a named policy key with official documentation behind it, the sort of detail our <a href="https://maximuslabs.ai/technical-seo-guide/">technical SEO guide</a> spells out in full.</p>
+
+<h4>💰 What this actually costs you</h4>
+
+<p>Nothing. It ships inside a browser your team already has installed.</p>
+
+<p>Most paid AI SEO platforms in this category run on the same public CrUX data with a chat layer on top. Automating an average workflow does not produce an advantage, it produces a commodity, and the value sits entirely in what you know to ask.</p>
+
+<h4>⭐ The honest limitation</h4>
+
+<p>Gemini reads the trace well. It does not know your deployment pipeline, your framework constraints, or which template drives your pipeline.</p>
+
+<p>It will explain why LCP is 4.1 seconds. It will not tell you whether that page is worth 4.1 seconds of anyone's attention, which is the judgment layer our <a href="https://maximuslabs.ai/services/geo/">generative engine optimization</a> work exists to supply.</p>
+
+<p>MaximusLabs AI defaults to free first-party tooling wherever it exists, and Chrome DevTools with Gemini is the clearest example on this keyword. If Google ships the trace debugger, that budget line belongs in original research instead.</p>
+
+<h2 id="q5-can-an-ai-agent-fix-core-web-vitals-end-to-end-or-only-suggest-fixes" data-n=""><a class="anchor" href="#q5-can-an-ai-agent-fix-core-web-vitals-end-to-end-or-only-suggest-fixes" aria-label="Link to section"></a>Q5. Can an AI Agent Fix Core Web Vitals End-to-End, or Only Suggest Fixes?</h2>
+
+<p><strong>Yes, with guardrails. Using Chrome MCP (Model Context Protocol, the standard that lets an AI agent control a browser), an agent runs the performance test, reads the report, locates responsible files by glob and grep, implements fixes in LCP-then-CLS-then-INP order, comments each change, and re-verifies. Every published workflow still ends at human diff review. The agent removes the diagnosis-to-pull-request lag that kills most Core Web Vitals projects. It does not remove accountability.</strong></p>
+
+<h4>⚠️ Fixes die in the backlog, not the audit</h4>
+
+<p>The audit is never the bottleneck. I have watched teams produce a flawless 40-page performance report, then hear "engineering says nine months" and quietly shelve it.</p>
+
+<p>That gap is the whole problem. An agent that can open the file, make the change, and re-run the test is solving the queue, not the diagnosis, which is where a hands-on <a href="https://maximuslabs.ai/technical-seo-website-audit/">technical SEO and website audit</a> earns its keep.</p>
+
+<h4>⭐ The eight-step runbook</h4><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/5c551d72-a173-4090-ae2e-aa3b02d3f3a6.png" alt="Eight-step agentic runbook for fixing Core Web Vitals, ending at human diff review" loading="lazy"></div><figcaption>The agent removes the diagnosis-to-pull-request lag that kills most Core Web Vitals projects. It does not remove the human review gate.</figcaption></figure></div>
+
+<ol><li>Run the performance test against a staging URL, not production.</li><li>Have the agent read the trace report and the CrUX field data together.</li><li>Ask it to locate the responsible files using glob and grep across the repo.</li><li>Fix LCP first, because it usually shares a root cause with everything else.</li><li>Fix CLS second, since layout reservations are low-risk and mechanical.</li><li>Fix INP last, because it touches JavaScript architecture.</li><li>Require a comment on every change explaining what it addresses and why.</li><li>Re-run the test, then hand the diff to a human before anything merges.</li></ol>
+
+<h4>✅ The guardrails that make this safe</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Guardrails for Agentic CWV Remediation</caption>
+<thead>
+<tr>
+<th>Guardrail</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">Staging only, never production</td>
+<td>An agent editing live templates is a rollback event waiting to happen</td>
+</tr>
+<tr>
+<td class="highlight">Read-only on config and CI files</td>
+<td>Keeps the blast radius inside components</td>
+</tr>
+<tr>
+<td class="highlight">One metric per branch</td>
+<td>Makes the diff readable and the rollback surgical</td>
+</tr>
+<tr>
+<td class="highlight">Human diff review before merge</td>
+<td>Non-negotiable in every published workflow</td>
+</tr>
+<tr>
+<td class="highlight">Re-verify against field data after 28 days</td>
+<td>Lab confirmation is not confirmation</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<p>MaximusLabs AI runs hybrid workflows where the machine handles aggregation and first drafts while humans own the final call, and this runbook follows the same split, a pattern detailed across our <a href="https://maximuslabs.ai/generative-engine-optimization/technical-geo-implementation/">technical GEO implementation</a> work.</p>
+
+<h4>❌ Automating a mediocre workflow just makes it cheaply mediocre</h4>
+
+<p>Ethan Smith, CEO of Graphite, has a line about AI agencies that applies directly here: take a B-minus workflow, automate it, and you get a C-plus at eighty percent off. That is not progress.</p>
+
+<p>The agent is only worth deploying if the underlying fix order and verification standard are already good. Automation multiplies whatever quality you feed it, which is why our <a href="https://maximuslabs.ai/services/geo/">GEO service</a> starts with the judgment layer, not the tooling.</p>
+
+<h4>💬 What practitioners report</h4>
+
+<blockquote><cite>"We've been working on our core web vitals and our Lab Data is flawless but our Field Data does not pass. I keep hearing it takes time but we..."</cite><br><cite>u/anonymous, r/SEO <a href="https://www.reddit.com/r/SEO/"><strong><em> Reddit Thread</em></strong></a></cite></blockquote>
+
+<blockquote><cite>"Almost every time I see an SEO 'expert' or 'agency' claiming to know what they are doing, I am usually going to their website (or their clients) and find..."</cite><br><cite>u/anonymous, r/SEO <a href="https://www.reddit.com/r/SEO/"><strong><em> Reddit Thread</em></strong></a></cite></blockquote>
+
+<h4>💰 The honest limit</h4>
+
+<p>MaximusLabs AI's read is that agentic remediation is genuinely ready for the mechanical layer, and genuinely not ready for architectural decisions. I hold that split loosely, because the tooling is moving fast enough that this paragraph may age badly within two quarters.</p>
+
+<p>MaximusLabs AI built execution capability in-house after watching technical fixes stall in nine-month engineering queues. A recommendation that cannot reach production is not a recommendation. It is a PDF, which is why our <a href="https://maximuslabs.ai/services/b2b-seo/">B2B SEO service</a> ships fixes rather than filing them.</p>
+
+<h2 id="q6-which-lcp-inp-and-cls-fixes-can-ai-reliably-automate" data-n=""><a class="anchor" href="#q6-which-lcp-inp-and-cls-fixes-can-ai-reliably-automate" aria-label="Link to section"></a>Q6. Which LCP, INP and CLS Fixes Can AI Reliably Automate?</h2>
+
+<p><strong>AI reliably automates the mechanical fixes: preloading the LCP image with fetchpriority high, converting to WebP or AVIF, adding explicit width and height attributes, applying font-display swap, and deferring non-critical JavaScript. It struggles with architectural calls, including main-thread task splitting with scheduler.yield, hydration strategy, and third-party script removal. Automate the mechanical layer, keep humans on the architectural one.</strong></p>
+
+<h4>⭐ The split that matters</h4><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/1eef5ac3-8fb4-4f57-b36b-f26e6f370a7e.png" alt="Two-column split of Core Web Vitals fixes AI can automate versus those needing human review" loading="lazy"></div><figcaption>Mechanical fixes automate reliably. Architectural ones need someone who knows why your team made a decision three years ago.</figcaption></figure></div>
+
+<p>Every Core Web Vitals checklist online treats all fixes as equal work. They are not.</p>
+
+<p>Some fixes are pattern-matching. Others require knowing why your team made a decision three years ago, the kind of context our <a href="https://maximuslabs.ai/technical-seo-guide/">technical SEO guide</a> insists you capture before automating anything.</p>
+
+<h3>Largest Contentful Paint</h3>
+
+<h4>✅ Safe to automate</h4>
+
+<p>Preloading the hero image with fetchpriority="high", converting images to WebP or AVIF, and inlining critical CSS are all mechanical. An agent can identify the LCP element from the trace and apply these reliably.</p>
+
+<p>Verification: re-run the trace and confirm the LCP element did not change identity after the fix.</p>
+
+<h4>❌ Escalate to a human</h4>
+
+<p>Server response time under 800ms, CDN configuration, and edge rendering decisions involve infrastructure cost. Those are budget calls, not code calls.</p>
+
+<h3>Interaction to Next Paint</h3>
+
+<h4>⚠️ Safe to automate, barely</h4>
+
+<p>Deferring non-critical JavaScript and debouncing input handlers are usually safe. Beyond that, INP gets architectural fast.</p>
+
+<p>Main-thread task splitting with scheduler.yield() requires understanding which tasks can be interrupted without breaking state.</p>
+
+<p>Escalate to a human: hydration strategy, third-party script removal, and DOM size reduction below 1,500 elements all touch product decisions. An agent does not know that your analytics vendor is contractually locked in for another year.</p>
+
+<h3>Cumulative Layout Shift</h3>
+
+<h4>✅ The most automatable metric</h4>
+
+<p>Explicit width and height attributes, CSS aspect-ratio, reserved space for ad slots and cookie banners, and font-display: swap with a metric-matched fallback font are all deterministic. This is where agents perform best.</p>
+
+<p>Verification: load the page on a throttled connection and watch for shift on late-loading elements.</p>
+
+<h4>💰 The third-party script reality check</h4>
+
+<p>Most INP failures trace back to scripts nobody in marketing owns. Tag managers, chat widgets, session recorders, and consent banners stack up over years.</p>
+
+<p>No agent will delete your CRM tracking pixel for you. That conversation happens between marketing and legal, not in a pull request.</p>
+
+<h4>🎯 The retrieval bonus nobody mentions</h4>
+
+<p>Here is a fix that pays twice. Attribute data buried in JavaScript dropdowns, product specifications, materials, dimensions, and compatibility notes, is invisible to AI crawlers and often causes layout shift when it loads.</p>
+
+<p>Move it into plain text blocks in the page body. You fix CLS and you make the data retrievable in the same commit, a double-win our <a href="https://maximuslabs.ai/ai-search-101/technical/content-formatting/content-formatting-ai-search-seo/">content formatting for AI search and SEO</a> playbook leans on.</p>
+
+<p>MaximusLabs AI treats attribute data trapped in JavaScript as a retrieval bug rather than a design choice. Moving it into readable text serves the crawler and the buyer at once, which is where our <a href="https://maximuslabs.ai/answer-engine-optimization-aeo/">answer engine optimization</a> work begins.</p>
+
+<h2 id="q7-where-does-ai-get-core-web-vitals-wrong" data-n=""><a class="anchor" href="#q7-where-does-ai-get-core-web-vitals-wrong" aria-label="Link to section"></a>Q7. Where Does AI Get Core Web Vitals Wrong?</h2>
+
+<p><strong>AI tooling fails in four predictable places: lazy-loading the element that turns out to be the LCP element, optimising lab scores while CrUX field data stays red, proposing framework-specific fixes that do not match your stack, and reporting a 900% improvement without stating the visit count. MaximusLabs AI verifies every AI-generated patch against a full 28-day CrUX window before calling the work done.</strong></p>
+
+<h4>⚠️ Four failure modes, and how to catch each</h4>
+
+<p>The tooling is good. It is not infallible, and the failures cluster in ways you can plan for.</p>
+
+<h3>Failure 1: lazy-loading the LCP element</h3>
+
+<p><strong>Symptom:</strong> LCP gets worse after an "optimisation" pass. <strong>Why it happens:</strong> the agent sees an image below the initial viewport in its test render and applies loading="lazy", but on mobile that image is the hero.</p>
+
+<p><strong>Catch it:</strong> confirm the LCP element identity in the trace before and after every image change.</p>
+
+<h3>Failure 2: optimising the lab, ignoring the field</h3>
+
+<p><strong>Symptom:</strong> Lighthouse jumps to 96, Search Console stays red. <strong>Why it happens:</strong> the agent optimises what it can measure instantly, and CrUX field data runs on a 28-day rolling window.</p>
+
+<p><strong>Catch it:</strong> never declare a fix successful before a full 28-day window has passed.</p>
+
+<p>MaximusLabs AI measures technical work against field data on that same 28-day cadence, which means results arrive slower than any dashboard would like, a discipline our <a href="https://maximuslabs.ai/generative-engine-optimization/measurement-and-metrics-in-geo/">GEO measurement and metrics</a> work enforces.</p>
+
+<h3>Failure 3: stack-mismatched fixes</h3>
+
+<p><strong>Symptom:</strong> the agent suggests next/font on a Webflow site, or LiteSpeed cache rules on Nginx. <strong>Why it happens:</strong> training data skews toward whichever framework blogs write about most.</p>
+
+<p><strong>Catch it:</strong> state your stack explicitly in the prompt, and reject any fix that references a dependency you do not have.</p>
+
+<h3>Failure 4: percentages without denominators</h3>
+
+<p><strong>Symptom:</strong> a report claiming a 900% improvement. <strong>Why it happens:</strong> relative numbers look impressive and cost nothing to generate.</p>
+
+<p><strong>Catch it:</strong> demand the absolute counts. A 900% lift on eleven sessions is a rounding error wearing a suit.</p>
+
+<h4>❌ The category-wide bad habit</h4>
+
+<p>There is a related pattern worth naming: "secret AI tag" advice, hidden markup or code tricks promised to unlock citations. MaximusLabs AI has found no evidence any of it works, and I would treat anyone selling it the way you would treat a guaranteed-rankings pitch, which is exactly why our <a href="https://maximuslabs.ai/ai-search-101/strategies/citations/citation-worthy-content-ai-engines/">citation-worthy content for AI</a> approach relies on substance instead.</p>
+
+<h4>✅ The verification gate, in one line</h4>
+
+<p>Before you close a Core Web Vitals ticket, confirm three things: the LCP element is still what you think it is, the CrUX window has actually elapsed, and every percentage in the report has a raw number beside it.</p>
+
+<p>MaximusLabs AI states visit counts beside every percentage in client reporting. It makes some slides less exciting. It also means nobody has ever had to walk a number back, the kind of trust standard our <a href="https://maximuslabs.ai/content-marketing/">content marketing service</a> is built on.</p>
+
+<h2 id="q8-what-is-the-right-budget-split-between-technical-polish-and-content-velocity" data-n=""><a class="anchor" href="#q8-what-is-the-right-budget-split-between-technical-polish-and-content-velocity" aria-label="Link to section"></a>Q8. What Is the Right Budget Split Between Technical Polish and Content Velocity?</h2>
+
+<p><strong>Buy the entry ticket once, then stop. MaximusLabs AI allocates one focused sprint to getting revenue-carrying templates past Google's thresholds, then redirects remaining hours to original research, bottom-of-funnel content, and third-party citation building. Velocity of genuinely new information beats marginal speed gains, because AI retrieval scores semantic relevance while competitors re-audit paint timings. Rank templates by pipeline contribution, never by session volume.</strong></p>
+
+<h4>💰 The situation: one budget, two stories</h4>
+
+<p>A VP Marketing has a fixed quarterly number. One advisor says fix the technical foundation first. Another says the foundation is fine and the content is invisible.</p>
+
+<p>Both sound reasonable. Only one of them compounds.</p>
+
+<h4>⚠️ The complication: comfort is not evidence</h4>
+
+<p>Technical work is measurable, bounded, and produces a satisfying chart. Content work is uncertain and slow.</p>
+
+<p>That asymmetry is exactly why budgets drift toward speed tuning. Ethan Smith puts it plainly: page speed is probably the thing people spend the most time on that does not drive impact.</p>
+
+<h4>⏰ The velocity argument</h4>
+
+<p>The thing that actually moves AI visibility is how fast you can publish something nobody else has, not whether your content management system parses in an LLM-friendly way.</p>
+
+<p>Traffic concentration makes this sharper. Roughly nineteen out of twenty landing pages drive about 85% of all traffic, so the template list you need to fix is far shorter than your URL count suggests, a truth our <a href="https://maximuslabs.ai/generative-engine-optimization/calculating-roi-for-geo-initiatives-revenue-attribution/">GEO ROI and revenue attribution</a> analysis keeps confirming.</p>
+
+<h4>📊 The allocation model</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Quarterly Budget Allocation Model</caption>
+<thead>
+<tr>
+<th>Budget line</th>
+<th>Share of quarter</th>
+<th>Trigger to revisit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">Core Web Vitals on revenue templates</td>
+<td>One sprint, roughly 15%</td>
+<td>A failing CrUX window on a BOFU template</td>
+</tr>
+<tr>
+<td class="highlight">Server rendering and URL hygiene</td>
+<td>Roughly 10%</td>
+<td>Any AI crawler 404 spike</td>
+</tr>
+<tr>
+<td class="highlight">Original research and BOFU content</td>
+<td>Roughly 55%</td>
+<td>Never. This is the compounding line.</td>
+</tr>
+<tr>
+<td class="highlight">Third-party citations and entity graph</td>
+<td>Roughly 20%</td>
+<td>Competitor share-of-voice gain</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<h4>✅ Sort by pipeline, not sessions</h4>
+
+<p>Export your Search Console Core Web Vitals URLs and group them by template. Then sort that list by pipeline contribution rather than session volume.</p>
+
+<p>Glossary pages and definition posts almost never survive that sort. The intent behind a definition query is not buying, so the speed work there returns nothing.</p>
+
+<h4>💬 What buyers say about where the money goes</h4>
+
+<blockquote><cite>"Avoid agencies that offer generic, pre-packaged SEO deals. Every website is unique, with its own set of challenges that require tailored solutions."</cite><br><cite>u/anonymous, r/SEO <a href="https://www.reddit.com/r/SEO/"><strong><em> Reddit Thread</em></strong></a></cite></blockquote>
+
+<blockquote><cite>"I'm super curious of what services the people charging thousands of dollars a month are providing."</cite><br><cite>u/anonymous, r/SEO <a href="https://www.reddit.com/r/SEO/"><strong><em> Reddit Thread</em></strong></a></cite></blockquote>
+
+<h4>💸 What the reallocated money buys</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Traditional Agency vs MaximusLabs AI</caption>
+<thead>
+<tr>
+<th>Line item</th>
+<th>Traditional agency</th>
+<th>
+<div class="logo-header"><img loading="lazy" decoding="async" src="https://maximuslabs.ai/logo.png" alt="MaximusLabs AI logo"> MaximusLabs AI</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">Cost per content piece</td>
+<td>~$260</td>
+<td>~$60</td>
+</tr>
+<tr>
+<td class="highlight">Monthly retainer entry point</td>
+<td>~$6,500</td>
+<td>From $899</td>
+</tr>
+<tr>
+<td class="highlight">Primary focus</td>
+<td>Rankings and impressions</td>
+<td>Pipeline contribution</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<p>MaximusLabs AI starts bottom-of-funnel first for exactly this reason. Pages closest to a purchase decision get the speed fix and the original research, in that order, because that sequence is the only one where both investments pay, and you can see the numbers on our <a href="https://maximuslabs.ai/pricing/">pricing</a> page.</p>
+
+I don't have Q9 through Q12 available. The prior turns in this thread contain Q1 through Q8 only, and the original article content for the final four questions was never generated or shared in this conversation.
+
+To process CMS 3 (Q9, Q10, Q11, Q12) with the same formatting standards applied to Q1 through Q8, please paste the source content for those four question sections. Once you share them, I will return them as clean Webflow-ready HTML with [toc=...] tags, embedded tables, cited blockquotes, em/en dash removal, and a minimum of seven internal links.
+
+Which of the following describes the Q9 to Q12 content you want processed?
+    <section class="faq" id="faq"><div class="faq-h"><h2>Questions, answered</h2><span>7 questions</span></div><details open><summary><span>What does AI for Core Web Vitals optimization actually mean?</span><i></i></summary><p>AI for Core Web Vitals optimization means using LLM-powered tooling to detect, diagnose, and remediate the three real-user metrics Google measures, instead of hand-auditing every template. Largest Contentful Paint (LCP): loading, target under 2.5 seconds Interaction to Next Paint (INP): responsiveness, target under 200 milliseconds Cumulative Layout Shift (CLS): visual stability, target under 0.1 All three are graded at the 75th percentile of real users. INP replaced First Input Delay in March 2024, so any guide still listing FID beside INP has not been touched in two years. The tooling covers three distinct jobs. Detection flags regressions across templates from field data. Diagnosis reads a full performance trace and explains the bottleneck. Patching generates and applies code fixes through agent tooling, which is the layer that still needs human review. There is a fourth job no model can do. AI has no idea which of your templates carries pipeline, and it will happily spend an afternoon optimising a glossary page that never produced a demo request. MaximusLabs AI runs its technical SEO and website audit inside the first seven days of an engagement, precisely so a fixable render-blocking script never becomes a nine-month conversation.</p></details><details><summary><span>Do Core Web Vitals still affect search rankings in 2026?</span><i></i></summary><p>Core Web Vitals function as a Google tiebreaker, not a growth lever, and they are close to irrelevant for AI citation. Ethan Smith, CEO of Graphite, built SEO programs at companies like Thumbtack and MasterClass, and his position is blunt: in fifteen years he has never seen Core Web Vitals scores drive a traffic increase on their own. That is one named practitioner rather than a dataset, but it is fifteen years of before-and-after traffic charts, which is more evidence than most speed advocacy carries. The counter-argument is real. Several 2026 technical guides maintain that Core Web Vitals still matter for both AI Overviews and blue links. Here is the fit condition that reconciles both camps: They matter for Google ranking as an entry ticket you buy once They deliver close to zero marginal citation gain once you are already in the candidate pool AI retrieval scores semantic query-passage relevance, not paint timings Past the threshold, the next hour of speed tuning buys almost nothing, while the same hour spent producing something genuinely new buys Information Gain. MaximusLabs AI measures content programs on pipeline contribution rather than impressions, which is why low-intent technical polish gets capped inside our GEO service rather than expanded.</p></details><details><summary><span>Why does my page pass Lighthouse but fail Core Web Vitals in Search Console?</span><i></i></summary><p>Because Lighthouse and Search Console measure two completely different things, and Google grades you on the one you did not run. Lighthouse runs a simulated test on one machine, on your network, under your conditions CrUX (Chrome User Experience Report) records what actual visitors experienced on real devices and real networks A page can score 98 in Lighthouse and still fail CrUX, because your users are on mid-range Android phones and you tested on a MacBook. The field data is the grade. The lab run is a rehearsal. There is a timing trap layered on top. CrUX field data runs on a 28-day rolling window, so a fix deployed on Monday cannot show up in Search Console by Friday. This is the single most common reason teams declare a Core Web Vitals project failed and abandon it two weeks before the data would have moved. Practitioners hit this constantly, as one r/SEO thread puts it: &quot;We've been working on our core web vitals and our Lab Data is flawless but our Field Data does not pass.&quot; MaximusLabs AI measures technical work against field data on that same 28-day cadence, which means results arrive slower than any dashboard would like. Our GEO measurement and metrics approach treats that lag as a feature, not a flaw.</p></details><details><summary><span>Do AI crawlers care about Core Web Vitals scores?</span><i></i></summary><p>No. AI crawlers ignore your Lighthouse score entirely and gate on two things you probably are not measuring. Server-rendered HTML. No AI crawler except Google's and Bing's executes JavaScript. If content is not in the raw HTML response, it does not enter the retrieval candidate pool. Turn JavaScript off in your browser and load your five highest-value pages: anything that vanishes is invisible to ChatGPT, Claude, and Perplexity. Time to First Byte. Keep TTFB, the delay before your server sends its first byte, under 200 milliseconds. Faster responses earn more frequent re-crawls, which means fresh content enters the index sooner. That is a refresh-rate argument, not a ranking argument. Crawl waste compounds the problem: Googlebot wastes 8.22% of fetches on 404s ChatGPT wastes roughly 34.8% Claude wastes roughly 34.2% AI crawlers burn roughly four times more of their budget on dead URLs than Googlebot does, so URL hygiene outranks CLS tuning on the priority list. MaximusLabs AI audits JavaScript minimisation first on every technical engagement, alongside unblocking GPTBot and OAI-SearchBot in robots.txt, and our free AI crawlability checker surfaces the gap in minutes.</p></details><details><summary><span>Can an AI agent fix Core Web Vitals end to end, or only suggest fixes?</span><i></i></summary><p>Yes, with guardrails. Using Chrome MCP (Model Context Protocol, the standard that lets an AI agent control a browser), an agent can run the performance test, read the report, locate responsible files by glob and grep, implement fixes, and re-verify. The eight-step runbook looks like this: Run the performance test against a staging URL , never production Read the trace report and CrUX field data together Locate responsible files using glob and grep across the repo Fix LCP first , since it usually shares a root cause with everything else Fix CLS second , because layout reservations are low-risk and mechanical Fix INP last , because it touches JavaScript architecture Require a comment on every change explaining what it addresses Re-run the test, then hand the diff to a human before anything merges Every published workflow still ends at human diff review. The agent removes the diagnosis-to-pull-request lag that kills most Core Web Vitals projects, not the accountability. One caution matters more than the tooling. Automate a B-minus workflow and you get a C-plus at eighty percent off, so the underlying fix order has to be good before you scale it. MaximusLabs AI runs hybrid workflows where machines handle aggregation and first drafts while humans own the final call, a split documented in our technical GEO implementation work.</p></details><details><summary><span>Which Core Web Vitals fixes are safe to automate with AI?</span><i></i></summary><p>The mechanical fixes automate reliably. The architectural ones do not, and knowing the difference saves you a rollback. Safe to automate: Preloading the LCP image with fetchpriority=&quot;high&quot; Converting images to WebP or AVIF Inlining critical CSS Explicit width and height attributes plus CSS aspect-ratio Reserved space for ad slots and cookie banners Font-display swap with a metric-matched fallback font Deferring non-critical JavaScript Escalate to a human: Server response time and CDN configuration, because those are budget calls Main-thread task splitting with scheduler.yield(), which needs state knowledge Hydration strategy and DOM size reduction Third-party script removal, which is a marketing and legal conversation CLS is the most automatable metric, since every fix is deterministic. INP is the least, because most failures trace back to tag managers, chat widgets, and consent banners that nobody in marketing owns. One fix pays twice. Attribute data buried in JavaScript dropdowns causes layout shift and is invisible to AI crawlers, so moving it into plain text blocks fixes CLS and makes the data retrievable in the same commit. MaximusLabs AI treats trapped attribute data as a retrieval bug, which is where our content formatting for AI search and SEO work starts.</p></details><details><summary><span>How should we split budget between Core Web Vitals work and content?</span><i></i></summary><p>Buy the entry ticket once, then stop. Our allocation model for a quarter looks like this: Roughly 15%: Core Web Vitals on revenue-carrying templates, one focused sprint Roughly 10%: server rendering and URL hygiene Roughly 55%: original research and bottom-of-funnel content, the compounding line Roughly 20%: third-party citations and entity graph building The sorting rule matters more than the percentages. Export your Search Console Core Web Vitals URLs, group them by template, then rank that list by pipeline contribution rather than session volume. Glossary pages and definition posts almost never survive that sort, because the intent behind a definition query is not buying. Traffic concentration makes the list shorter than you expect. Roughly nineteen out of twenty landing pages drive about 85% of all traffic, so the template list you actually need to fix is far shorter than your URL count suggests. Technical work wins budgets because it is measurable, bounded, and produces a satisfying red-to-green chart. That comfort is not evidence. MaximusLabs AI starts bottom-of-funnel first, giving pages closest to a purchase decision the speed fix and the original research in that order, and the numbers behind that split sit on our pricing page.</p></details></section>
+    <div class="author-box"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="72" height="72"><div><small>Written by</small><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span></div></div>
+  </article>
+  <aside class="author-rail"><div class="ar-in"><small>Written by</small><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="56" height="56"><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span><hr><small>Share</small><div class="ar-share"><button type="button" class="ic-btn sm" data-copy aria-label="Copy link"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button></div></div></aside>
+</div></section>
+
+<section class="vsec bt"><div class="vrail">
+  <div class="sec-head reveal"><div class="sec-l"><div class="eyebrow">Keep reading</div><h2 class="h2 sm">Discover more in Technical Performance</h2></div><div class="sec-r"><a class="btn-ghost" href="../../../technical/performance/">All Technical Performance guides <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+  <div class="grid g-3"><a class="card a-card reveal " href="../../../technical/content-formatting/content-formatting-ai-search-seo/" data-date="2026-07-28T17:37:31.187Z" data-order="1">
+  <div class="cover " style="--gx:110%;--gy:61%" data-light><img class="shot" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/3e2bf7e9-e2ad-4fbf-9115-0dd09db5b3f4.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Technical</span><i class="dot"></i><span>Content Formatting</span></div><h3>Content Formatting Hub: How to Format Content for AI Search and SEO</h3><p>Master the content formatting patterns that earn citations in AI answers and rankings in search.</p></div>
+  <div class="byline"><span class="who"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 28</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a><a class="card a-card reveal " href="../../../technical/ai-crawlers/bingbot-ai-search-crawl-optimization/" data-date="2026-07-04T11:39:33.017Z" data-order="1">
+  <div class="cover " style="--gx:110%;--gy:27%" data-light><img class="shot" src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/9d235c2d-6943-4075-9ef6-5293eb7dbb59.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Technical</span><i class="dot"></i><span>AI Crawler Optimization</span></div><h3>Bingbot for AI Search: How to Optimize Crawl Access for Microsoft's AI Crawler</h3><p>Learn how to configure crawl access so Bingbot indexes your site for Microsoft Copilot and AI search visibility</p></div>
+  <div class="byline"><span class="who"><img src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/420f5e47-8a4e-4cc8-8f0b-c1f92781ed76.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 4</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a><a class="card a-card reveal " href="../../../technical/ai-crawlers/ccbot-common-crawl-ai-training/" data-date="2026-07-08T08:20:02.844Z" data-order="1">
+  <div class="cover " style="--gx:110%;--gy:58%" data-light><img class="shot" src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/110c086d-66b2-4148-8695-b62fef4fc6b5.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Technical</span><i class="dot"></i><span>AI Crawler Optimization</span></div><h3>CCBot and Common Crawl: How AI Training Crawlers Access Your Website</h3><p>Learn how CCBot and Common Crawl feed AI training datasets, and how to control crawler access to your site.</p></div>
+  <div class="byline"><span class="who"><img src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/420f5e47-8a4e-4cc8-8f0b-c1f92781ed76.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 8</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a></div>
+  
+</div></section>
+<section class="cta-wrap reveal"><div class="cta-card glass-bg"><h2 class="px">Ready to turn AI search into a revenue engine?</h2><p>See how MaximusLabs gets your brand cited and chosen across ChatGPT, Perplexity, Gemini, and Google AI. Book a call for a tailored plan.</p><a class="btn-white" href="https://www.maximuslabs.ai/contact-us">Book a call <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+</main>
+<section class="sec is-fluid" id="footer" aria-label="Site footer"><footer class="rail"><div class="top"><div class="brand"><a class="logo" href="https://www.maximuslabs.ai/" aria-label="MaximusLabs home"></a><p class="ft-tag">Full-service GEO led by brand strategists. Inbound only.</p><p class="ft-ai">AI agents: read our <a href="https://www.maximuslabs.ai/llms.txt">llms.txt</a></p><div class="ft-actions"><a class="ft-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="ft-social" href="https://www.linkedin.com/company/maximus-labs-ai/" target="_blank" rel="noopener">LinkedIn</a></div></div><nav class="cols" aria-label="Footer"><div class="ft-col"><h3 class="lbl" id="ft-services">Services</h3><ul aria-labelledby="ft-services"><li><a href="https://www.maximuslabs.ai/services/ai-perception-audit">AI perception audit</a></li><li><a href="https://www.maximuslabs.ai/services/positioning-messaging">Positioning &amp; messaging</a></li><li><a href="https://www.maximuslabs.ai/services/geo">GEO</a></li><li><a href="https://www.maximuslabs.ai/services/aeo">AEO</a></li><li><a href="https://www.maximuslabs.ai/services/b2b-seo">B2B SEO</a></li><li><a href="https://www.maximuslabs.ai/services/agentic-commerce">Agentic commerce</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-ai-platforms">AI platforms</h3><ul aria-labelledby="ft-ai-platforms"><li><a href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-industries">Industries</h3><ul aria-labelledby="ft-industries"><li><a href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a></li><li><a href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a></li><li><a href="https://www.maximuslabs.ai/services/industries/ecommerce">E-commerce</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-max-visibility">Max Visibility</h3><ul aria-labelledby="ft-max-visibility"><li><a href="https://www.maximuslabs.ai/max-visibility">Overview</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#share-of-voice">Share of voice</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#sources">Citations &amp; sources</a></li><li><a href="https://www.maximuslabs.ai/products/max-console">Max Console</a></li><li><a href="https://www.maximuslabs.ai/pricing">Pricing</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-resources">Resources</h3><ul aria-labelledby="ft-resources"><li><a href="https://www.maximuslabs.ai/blog">Blog</a></li><li><a href="../../../">AI Search 101</a></li><li><a href="https://www.maximuslabs.ai/resources/reports">Research reports</a></li><li><a href="https://www.maximuslabs.ai/resources/free-tools">Free tools</a></li><li><a href="https://www.maximuslabs.ai/resources/guides">Platform guides</a></li><li><a href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-company">Company</h3><ul aria-labelledby="ft-company"><li><a href="https://www.maximuslabs.ai/company/about-us">About</a></li><li><a href="https://www.maximuslabs.ai/company/case-studies">Case studies</a></li><li><a href="https://www.maximuslabs.ai/company/careers">Careers</a></li><li><a href="https://www.maximuslabs.ai/contact-us">Contact</a></li></ul></div></nav></div><div class="ft-proof"><span class="lbl">Results with</span><a href="https://www.maximuslabs.ai/company/case-studies">Explorium</a></div><div class="legal"><p class="ft-copy">© 2026 MaximusLabs AI</p><p class="terms"><a href="https://www.maximuslabs.ai/privacy-policy">Privacy</a><span aria-hidden="true"> · </span><a href="https://www.maximuslabs.ai/others/terms-of-service">Terms</a><span aria-hidden="true"> · </span><a href="https://www.maximuslabs.ai/others/refund-policy">Refund policy</a></p></div></footer></section>
+</div>
+<script src="../../../assets/js/live-baselayout.js" defer></script>
+<script src="../../../assets/js/maximus-fx.js" defer></script>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

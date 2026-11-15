@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Crawlers Complete Guide: Every Major AI Bot and How to Manage Access | AI Search 101</title>
+<meta name="description" content="Discover which AI bots crawl your site and how to manage their access using robots.txt, headers, and blocking rules.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../../assets/live/logo-full.svg">
+<link rel="stylesheet" href="../../../assets/css/live-nav-plan.css">
+<link rel="stylesheet" href="../../../assets/css/live-baselayout.css">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+</head>
+<body class="v2 k-article" data-root="../../../" data-fx="signal">
+<div class="page">
+<header class="nav is-fluid" id="nav"><div class="nav-left"><a href="https://www.maximuslabs.ai/" class="nav-logo" aria-label="MaximusLabs home"></a></div><nav class="nav-center" aria-label="Primary"><button type="button" class="nav-item" data-menu="services" aria-expanded="false" aria-controls="menu-services">Services <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-services"><div class="mega-grid"><div class="col"><div class="col-label">Optimization</div><a class="mi" href="https://www.maximuslabs.ai/services/geo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#7FB5FF" stroke-width="1.3"/><circle cx="8" cy="8" r="2.2" fill="#7FB5FF"/></svg></span><span><span class="mi-t">Generative Engine Optimization</span><span class="mi-d">Get named and recommended across ChatGPT, Gemini, Perplexity and Google.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/aeo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Answer Engine Optimization</span><span class="mi-d">Own the answer box and AI Overviews, in your own words.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/b2b-seo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">B2B SEO</span><span class="mi-d">Buying-stage pages, written for Google and AI answers, traced to pipeline.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/technical-seo-website-audit"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Technical SEO foundation</span><span class="mi-d">Rendering, Markdown for agents, schema, bot access and agent protocols.</span></span></a><a class="mi muted" href="https://www.maximuslabs.ai/services/agentic-commerce"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 2.5h2l1.6 7.5h7l1.4-5.2H4.6" fill="none" stroke="#6E6E6E" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6.2" cy="12.8" r="1" fill="#6E6E6E"/><circle cx="11.4" cy="12.8" r="1" fill="#6E6E6E"/></svg></span><span><span class="mi-t">Agentic commerce</span><span class="mi-d">Make your product readable by the AI agents that shop for buyers.</span></span></a></div><div class="col w" style="--w:200px"><div class="col-label">By AI platform</div><div class="links"><a href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a><a href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a><a href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a><a href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a><a href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></div><div class="col-label">By industry</div><div class="links"><a href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a><a href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a><a href="https://www.maximuslabs.ai/services/industries/ecommerce">Ecommerce</a></div></div><div class="col"><div class="col-label">Brand strategy</div><a class="mi" href="https://www.maximuslabs.ai/services/ai-perception-audit"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><circle cx="8" cy="8" r="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">AI perception audit</span><span class="mi-d">How AI describes you today, who it compares you to, which sources it trusts.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/positioning-messaging"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M10.6 5.4L9.1 9.1 5.4 10.6 6.9 6.9z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Positioning &amp; messaging</span><span class="mi-d">ICP, buyer journey and positioning, written so AI repeats your story.</span></span></a></div></div><div class="mega-foot"><a href="https://www.maximuslabs.ai/#services">All services <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span>Full-service GEO led by brand strategists. Inbound only: we never run paid media.</span></div></div><button type="button" class="nav-item" data-menu="products" aria-expanded="false" aria-controls="menu-products">Products <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-products"><div class="mega-grid"><div class="col"><div class="col-label">AI visibility</div><a class="mi" href="https://www.maximuslabs.ai/max-visibility"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><span class="mi-t">Max Visibility <span class="tag">AI visibility</span></span><span class="mi-d">See what ChatGPT, Claude, Gemini, Perplexity and every major AI model say about your brand, and what to fix next.</span></span></a><div class="col-label" style="padding-top:18px">Client workspace</div><a class="mi" href="https://www.maximuslabs.ai/products/max-console"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2 6h12M6.5 6v7.5" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">Max Console</span><span class="mi-d">Your engagement in one place: meeting notes, decisions, tasks and results.</span></span></a></div><div class="col w" style="--w:260px"><div class="col-label">Max Visibility</div><div class="links"><a href="https://www.maximuslabs.ai/max-visibility#ai-visibility">AI visibility &amp; share of voice</a><a href="https://www.maximuslabs.ai/max-visibility#models">Every AI model</a><a href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a><a href="https://www.maximuslabs.ai/max-visibility#competitors">Competitors &amp; sources</a><a href="https://www.maximuslabs.ai/max-visibility#brand-perception">Brand perception</a><a href="https://www.maximuslabs.ai/max-visibility#actions">Actions</a><a href="https://www.maximuslabs.ai/max-visibility#agent-analytics">Agent analytics</a><a href="https://www.maximuslabs.ai/pricing#max-visibility">Pricing</a></div><div class="col-label">For clients</div><div class="links"><a href="https://www.maximuslabs.ai/#how-we-work">How the engagement works</a></div></div><div class="feature"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></i>Our instrument</div><h4>Max Visibility</h4><p>Change your positioning, then watch how AI&#39;s story about you moves across every major model. Experiments, not dashboards.</p></div><a class="f-cta" href="https://www.maximuslabs.ai/max-visibility">See Max Visibility <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><button type="button" class="nav-item" data-menu="resources" aria-expanded="false" aria-controls="menu-resources">Resources <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-resources"><div class="mega-grid"><div class="col"><div class="col-label">Learn</div><a class="mi" href="../../../"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5c2-.8 3.8-.8 5.5.4 1.7-1.2 3.5-1.2 5.5-.4v9c-2-.8-3.8-.8-5.5.4-1.7-1.2-3.5-1.2-5.5-.4z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 3.9v9" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">AI Search 101</span><span class="mi-d">How AI search works, from first principles.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/blog"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">Blog</span><span class="mi-d">What we test and learn, published openly.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/resources/reports"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#A9B5C9" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><span class="mi-t">Research reports</span><span class="mi-d">Benchmarks on how B2B brands show up in AI answers.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/company/case-studies"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Case studies</span><span class="mi-d">How B2B SaaS and AI brands earned their place in AI answers.</span></span></a></div><div class="col w" style="--w:230px"><div class="col-label">Platform guides</div><div class="links"><a href="https://www.maximuslabs.ai/chatgpt-seo-guide">ChatGPT SEO guide</a><a href="https://www.maximuslabs.ai/perplexity-seo-guide">Perplexity SEO guide</a><a href="https://www.maximuslabs.ai/google-gemini-ai-mode-guide">Gemini &amp; AI Mode guide</a><a href="https://www.maximuslabs.ai/technical-seo-guide">Technical SEO guide</a><a href="https://www.maximuslabs.ai/resources/guides">All guides</a></div><div class="col-label">GEO &amp; AEO library</div><div class="links"><a href="https://www.maximuslabs.ai/blog/what-is-generative-engine-optimization-geo">What is GEO?</a><a href="../../../aeo/fundamentals/what-is-aeo/">What is AEO?</a><a href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison">GEO vs SEO</a><a href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></div></div><div class="col w" style="--w:230px"><div class="col-label">Free tools</div><div class="links"><a href="https://www.maximuslabs.ai/resources/free-tools/ai-crawlability-checker">AI Crawlability Checker</a><a href="https://www.maximuslabs.ai/resources/free-tools/reddit-threads-finder">Reddit Threads Finder</a><a href="https://www.maximuslabs.ai/resources/free-tools/ai-content-optimizer">AI Content Optimizer</a><a href="https://www.maximuslabs.ai/resources/free-tools/llms-txt-generator">LLMs.txt Generator</a><a href="https://www.maximuslabs.ai/resources/free-tools/ai-content-humanizer">AI Content Humanizer</a><a href="https://www.maximuslabs.ai/resources/ai-tool-directory">AI Tool Directory</a><a href="https://www.maximuslabs.ai/resources/free-tools">All free tools</a></div></div><div class="feature" style="min-height:300px"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></i>Industry report</div><h4>How 200+ B2B SaaS and AI companies show up in AI search</h4></div><a class="f-cta" href="https://www.maximuslabs.ai/resources/research-reports/ai-search-in-b2b-saas-2026/interactive-html">Read the report <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><button type="button" class="nav-item" data-menu="company" aria-expanded="false" aria-controls="menu-company">Company <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-company"><div class="mega-grid"><div class="col"><div class="col-label">Company</div><a class="mi" href="https://www.maximuslabs.ai/company/about-us"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.5" r="2.6" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M3 13.5c.8-2.6 2.8-3.8 5-3.8s4.2 1.2 5 3.8" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">About us</span><span class="mi-d">Brand strategists for the AI search era.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/company/case-studies"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Case studies</span><span class="mi-d">The work, the numbers and how we got there.</span></span></a></div><div class="col"><div class="col-label"> </div><a class="mi" href="https://www.maximuslabs.ai/company/careers"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="5" width="12" height="8.5" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5.8 5V3.6c0-.6.5-1.1 1.1-1.1h2.2c.6 0 1.1.5 1.1 1.1V5" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">Careers</span><span class="mi-d">Join a team that experiments every day.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/contact-us"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2.6 4.5L8 8.6l5.4-4.1" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Contact</span><span class="mi-d">Talk to a strategist about your AI search story.</span></span></a></div><div class="col w" style="--w:220px"><div class="col-label">For AI agents</div><div class="links"><a href="https://www.maximuslabs.ai/llms.txt">Information for AI (llms.txt)</a></div></div><div class="feature" style="min-height:280px"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 9.5c0-2.5 1.2-4.2 3.2-5M9.3 9.5c0-2.5 1.2-4.2 3.2-5" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></i>From the founder</div><p class="quote">AI search is a positioning problem before it&#39;s a technical one.</p><p>Krishna Kaanth M, Founder</p></div><a class="f-cta" href="https://www.maximuslabs.ai/company/about-us">Read our story <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><a class="nav-item" href="https://www.maximuslabs.ai/pricing">Pricing</a></nav><div class="nav-right"><button type="button" class="icon-btn nav-search" data-cmdk-open aria-label="Search" aria-haspopup="dialog" aria-controls="cmdk"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="#fff" stroke-width="1.8"></circle><path d="M20 20l-4.4-4.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"></path></svg></button><a class="pill-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button type="button" class="icon-btn nav-burger" data-drawer-open aria-label="Open menu" aria-haspopup="dialog" aria-expanded="false" aria-controls="site-drawer" popovertarget="site-drawer"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2.5 5.5h13M2.5 9h13M2.5 12.5h13" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg></button></div></header>
+<dialog class="drawer" id="site-drawer" aria-label="Menu" popover><div class="drawer-panel"><div class="drawer-head"><a href="https://www.maximuslabs.ai/" class="nav-logo" aria-label="MaximusLabs home"></a><button type="button" class="icon-btn drawer-close" data-drawer-close aria-label="Close menu" popovertarget="site-drawer" popovertargetaction="hide" autofocus><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg></button></div><nav class="drawer-body" aria-label="Primary (mobile)"><details class="acc" name="drawer-menu"><summary class="acc-sum">Services<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Optimization</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/services/geo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#7FB5FF" stroke-width="1.3"/><circle cx="8" cy="8" r="2.2" fill="#7FB5FF"/></svg></span><span class="acc-t">Generative Engine Optimization</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/aeo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Answer Engine Optimization</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/b2b-seo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">B2B SEO</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/technical-seo-website-audit"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Technical SEO foundation</span></a></li><li><a class="acc-link muted" href="https://www.maximuslabs.ai/services/agentic-commerce"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 2.5h2l1.6 7.5h7l1.4-5.2H4.6" fill="none" stroke="#6E6E6E" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6.2" cy="12.8" r="1" fill="#6E6E6E"/><circle cx="11.4" cy="12.8" r="1" fill="#6E6E6E"/></svg></span><span class="acc-t">Agentic commerce</span></a></li></ul></div><div class="acc-group"><div class="acc-label">By AI platform</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></li></ul></div><div class="acc-group"><div class="acc-label">By industry</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/ecommerce">Ecommerce</a></li></ul></div><div class="acc-group"><div class="acc-label">Brand strategy</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/services/ai-perception-audit"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><circle cx="8" cy="8" r="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">AI perception audit</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/positioning-messaging"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M10.6 5.4L9.1 9.1 5.4 10.6 6.9 6.9z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Positioning &amp; messaging</span></a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/#services">All services <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Products<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">AI visibility</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/max-visibility"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="acc-t">Max Visibility</span><span class="tag">AI visibility</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Client workspace</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/products/max-console"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2 6h12M6.5 6v7.5" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">Max Console</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Max Visibility</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#ai-visibility">AI visibility &amp; share of voice</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#models">Every AI model</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#competitors">Competitors &amp; sources</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#brand-perception">Brand perception</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#actions">Actions</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#agent-analytics">Agent analytics</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/pricing#max-visibility">Pricing</a></li></ul></div><div class="acc-group"><div class="acc-label">For clients</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/#how-we-work">How the engagement works</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/max-visibility">See Max Visibility <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Resources<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Learn</div><ul><li><a class="acc-link" href="../../../"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5c2-.8 3.8-.8 5.5.4 1.7-1.2 3.5-1.2 5.5-.4v9c-2-.8-3.8-.8-5.5.4-1.7-1.2-3.5-1.2-5.5-.4z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 3.9v9" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">AI Search 101</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/blog"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">Blog</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/resources/reports"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#A9B5C9" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="acc-t">Research reports</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/company/case-studies"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Case studies</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Platform guides</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/chatgpt-seo-guide">ChatGPT SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/perplexity-seo-guide">Perplexity SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/google-gemini-ai-mode-guide">Gemini &amp; AI Mode guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/technical-seo-guide">Technical SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/guides">All guides</a></li></ul></div><div class="acc-group"><div class="acc-label">GEO &amp; AEO library</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/blog/what-is-generative-engine-optimization-geo">What is GEO?</a></li><li><a class="acc-link is-plain" href="../../../aeo/fundamentals/what-is-aeo/">What is AEO?</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison">GEO vs SEO</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></li></ul></div><div class="acc-group"><div class="acc-label">Free tools</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-crawlability-checker">AI Crawlability Checker</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/reddit-threads-finder">Reddit Threads Finder</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-content-optimizer">AI Content Optimizer</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/llms-txt-generator">LLMs.txt Generator</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-content-humanizer">AI Content Humanizer</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/ai-tool-directory">AI Tool Directory</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools">All free tools</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/resources/research-reports/ai-search-in-b2b-saas-2026/interactive-html">Read the report <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Company<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Company</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/company/about-us"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.5" r="2.6" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M3 13.5c.8-2.6 2.8-3.8 5-3.8s4.2 1.2 5 3.8" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">About us</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/company/case-studies"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Case studies</span></a></li></ul></div><div class="acc-group"><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/company/careers"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="5" width="12" height="8.5" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5.8 5V3.6c0-.6.5-1.1 1.1-1.1h2.2c.6 0 1.1.5 1.1 1.1V5" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">Careers</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/contact-us"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2.6 4.5L8 8.6l5.4-4.1" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Contact</span></a></li></ul></div><div class="acc-group"><div class="acc-label">For AI agents</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/llms.txt">Information for AI (llms.txt)</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/company/about-us">Read our story <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><a class="acc-row" href="https://www.maximuslabs.ai/pricing">Pricing</a></nav><div class="drawer-foot"><a class="pill-cta drawer-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></dialog>
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Search" hidden><div class="cmdk-box"><div class="cmdk-in"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="#ABABAB" stroke-width="1.8"></circle><path d="M20 20l-4.4-4.4" stroke="#ABABAB" stroke-width="1.8" stroke-linecap="round"></path></svg><input id="cmdkInput" type="search" enterkeyhint="go" aria-label="Search the site" placeholder="Search services, sections, resources…" autocomplete="off"><button type="button" class="cmdk-esc" data-cmdk-close aria-label="Close search">ESC</button></div><div class="cmdk-list" id="cmdkList"></div></div></div>
+<div class="toast" id="toast">This page is coming soon.</div>
+<div class="proto-flag" role="note">Design prototype · v2 · real content from AI Search 101</div>
+<main id="main">
+
+<div class="read-progress" aria-hidden="true"><i></i></div>
+<section class="inner-hero-wrap"><div class="inner-hero art" data-fx-host>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../">AI Search 101</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><a href="../../../technical/">Technical</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><a href="../../../technical/ai-crawlers/">AI Crawler Optimization</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><span aria-current="page">AI Crawlers Complete Guide: Every Major AI B…</span></nav>
+  <div class="art-title">
+    <div class="at-l">
+      <div class="chips"><span class="chip-b">AI Crawler Optimization</span><span class="chip-o">Technical</span></div>
+      <h1 class="art-h1">AI Crawlers Complete Guide: Every Major AI Bot and How to Manage Access</h1>
+      <p class="ih-sub">Discover which AI bots crawl your site and how to manage their access using robots.txt, headers, and blocking rules.</p>
+    </div>
+    <div class="share"><button type="button" class="ic-btn" data-copy aria-label="Copy link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button><a class="ic-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.maximuslabs.ai%2Fai-search-101%2Ftechnical%2Fai-crawlers%2Fai-crawlers-complete-guide-all-bots" aria-label="Share on LinkedIn"><img src="../../../assets/live/platforms/linkedin.svg" alt="" width="15" height="15"></a></div>
+  </div>
+  <div class="art-meta">
+    <span class="who"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="44" height="44"><span><b>Krishna Kaanth M</b><small>CEO, MaximusLabs</small></span></span>
+    <span class="vr"></span>
+    <span class="mi"><small>Published</small><b>18 July 2026</b></span>
+    <span class="mi"><small>Reading time</small><b>13 minutes</b></span>
+    <span class="mi"><small>Last updated</small><b>18 July 2026</b></span>
+  </div>
+  
+</div></section>
+
+<div class="m-toc" data-mtoc><button type="button" class="m-toc-bar" aria-expanded="false"><span class="m-n">01/11</span><span class="m-t">AI Crawlers &amp;amp; Revenue</span><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 4.5 6 7.5 9 4.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><i class="m-prog"></i></button><ol class="m-list"><li><a href="#q1-why-is-managing-ai-crawlers-now-a-revenue-decision-not-just-an-it-chore"><span>01</span>AI Crawlers &amp;amp; Revenue</a></li><li><a href="#q2-what-are-the-three-types-of-ai-crawlers-and-how-does-each-affect-visibility"><span>02</span>Three Crawler Types</a></li><li><a href="#q3-which-are-every-major-ai-bot-in-2026-and-what-is-each-ones-exact-user-agent"><span>03</span>Complete AI Bot List</a></li><li><a href="#q4-should-you-block-ai-crawlers-and-does-blocking-google-extended-hurt-your-seo"><span>04</span>Block vs Allow Decision</a></li><li><a href="#q5-how-do-you-write-a-robotstxt-that-blocks-training-bots-but-keeps-ai-search-visibility"><span>05</span>robots.txt Configuration</a></li><li><a href="#q6-why-is-your-content-invisible-to-ai-crawlers-even-when-you-allow-them"><span>06</span>Crawlability &amp;amp; Rendering Gates</a></li><li><a href="#q7-how-do-allowed-crawlers-actually-turn-into-ai-citations-rag-schema-llmstxt"><span>07</span>From Crawl to Citation</a></li><li><a href="#q8-how-do-you-enforce-blocks-beyond-robotstxt-and-verify-a-crawler-is-real"><span>08</span>Server Enforcement &amp;amp; Verification</a></li><li><a href="#q9-how-do-you-get-ai-crawlers-to-find-and-refresh-your-pages-faster"><span>09</span>Faster Discovery &amp;amp; Refresh</a></li><li><a href="#q10-how-do-you-detect-which-ai-bots-are-crawling-you-and-keep-your-setup-current"><span>10</span>Detection &amp;amp; Maintenance</a></li><li><a href="#q11-from-blocking-bots-to-becoming-the-answer-what-should-you-do-on-monday-morning"><span>11</span>Your Monday Action Plan</a></li></ol></div>
+
+<section class="art-body"><div class="art-rail">
+  <aside class="toc" aria-label="On this page"><div class="toc-in">
+    <div class="toc-h"><span>On this page</span><span class="toc-count">1 / 11</span></div>
+    <div class="toc-prog"><i></i></div>
+    <ol><li><a href="#q1-why-is-managing-ai-crawlers-now-a-revenue-decision-not-just-an-it-chore"><span class="n">01</span><span>AI Crawlers &amp;amp; Revenue</span></a></li><li><a href="#q2-what-are-the-three-types-of-ai-crawlers-and-how-does-each-affect-visibility"><span class="n">02</span><span>Three Crawler Types</span></a></li><li><a href="#q3-which-are-every-major-ai-bot-in-2026-and-what-is-each-ones-exact-user-agent"><span class="n">03</span><span>Complete AI Bot List</span></a></li><li><a href="#q4-should-you-block-ai-crawlers-and-does-blocking-google-extended-hurt-your-seo"><span class="n">04</span><span>Block vs Allow Decision</span></a></li><li><a href="#q5-how-do-you-write-a-robotstxt-that-blocks-training-bots-but-keeps-ai-search-visibility"><span class="n">05</span><span>robots.txt Configuration</span></a></li><li><a href="#q6-why-is-your-content-invisible-to-ai-crawlers-even-when-you-allow-them"><span class="n">06</span><span>Crawlability &amp;amp; Rendering Gates</span></a></li><li><a href="#q7-how-do-allowed-crawlers-actually-turn-into-ai-citations-rag-schema-llmstxt"><span class="n">07</span><span>From Crawl to Citation</span></a></li><li><a href="#q8-how-do-you-enforce-blocks-beyond-robotstxt-and-verify-a-crawler-is-real"><span class="n">08</span><span>Server Enforcement &amp;amp; Verification</span></a></li><li><a href="#q9-how-do-you-get-ai-crawlers-to-find-and-refresh-your-pages-faster"><span class="n">09</span><span>Faster Discovery &amp;amp; Refresh</span></a></li><li><a href="#q10-how-do-you-detect-which-ai-bots-are-crawling-you-and-keep-your-setup-current"><span class="n">10</span><span>Detection &amp;amp; Maintenance</span></a></li><li><a href="#q11-from-blocking-bots-to-becoming-the-answer-what-should-you-do-on-monday-morning"><span class="n">11</span><span>Your Monday Action Plan</span></a></li></ol>
+    <a class="toc-faq" href="#faq">8 questions answered</a>
+    <div class="toc-cta glass-bg"><b>Want ChatGPT to name you, not just list you?</b><a class="btn-white sm" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div></aside>
+  <article class="prose">
+    
+    <div class="tldr reveal"><div class="px">TL;DR</div><ul><li>AI crawlers split into three types: training bots, search-index bots, and live-fetch agents; blocking the wrong one silently removes you from AI citations.</li><li>Managing crawlers is a revenue decision, not an IT chore; one careless robots.txt line can delete you from ChatGPT and Perplexity answers.</li><li>Block training crawlers like GPTBot and CCBot while explicitly allowing OAI-SearchBot and PerplexityBot; blocking Google-Extended does not hurt Search rankings.</li><li>Allowing a bot is not the same as being readable; most AI crawlers do not run JavaScript, so server-side rendering and clean HTML are essential.</li><li>Citations happen through RAG retrieval, so schema, self-contained answer blocks, and IndexNow-driven fast refresh turn crawls into named citations.</li><li>Access is table stakes; the real goal is becoming the answer AI engines cite through revenue-focused, citation-worthy content.</li></ul></div>
+    <html><head></head><body><h2 id="q1-why-is-managing-ai-crawlers-now-a-revenue-decision-not-just-an-it-chore" data-n=""><a class="anchor" href="#q1-why-is-managing-ai-crawlers-now-a-revenue-decision-not-just-an-it-chore" aria-label="Link to section"></a>Q1. Why is managing AI crawlers now a revenue decision, not just an IT chore?</h2>
+
+<p>A VP of Marketing pings her engineer: "Just block the AI bots, they're scraping us." He adds one line to robots.txt, closes the ticket, and moves on. Six weeks later, the brand has vanished from ChatGPT answers, and nobody connects the two events. That one line was not an IT fix. It was a pipeline decision made by accident.</p>
+
+<p>Managing AI crawlers is now a revenue decision because every major platform runs separate, independently-toggleable bots for model training and live search retrieval. Blocking the training bot does not remove you from AI search. Blocking the search bot silently deletes you from ChatGPT and Perplexity citations. Your robots.txt file quietly decides whether your next buyer ever finds you inside an AI answer, making it a pipeline lever, not an IT ticket.</p>
+
+<h3>🧩 The mistake almost everyone makes</h3>
+
+<p>Most teams treat "block AI bots" as one switch. It is not. OpenAI alone runs distinct crawlers with distinct jobs.</p>
+
+<p>GPTBot/1.3 collects content to train future models. OAI-SearchBot/1.3 builds the index that <a href="https://maximuslabs.ai/services/platforms/chatgpt/">ChatGPT search</a> pulls live answers from. Those are two different strings, doing two different things, with two very different revenue consequences.</p>
+
+<p>Block GPTBot and you opt out of training. Fine. Block OAI-SearchBot and you disappear from the place buyers now ask questions. Not fine.</p>
+
+<h3>💸 The imbalance that makes this urgent</h3>
+
+<p>Here is the tension founders feel. Training crawlers take a lot and give back almost nothing. Anthropic's crawler was measured fetching roughly 38,000 pages for every single referred visitor.</p>
+
+<p>That ratio is why a blanket block feels reasonable. You are being crawled hard and getting little traffic in return. But the fix is not "block everything." The fix is knowing which bot does what.</p>
+
+<p>Block the wrong one, and you are not ranked low. You are absent. That is the difference between old SEO thinking (rank the blue link) and <a href="https://maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison/">GEO thinking</a> (become the answer buyers see).</p>
+
+<h3>⚠️ From access control to pipeline</h3>
+
+<p>Think of robots.txt as a guest list, not a locked door. You decide who gets in to read, and reading is how AI engines learn to cite you to a buyer in evaluation.</p>
+
+<p>When we audit a client's robots.txt at MaximusLabs, the most common finding is not over-exposure. It is accidental invisibility. They blocked the wrong bot and quietly removed themselves from the answer layer where deals now start. Fixing one line has, in our <a href="https://maximuslabs.ai/technical-seo-website-audit/">technical SEO audit</a>, restored citation eligibility without publishing a single new page.</p>
+
+<p>I might be overstating how often this single mistake happens, but from what surfaces when you actually run these audits, it is the first thing we look for, and it is broken more often than not.</p>
+
+<h2 id="q2-what-are-the-three-types-of-ai-crawlers-and-how-does-each-affect-visibility" data-n=""><a class="anchor" href="#q2-what-are-the-three-types-of-ai-crawlers-and-how-does-each-affect-visibility" aria-label="Link to section"></a>Q2. What are the three types of AI crawlers, and how does each affect visibility?</h2>
+
+<p>An engineer once asked me, "There are like twenty of these bots. Do I really need to learn all of them?" No. You need to learn three buckets. Once the buckets are clear, every robots.txt line downstream writes itself.</p><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/03e88715-5c0a-4c50-8e65-457549e83b76.png" alt="Radial diagram of three AI crawler types: training, search-index, and live-fetch, with blocking consequences." loading="lazy"></div><figcaption>The three AI crawler types and what blocking each one costs you in AI search visibility.</figcaption></figure></div>
+
+<p>AI crawlers fall into three types. Training crawlers (GPTBot, ClaudeBot, CCBot, Google-Extended) collect content to train future models. Search-index crawlers (OAI-SearchBot, PerplexityBot) build the index AI search draws from. Live-fetch agents (ChatGPT-User, Perplexity-User) fire only when a real user asks the AI to read a specific page. Blocking training protects IP. Blocking search or fetch removes you from citations. So each type demands its own directive.</p>
+
+<h3>🗂️ The three buckets, side by side</h3>
+
+<p>Think of it like office access tiers. Some people get the archive, some get the live directory, and some only enter when a visitor asks for them by name.</p>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Three Types of AI Crawlers and Their Visibility Impact</caption>
+<thead>
+<tr>
+<th>Category</th>
+<th>Example bots</th>
+<th>What it does</th>
+<th>Cost of blocking it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">Training crawlers</td>
+<td>GPTBot, ClaudeBot, CCBot, Google-Extended</td>
+<td>Feed content into future model training</td>
+<td>Lower training exposure, little traffic lost</td>
+</tr>
+<tr>
+<td class="highlight">Search-index crawlers</td>
+<td>OAI-SearchBot, PerplexityBot</td>
+<td>Build the index AI search cites from</td>
+<td>You vanish from AI search citations</td>
+</tr>
+<tr>
+<td class="highlight">Live-fetch agents</td>
+<td>ChatGPT-User, Perplexity-User</td>
+<td>Fetch a specific page on user request</td>
+<td>The AI cannot read the page a buyer asked about</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<h3>🔁 Why the search bucket is the revenue bucket</h3>
+
+<p>Training shapes what a model vaguely "knows." Search and fetch shape what it cites right now, in front of a buyer. That second group is where pipeline lives.</p>
+
+<p>There is a detail most guides miss. After a live retrieval, OpenAI re-fetches robots.txt and refreshes the specific pages users searched. In plain terms, user questions drive how often your content gets re-read. Real demand pulls the crawler back.</p>
+
+<p>So blocking a search-index bot does not just hurt you today. It removes the loop where buyer curiosity keeps your content fresh in the index.</p>
+
+<p>The takeaway is simple. Never write one blanket rule for "AI bots." Write one deliberate rule per bucket, because each bucket touches a different part of your funnel. This is exactly the mapping we build first in our <a href="https://maximuslabs.ai/services/geo/">GEO service</a>.</p>
+
+<h2 id="q3-which-are-every-major-ai-bot-in-2026-and-what-is-each-ones-exact-user-agent" data-n=""><a class="anchor" href="#q3-which-are-every-major-ai-bot-in-2026-and-what-is-each-ones-exact-user-agent" aria-label="Link to section"></a>Q3. Which are every major AI bot in 2026, and what is each one's exact user-agent?</h2>
+
+<p>The first time a team sees the full list, the reaction is usually the same: "Wait, one company runs three separate bots?" Yes. And the exact strings matter, because GPTBot/1.3 and OAI-SearchBot/1.3 look similar but do opposite jobs for your visibility.</p>
+
+<p>The major AI bots in 2026 include OpenAI's GPTBot, OAI-SearchBot, and ChatGPT-User; Anthropic's ClaudeBot, anthropic-ai, and claude-web; Perplexity's PerplexityBot and Perplexity-User; Google-Extended; Bytespider; CCBot; Meta-ExternalAgent and Meta-ExternalFetcher; Applebot-Extended; and Amazonbot. Each uses a distinct user-agent token and serves training, indexing, or live fetch. So each needs its own robots.txt directive, not a blanket rule.</p>
+
+<h3>📋 The complete bot table (verify tokens against official docs)</h3>
+
+<p>Read the table by category, not by company. The "trains models?" column is where your IP decision lives. The "directive" column is what you paste. Confirm each string against the operator's own docs before shipping, since tokens change. A quick <a href="https://maximuslabs.ai/tools/ai-crawlability-checker/">AI crawlability checker</a> makes this faster.</p>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Complete AI Bot Reference (2026)</caption>
+<thead>
+<tr>
+<th>Bot token</th>
+<th>Company</th>
+<th>Category</th>
+<th>Trains models?</th>
+<th>robots.txt directive</th>
+<th>Verify via</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">GPTBot</td>
+<td>OpenAI</td>
+<td>Training</td>
+<td>Yes</td>
+<td>User-agent: GPTBot</td>
+<td>OpenAI IP JSON</td>
+</tr>
+<tr>
+<td class="highlight">OAI-SearchBot</td>
+<td>OpenAI</td>
+<td>Search-index</td>
+<td>No</td>
+<td>User-agent: OAI-SearchBot</td>
+<td>OpenAI IP JSON</td>
+</tr>
+<tr>
+<td class="highlight">ChatGPT-User</td>
+<td>OpenAI</td>
+<td>Live-fetch</td>
+<td>No</td>
+<td>User-agent: ChatGPT-User</td>
+<td>OpenAI IP JSON</td>
+</tr>
+<tr>
+<td class="highlight">ClaudeBot</td>
+<td>Anthropic</td>
+<td>Training</td>
+<td>Yes</td>
+<td>User-agent: ClaudeBot</td>
+<td>Anthropic docs</td>
+</tr>
+<tr>
+<td class="highlight">anthropic-ai</td>
+<td>Anthropic</td>
+<td>Training</td>
+<td>Yes</td>
+<td>User-agent: anthropic-ai</td>
+<td>Anthropic docs</td>
+</tr>
+<tr>
+<td class="highlight">claude-web</td>
+<td>Anthropic</td>
+<td>Live-fetch</td>
+<td>No</td>
+<td>User-agent: claude-web</td>
+<td>Anthropic docs</td>
+</tr>
+<tr>
+<td class="highlight">PerplexityBot</td>
+<td>Perplexity</td>
+<td>Search-index</td>
+<td>No</td>
+<td>User-agent: PerplexityBot</td>
+<td>Perplexity docs</td>
+</tr>
+<tr>
+<td class="highlight">Perplexity-User</td>
+<td>Perplexity</td>
+<td>Live-fetch</td>
+<td>No</td>
+<td>User-agent: Perplexity-User</td>
+<td>Perplexity docs</td>
+</tr>
+<tr>
+<td class="highlight">Google-Extended</td>
+<td>Google</td>
+<td>Training</td>
+<td>Yes (Gemini)</td>
+<td>User-agent: Google-Extended</td>
+<td>Google Search Central</td>
+</tr>
+<tr>
+<td class="highlight">Bytespider</td>
+<td>ByteDance</td>
+<td>Training</td>
+<td>Yes</td>
+<td>User-agent: Bytespider</td>
+<td>ai.robots.txt</td>
+</tr>
+<tr>
+<td class="highlight">CCBot</td>
+<td>Common Crawl</td>
+<td>Training</td>
+<td>Yes</td>
+<td>User-agent: CCBot</td>
+<td>ai.robots.txt</td>
+</tr>
+<tr>
+<td class="highlight">Meta-ExternalAgent</td>
+<td>Meta</td>
+<td>Training</td>
+<td>Yes</td>
+<td>User-agent: Meta-ExternalAgent</td>
+<td>ai.robots.txt</td>
+</tr>
+<tr>
+<td class="highlight">Meta-ExternalFetcher</td>
+<td>Meta</td>
+<td>Live-fetch</td>
+<td>No</td>
+<td>User-agent: Meta-ExternalFetcher</td>
+<td>ai.robots.txt</td>
+</tr>
+<tr>
+<td class="highlight">Applebot-Extended</td>
+<td>Apple</td>
+<td>Training</td>
+<td>Yes</td>
+<td>User-agent: Applebot-Extended</td>
+<td>Apple docs</td>
+</tr>
+<tr>
+<td class="highlight">Amazonbot</td>
+<td>Amazon</td>
+<td>Search/assistant</td>
+<td>No</td>
+<td>User-agent: Amazonbot</td>
+<td>Amazon IP list</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<h3>⭐ GPTBot vs. ChatGPT-User vs. OAI-SearchBot</h3>
+
+<p>GPTBot is OpenAI's training crawler that visits on a schedule to collect content for future ChatGPT models. ChatGPT-User is a live-fetch agent that fires only when a real user asks ChatGPT to read a specific page, and OpenAI states it is not used for training. OAI-SearchBot is a third bot that indexes pages for ChatGPT search. Each can be allowed or blocked independently in robots.txt.</p>
+
+<h3>⚠️ Two honest caveats</h3>
+
+<p>Verification is not equal across vendors. Anthropic lags on bot verification, so its robots.txt compliance is, per Cloudflare, effectively unclear. Treat Anthropic blocks as advisory, and back them with server-level rules if IP protection matters. Our <a href="https://maximuslabs.ai/services/platforms/anthropic-claude/">Anthropic Claude optimization</a> work accounts for exactly this gap.</p>
+
+<p>Also, do not assume ChatGPT citations mirror Bing rankings. Evidence suggests OpenAI is moving toward its own OAI-SearchBot index, which means citations may soon de-correlate from Bing organic results. Optimizing only for Bing is a fading proxy.</p>
+
+<p>This kind of platform-by-platform citation nuance is exactly what we track daily at MaximusLabs. For one client, Oliv AI, that depth translated into a 64% citation rate across AI platforms, overtaking a decade-old competitor stuck near 30%.</p>
+
+<blockquote><cite>"Achieved a 64% citation rate across AI platforms in just 6 months of GEO work, overtaking legacy billion-dollar competitors who had only a 30% citation rate."</cite><br><cite>Oliv AI, <a href="https://maximuslabs.ai/company/case-studies/b2b-ai-saas/oliv-ai-case-study/"><strong><em> MaximusLabs AI Verified Case Study </em></strong></a></cite></blockquote>
+
+<h2 id="q4-should-you-block-ai-crawlers-and-does-blocking-google-extended-hurt-your-seo" data-n=""><a class="anchor" href="#q4-should-you-block-ai-crawlers-and-does-blocking-google-extended-hurt-your-seo" aria-label="Link to section"></a>Q4. Should you block AI crawlers, and does blocking Google-Extended hurt your SEO?</h2>
+
+<p>The instinct is always to block. A founder sees the crawl logs, watches bots hammer the server for near-zero return, and reaches for the "deny all" rule. It feels like protecting the asset. Sometimes it quietly kills the pipeline instead.</p>
+
+<p>Blocking every AI crawler is a measurable risk, not a safe default. Publishers that blocked lost roughly 7% of weekly traffic within six weeks, while GPTBot traffic grew 305% year over year. Block pure-training crawlers with poor crawl-to-referral ratios (Anthropic crawled about 38,065 pages per referred visitor) while keeping search and fetch agents. And blocking Google-Extended does not hurt your Search rankings or AI Overviews. It only opts you out of Gemini training.</p>
+
+<h3>📉 The cost of a blanket block</h3>
+
+<p>The 7% weekly traffic drop is the number to sit with. That decay showed up within six weeks of blocking, and it is real revenue, not a vanity dip.</p>
+
+<p>Meanwhile the crawlers are not going away. GPTBot traffic grew 305% in a single year. Blocking is not opting out of the trend. It is opting out of the upside while the trend accelerates.</p>
+
+<h3>💰 The imbalance that justifies granularity</h3>
+
+<p>Here is the fair case for blocking some bots. Anthropic's crawler was measured at roughly 38,065 pages fetched per referred visitor in July 2025. That is a bad trade if the bot only trains and never cites.</p>
+
+<p>So the answer is not block-all or allow-all. It is triage. Match each bot to what it returns, which is the core of our <a href="https://maximuslabs.ai/resources/research-reports/r-geo-revenue-focused-framework/">revenue-focused GEO framework</a>.</p><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/86dd44db-0158-40cb-8511-351cfd1e8f3a.png" alt="Decision flowchart showing when to block, gate, or allow AI crawlers based on their function and value." loading="lazy"></div><figcaption>A triage flowchart for deciding which AI crawlers to block, gate, or allow.</figcaption></figure></div>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<caption>Block, Allow, or Gate: AI Crawler Decision Matrix</caption>
+<thead>
+<tr>
+<th>Crawler category</th>
+<th>Crawl-to-refer ratio</th>
+<th>Citation upside</th>
+<th>Recommended action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="highlight">Pure training (CCBot, Bytespider)</td>
+<td>Very poor</td>
+<td>None</td>
+<td>❌ Block</td>
+</tr>
+<tr>
+<td class="highlight">Training with reach (GPTBot, Google-Extended)</td>
+<td>Poor</td>
+<td>Indirect</td>
+<td>⚠️ Gate (block if IP-sensitive)</td>
+</tr>
+<tr>
+<td class="highlight">Search-index (OAI-SearchBot, PerplexityBot)</td>
+<td>Higher value</td>
+<td>High</td>
+<td>✅ Allow</td>
+</tr>
+<tr>
+<td class="highlight">Live-fetch (ChatGPT-User, Perplexity-User)</td>
+<td>Demand-driven</td>
+<td>High</td>
+<td>✅ Allow</td>
+</tr>
+</tbody>
+</table></div></div>
+
+<h3>✅ The Google-Extended myth, settled</h3>
+
+<p>Now the fear that stops most teams. People assume blocking anything with "Google" in the name will tank rankings. It will not.</p>
+
+<p>Google runs distinct tokens. Googlebot handles Search. Google-Extended governs only Gemini training and grounding. Blocking Google-Extended leaves your Search rankings and AI Overviews fully intact, because those follow standard Googlebot rules. The scariest-sounding block is actually the safest one on the list. Our <a href="https://maximuslabs.ai/services/platforms/google-ai-gemini/">Google AI and Gemini optimization</a> work leans on exactly this distinction.</p>
+
+<p>Traditional SEO agencies rarely frame it this way. They optimize the site for impressions and treat crawler management as a security chore. Our revenue-focused <a href="https://maximuslabs.ai/answer-engine-optimization-aeo/">answer engine optimization</a> methodology at MaximusLabs treats each bot as a line item against pipeline: block what pirates IP for zero return, allow what earns citations from buyers in evaluation. That same lens helped Nidra Goods rank number one across Google, ChatGPT, and Perplexity for its core term from a single strategy.</p>
+
+<blockquote><cite>"Ranked #1 across Google, ChatGPT, AND Perplexity from a single GEO strategy: triple-platform dominance."</cite><br><cite>Nidra Goods, <a href="https://maximuslabs.ai/company/case-studies/e-commerce/nidra-case-study/"><strong><em> MaximusLabs AI Verified Case Study </em></strong></a></cite></blockquote>
+
+<p>I hold the triage framework loosely on the edges. The exact ratios shift by vendor and month. But the core call, allow the citation bots and gate the pure-training ones, has held up every time we have run it.</p>
+
+<h2 id="q5-how-do-you-write-a-robotstxt-that-blocks-training-bots-but-keeps-ai-search-visibility" data-n=""><a class="anchor" href="#q5-how-do-you-write-a-robotstxt-that-blocks-training-bots-but-keeps-ai-search-visibility" aria-label="Link to section"></a>Q5. How do you write a robots.txt that blocks training bots but keeps AI-search visibility?</h2>
+
+<p>To block training but stay visible, Disallow GPTBot, ClaudeBot, CCBot, Google-Extended, and Bytespider while explicitly Allowing OAI-SearchBot, PerplexityBot, ChatGPT-User, and Perplexity-User. The most common error: sites "allow OpenAI" but only unblock GPTBot, leaving OAI-SearchBot blocked, so they get zero ChatGPT citations. OAI-SearchBot is separate from Bingbot. If it is blocked, you will not appear in ChatGPT search regardless of your Bing ranking.</p>
+
+<h3>❌ Why blanket rules fail</h3>
+
+<p>A single "deny all AI bots" rule feels clean. It also throws away your citation visibility along with your training exposure. The two goals need two different rules, which is where a proper <a href="https://maximuslabs.ai/technical-seo-website-audit/">technical SEO audit</a> starts.</p>
+
+<p>Here is the nuclear option, for when you genuinely want out of everything.</p>
+
+<ul><li>User-agent: GPTBot</li><li>User-agent: OAI-SearchBot</li><li>User-agent: ChatGPT-User</li><li>User-agent: ClaudeBot</li><li>User-agent: PerplexityBot</li><li>User-agent: Google-Extended</li><li>User-agent: CCBot</li><li>User-agent: Bytespider</li><li>Disallow: /</li></ul>
+
+<p>Use that only if you have a legal or licensing reason. For most brands, it quietly deletes pipeline.</p>
+
+<h3>✅ The selective config that keeps you visible</h3>
+
+<p>This is the version most teams actually want. Block the pure-training crawlers, and keep the search and fetch agents that drive citations. It is a core step in our <a href="https://maximuslabs.ai/generative-engine-optimization/technical-geo-implementation/">technical GEO implementation</a> work.</p>
+
+<p><strong>Block training crawlers:</strong></p>
+
+<ul><li>User-agent: GPTBot / Disallow: /</li><li>User-agent: ClaudeBot / Disallow: /</li><li>User-agent: CCBot / Disallow: /</li><li>User-agent: Google-Extended / Disallow: /</li><li>User-agent: Bytespider / Disallow: /</li></ul>
+
+<p><strong>Allow AI search and live-fetch agents:</strong></p>
+
+<ul><li>User-agent: OAI-SearchBot / Allow: /</li><li>User-agent: PerplexityBot / Allow: /</li><li>User-agent: ChatGPT-User / Allow: /</li><li>User-agent: Perplexity-User / Allow: /</li></ul>
+
+<p>Each bot gets its own block. That is the whole trick. One directive per user-agent, matched to what that bot does for you.</p>
+
+<h3>⚠️ The mistake that fakes optimization</h3>
+
+<p>Here is the trap I see most. A team "allows OpenAI," but only unblocks GPTBot and leaves OAI-SearchBot disallowed. They think they are covered. They get zero <a href="https://maximuslabs.ai/services/platforms/chatgpt/">ChatGPT citations</a>.</p>
+
+<p><strong>Wrong (looks OpenAI-friendly, still invisible in ChatGPT search):</strong></p>
+
+<ul><li>User-agent: GPTBot / Allow: /</li><li>User-agent: OAI-SearchBot / Disallow: /</li></ul>
+
+<p><strong>Right (the search bot is the one that drives citations):</strong></p>
+
+<ul><li>User-agent: OAI-SearchBot / Allow: /</li></ul>
+
+<p>Remember OAI-SearchBot is not Bingbot. Ranking well in Bing does nothing if this bot is blocked. After you push changes, give it about 24 hours to propagate before you test, so you do not panic over a change that has not taken effect yet. You can confirm the result with our <a href="https://maximuslabs.ai/tools/ai-crawlability-checker/">AI crawlability checker</a>.</p>
+
+<p>We have audited sites that swore they were AI-optimized, and found they had allowed GPTBot while blocking the one bot that actually feeds ChatGPT citations. This exact check is step one of our technical SEO sprint at MaximusLabs, and we have watched it flip a site from zero to consistent ChatGPT citations without a single new article. I might be wrong on the exact propagation window, but from what surfaces when you actually run these tests, waiting a day saves a lot of false alarms.</p>
+
+<h2 id="q6-why-is-your-content-invisible-to-ai-crawlers-even-when-you-allow-them" data-n=""><a class="anchor" href="#q6-why-is-your-content-invisible-to-ai-crawlers-even-when-you-allow-them" aria-label="Link to section"></a>Q6. Why is your content invisible to AI crawlers even when you allow them?</h2>
+
+<p>You allowed every search bot. You checked robots.txt twice. And you still are not getting cited. The standard read says "allow the bot and you're set." That read gets it backwards.</p>
+
+<p>Allowing a crawler is not the same as being readable by it. With one exception (Google), no standalone AI crawler executes JavaScript. They fetch but do not render, so content that needs React, Vue, or Angular to display is invisible to OpenAI and Perplexity bots. These crawlers are also inefficient, wasting about 34.8% (ChatGPT) and 34.2% (Claude) of fetches on 404 errors versus Googlebot's 8.22%. So server-side rendering and clean HTML are not optional.</p>
+
+<h3>🧱 The rendering wall nobody warns you about</h3>
+
+<p>Here is the situation most teams sit in. The bot has permission, the page loads fine in a browser, and everything looks healthy.</p>
+
+<p>Now the complication. If your critical content only appears after JavaScript runs, the AI crawler never sees it. It fetches raw HTML, finds an empty shell, and moves on. Your best page is, to that bot, a blank page. Our <a href="https://maximuslabs.ai/webflow-seo-guide/">Webflow SEO guide</a> walks through how to avoid this on modern site builders.</p>
+
+<h3>📦 File size and wasted fetches</h3>
+
+<p>There is a second gate. Googlebot truncates its initial fetch at roughly 2MB, and anything past that is never indexed. Bloated pages get cut off mid-content.</p><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/16517b8d-662d-4362-aa0e-5c8460957630.png" alt="Three hidden gates blocking AI crawlers: JavaScript rendering, 2MB fetch limit, and 404 waste rate." loading="lazy"></div><figcaption>Three hidden gates that keep your content invisible to AI crawlers even when you allow them.</figcaption></figure></div>
+
+<p>And AI crawlers are sloppier than people assume. Most treat them as smarter than Googlebot. The infrastructure reality is the opposite. ChatGPT wastes about 34.8% of fetches on 404s, Claude about 34.2%, against Googlebot's 8.22%. They burn a third of their effort hitting dead links, a pattern worth tracking in any <a href="https://maximuslabs.ai/ai-search-101/technical/ai-crawlers">AI crawler optimization</a> review.</p>
+
+<h3>✅ The fix is boring and it works</h3>
+
+<p>Make your content trivially easy to fetch. Server-side rendering (SSR), which means the server sends finished HTML instead of a script that builds it, is the core move.</p>
+
+<ul><li>Render critical content in raw HTML, not client-side scripts.</li><li>Keep key pages well under the 2MB fetch ceiling.</li><li>Fix 404s and broken internal links so crawlers do not waste budget.</li></ul>
+
+<p>JavaScript minimization and HTML-first rendering are core to our technical SEO audit at MaximusLabs. We make sure the content you paid to produce is actually fetchable by the bots you allowed. For Oliv AI, that kind of <a href="https://maximuslabs.ai/generative-engine-optimization/schema-markup-basics/">foundation work</a> supported a 64% citation rate across AI platforms, beating a decade-old competitor stuck near 30%.</p>
+
+<blockquote><cite>"Achieved a 64% citation rate across AI platforms in just 6 months of GEO work, overtaking legacy billion-dollar competitors that sat at only a 30% citation rate."</cite><br><cite>Oliv AI, <a href="https://maximuslabs.ai/company/case-studies/b2b-ai-saas/oliv-ai-case-study/"><strong><em> MaximusLabs AI Verified Case Study </em></strong></a></cite></blockquote>
+
+<p>I hold the exact waste percentages loosely, since they shift by crawler and month. But from what surfaces when you actually pull server logs, the pattern holds: allowed does not mean readable.</p>
+
+<h2 id="q7-how-do-allowed-crawlers-actually-turn-into-ai-citations-rag-schema-llmstxt" data-n=""><a class="anchor" href="#q7-how-do-allowed-crawlers-actually-turn-into-ai-citations-rag-schema-llmstxt" aria-label="Link to section"></a>Q7. How do allowed crawlers actually turn into AI citations (RAG, schema, llms.txt)?</h2>
+
+<p>Allowing a crawler only gets you in the door. Citations happen through retrieval-augmented generation (RAG), where the AI runs a live search, fetches specific URLs, and summarizes them into an answer with sources. To be the source it picks, structure content for extraction: clean HTML, schema markup (Article, Author, FAQ), and self-contained answer blocks. Skip unproven tactics, since there is no evidence llms.txt or markdown-only pages affect retrieval today.</p>
+
+<h3>🔗 The chain from crawl to citation</h3>
+
+<p>Here is what actually happens when a buyer asks ChatGPT a question. The model runs a live search, pulls a handful of URLs, reads them, and stitches an answer with citations attached.</p>
+
+<p>That means citations live in the retrieval layer, not the training layer. AEO (Answer Engine Optimization, optimizing to be cited in AI answers) influences RAG, not the core model. This is good news. RAG is the part you can actually shape, and it is the heart of our <a href="https://maximuslabs.ai/answer-engine-optimization-aeo/">answer engine optimization</a> service.</p>
+
+<h3>🧩 What makes content extractable</h3>
+
+<p>The AI does not cite whole websites. It cites specific, quotable chunks it can lift cleanly. So write for extraction.</p>
+
+<ul><li>Lead each section with a 40-to-80 word answer block that stands alone.</li><li>Add schema markup, the structured labels that tell engines "this is the author, this is the FAQ."</li><li>Keep HTML clean so the extractable chunk is easy to isolate.</li></ul>
+
+<p>These are the same levers we apply through our <a href="https://maximuslabs.ai/ai-search-101/strategies/citations">citation optimization</a> playbook.</p>
+
+<h3>⚠️ The hype to ignore</h3>
+
+<p>Now the part the category avoids saying out loud. Some popular tactics have no proof behind them. There is no evidence that <a href="https://maximuslabs.ai/generative-engine-optimization/llms-txt/">llms.txt files</a> or markdown-only pages change retrieval today.</p>
+
+<p>Chasing them burns hours you could spend on extractable content. I might be proven wrong if platforms adopt llms.txt later. But from what surfaces when you actually run tests, the return right now is zero, so I would not spend cash on it.</p>
+
+<h3>✅ Access is table stakes; citation is the game</h3>
+
+<p>This is the real reframe. Old SEO asked "did my page rank?" GEO asks "did the engine name me as the answer?" Getting crawled is the entry fee, not the win.</p>
+
+<p>Engineering content for RAG extraction, the answer nuggets, schema, and primary-source citations, is the core of our <a href="https://maximuslabs.ai/services/geo/">GEO service</a> at MaximusLabs. It is what turns an allowed crawl into a named citation. Traditional agencies still optimize the page to rank a blue link, which is exactly the metric AI answers are quietly replacing, a shift we cover in <a href="https://maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison/">GEO vs traditional SEO</a>.</p>
+
+<h2 id="q8-how-do-you-enforce-blocks-beyond-robotstxt-and-verify-a-crawler-is-real" data-n=""><a class="anchor" href="#q8-how-do-you-enforce-blocks-beyond-robotstxt-and-verify-a-crawler-is-real" aria-label="Link to section"></a>Q8. How do you enforce blocks beyond robots.txt and verify a crawler is real?</h2>
+
+<p>robots.txt is advisory, not enforceable. Bad actors and some crawlers ignore it. For hard enforcement, block at the server level (.htaccess, Nginx return 403) or the CDN (content delivery network, the layer like Cloudflare that sits in front of your site). To avoid blocking spoofed user agents, verify crawlers against operators' published IP ranges. OpenAI and Amazon publish verification JSON files, so you allow the real bot and reject impostors wearing its name.</p>
+
+<h3>🚧 Why robots.txt alone is not enough</h3>
+
+<p>robots.txt is a request, not a wall. A well-behaved bot honors it. A scraper pretending to be a bot simply ignores it.</p>
+
+<p>So if IP protection actually matters to you, you need enforcement the crawler cannot opt out of. That means blocking at the server or the CDN, where you control the response.</p>
+
+<h3>🛠️ The enforcement ladder</h3>
+
+<p>Start at the server. Here is an Nginx rule that returns a hard 403 (access denied) to a training crawler.</p>
+
+<ul><li>if ($http_user_agent ~* "GPTBot|CCBot|Bytespider") { return 403; }</li></ul>
+
+<p>The Apache equivalent, in .htaccess, does the same job.</p>
+
+<ul><li>RewriteEngine On</li><li>RewriteCond %{HTTP_USER_AGENT} (GPTBot|CCBot|Bytespider) [NC]</li><li>RewriteRule .* - [F,L]</li></ul>
+
+<p>At the CDN, a Cloudflare WAF (web application firewall) custom rule blocks by user-agent before traffic ever reaches your origin. That is the cleanest layer for most teams, and it slots neatly into our <a href="https://maximuslabs.ai/ai-search-101/technical/ai-crawlers/ccbot-common-crawl-ai-training">CCBot and Common Crawl</a> guidance.</p>
+
+<h3>⚠️ Verify before you block</h3>
+
+<p>Here is the catch. User agents can be faked. A bot calling itself GPTBot might not be OpenAI at all, just a scraper wearing the name.</p>
+
+<p>So verify by IP, not by name. OpenAI and Amazon publish JSON files listing their crawlers' real IP ranges, so you can confirm a bot is genuine before you allow or block it. One honest caveat: Anthropic lags on bot verification, so its robots.txt compliance is, per Cloudflare, effectively unclear. Treat Anthropic blocks as advisory, and back them at the server level, an approach we build into our <a href="https://maximuslabs.ai/services/platforms/anthropic-claude/">Anthropic Claude optimization</a> work.</p>
+
+<p>At MaximusLabs, we treat verification as a prerequisite, not an afterthought, because blocking a spoofed agent by name protects nothing while a real scraper keeps taking. I might be cautious to a fault here, but from what surfaces when you actually check the logs, spoofing is common enough to justify the extra step.</p>
+
+<h2 id="q9-how-do-you-get-ai-crawlers-to-find-and-refresh-your-pages-faster" data-n=""><a class="anchor" href="#q9-how-do-you-get-ai-crawlers-to-find-and-refresh-your-pages-faster" aria-label="Link to section"></a>Q9. How do you get AI crawlers to find and refresh your pages faster?</h2>
+
+<p>AI crawlers refresh lazily, updating their index based on what users actually search. To accelerate discovery, implement IndexNow, a protocol where you host a key file and POST changed URLs to ping search engines. It has produced a first Bingbot crawl within 3 to 6 hours, and content-to-citation compression to roughly 24 to 72 hours. Also keep key content in subdirectories, not subdomains. AI agents treat subdomains as separate filing cabinets, and they will not automatically check them during grounding.</p>
+
+<h3>⏰ Why waiting for the crawl loses</h3>
+
+<p>Here is the uncomfortable default. AI crawlers do not re-read your site on a tidy schedule. They refresh based on what real users search for.</p>
+
+<p>So a page you updated today might stay stale in the index for weeks. If a buyer asks the question your new page answers, the engine cites the old version, or someone else. Our <a href="https://maximuslabs.ai/generative-engine-optimization/geo-content-refresh/">GEO content refresh</a> process exists precisely because of this lag.</p>
+
+<h3>🚀 IndexNow, the push lever</h3>
+
+<p>IndexNow flips this from passive to active. Instead of waiting to be found, you tell the engine "this URL changed, come look."</p>
+
+<p>The setup is simple. Host a key file on your domain, then POST your changed URLs to the IndexNow endpoint. In measured testing, that produced a first Bingbot crawl within 3 to 6 hours, and compressed the content-to-citation window to roughly 24 to 72 hours, a pattern worth tracking through <a href="https://maximuslabs.ai/ai-search-101/technical/ai-crawlers/bingbot-ai-search-crawl-optimization">Bingbot crawl optimization</a>.</p>
+
+<p>We push changed URLs through IndexNow as standard practice at MaximusLabs. Waiting for the default crawl means being irrelevant to the question your buyer just asked.</p>
+
+<h3>🗂️ The subdirectory trap</h3>
+
+<p>Architecture quietly decides discovery too. Many teams park their help center or blog on a subdomain (like help.yoursite.com) instead of a subdirectory (yoursite.com/help).</p>
+
+<p>That choice matters more than it looks. AI agents treat subdomains as separate filing cabinets, and they will not automatically check them during grounding. A subdirectory keeps everything in one drawer the crawler already opens, which is a core fix in our <a href="https://maximuslabs.ai/generative-engine-optimization/technical-geo-implementation/">technical GEO implementation</a> work.</p>
+
+<ul><li>Keep money content in subdirectories, not subdomains.</li><li>Push every meaningful update through IndexNow the same day.</li><li>Remember the loop: after a retrieval, OpenAI re-fetches robots.txt and refreshes the specific pages users searched.</li></ul>
+
+<p>This compounds with the extraction work from earlier. Fast discovery gets your <a href="https://maximuslabs.ai/ai-search-101/strategies/citations">citation-ready content</a> in front of the engine while the question is still being asked. Traditional SEO's "wait for the crawl" patience is exactly the passivity AI search punishes, a gap we detail in <a href="https://maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison/">GEO vs traditional SEO</a>.</p>
+
+<p>For Nidra Goods, that combination of fast discovery and citation-ready content supported a number-one ranking across Google, ChatGPT, and Perplexity from a single strategy.</p>
+
+<blockquote><cite>"Ranked #1 across Google, ChatGPT, AND Perplexity from a single GEO strategy: triple-platform dominance."</cite><br><cite>Nidra Goods, <a href="https://maximuslabs.ai/company/case-studies/e-commerce/nidra-case-study/"><strong><em> MaximusLabs AI Verified Case Study </em></strong></a></cite></blockquote>
+
+<p>I hold the exact crawl windows loosely, since they shift by platform. But from what surfaces when you actually push URLs, the direction is clear: pushing beats waiting.</p>
+
+<h2 id="q10-how-do-you-detect-which-ai-bots-are-crawling-you-and-keep-your-setup-current" data-n=""><a class="anchor" href="#q10-how-do-you-detect-which-ai-bots-are-crawling-you-and-keep-your-setup-current" aria-label="Link to section"></a>Q10. How do you detect which AI bots are crawling you and keep your setup current?</h2>
+
+<p>To see which AI bots crawl you, grep your raw server access logs for known user-agent patterns (GPTBot, ClaudeBot, PerplexityBot, Bytespider, CCBot), check your Cloudflare or Fastly dashboard, or use a dedicated AI-crawler tracker showing per-page crawl frequency. Because new bots appear roughly monthly, run a monthly log review and a quarterly blocklist update against the community ai.robots.txt project, so your configuration never silently drifts out of date.</p>
+
+<h3>🔍 How to see the bots in your logs</h3>
+
+<p>Start where the truth lives, in your raw access logs. A simple grep for known user agents shows you exactly who is visiting and how often.</p>
+
+<ul><li>grep -E "GPTBot|ClaudeBot|PerplexityBot|Bytespider|CCBot" access.log</li><li>Check your Cloudflare or Fastly dashboard for bot traffic breakdowns.</li><li>Use an AI-crawler tracker for per-page crawl frequency.</li></ul>
+
+<p>You can also sanity-check any single page with our <a href="https://maximuslabs.ai/tools/ai-crawlability-checker/">AI crawlability checker</a> before digging through logs.</p>
+
+<h3>⚠️ What to watch for</h3>
+
+<p>Logs tell you more than "who visited." They tell you whether crawl budget is being wasted.</p>
+
+<p>Watch three signals: crawl frequency per bot, the 404 waste rate (recall ChatGPT wastes about 34.8% and Claude about 34.2% of fetches on dead links), and any new or unknown user agents you have not seen before. A spike in 404s means crawlers are burning budget on broken links, which our <a href="https://maximuslabs.ai/technical-seo-website-audit/">technical SEO audit</a> catches early.</p>
+
+<h3>🔁 The maintenance cadence</h3>
+
+<p>Here is the part almost everyone skips. A crawler config is not set-and-forget. New bots launch roughly monthly, so a blocklist that was perfect in January is stale by April.</p>
+
+<p>Set a simple rhythm: a monthly log review, and a quarterly blocklist update against the community ai.robots.txt project. Freshness itself is a trust signal, and it keeps you from silently losing citations, which is why ongoing <a href="https://maximuslabs.ai/answer-engine-optimizations/ai-search-visibility-brand-mentions-tracking-tools/">AI visibility tracking</a> matters.</p>
+
+<p>Ongoing crawler monitoring is part of how we keep client sites citation-visible at MaximusLabs. Treat a crawler config like a subscription you review, not a wall you build once, because silent drift equals silent citation loss, and that is real revenue leaking out through neglect, not strategy.</p>
+
+<h2 id="q11-from-blocking-bots-to-becoming-the-answer-what-should-you-do-on-monday-morning" data-n=""><a class="anchor" href="#q11-from-blocking-bots-to-becoming-the-answer-what-should-you-do-on-monday-morning" aria-label="Link to section"></a>Q11. From blocking bots to becoming the answer: what should you do on Monday morning?</h2>
+
+<p>Start with a robots.txt audit: confirm OAI-SearchBot, PerplexityBot, and ChatGPT-User are allowed, and decide training crawlers case by case. Then verify your content is server-side rendered, push updates via IndexNow, consolidate key content into subdirectories, and set a monthly log review. Managing crawlers is the technical foundation, but the goal is not just to be crawled. It is to become the answer AI engines cite, which demands citation-worthy, revenue-aligned content on top of clean access.</p>
+
+<h3>✅ Your Monday checklist</h3>
+
+<p>You have read the whole guide. Here is where the journey started, playing defense, blocking bots to protect the asset. Here is where it ends, playing offense, engineering to be cited. This checklist is the bridge.</p><div data-rt-embed-type="true"><figure class="w-richtext-align-fullwidth w-richtext-figure-type-image"><div><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/81d5cff3-fbea-42fc-9c02-43ac2be813df.png" alt="Six-step Monday action plan for AI crawler management, from robots.txt audit to review cadence." loading="lazy"></div><figcaption>A six-step Monday action plan that turns AI crawler management into a path toward AI citations.</figcaption></figure></div>
+
+<ol><li>Audit robots.txt: confirm OAI-SearchBot, PerplexityBot, and ChatGPT-User are allowed.</li><li>Decide training crawlers (GPTBot, ClaudeBot, CCBot, Google-Extended) case by case.</li><li>Verify critical content is server-side rendered, not JavaScript-gated.</li><li>Push changed URLs through IndexNow the same day you publish.</li><li>Consolidate key content into subdirectories, not subdomains.</li><li>Set a monthly log review, and a quarterly blocklist update.</li><li>Layer schema and self-contained answer blocks so you are extractable.</li></ol>
+
+<h3>🎯 Access is table stakes; citation is the game</h3>
+
+<p>Here is the reframe worth sitting with. Getting crawled is the entry fee, not the win. Old, Google-only SEO asked "did my page rank?" That question is quietly being replaced.</p>
+
+<p>The new question is "did the engine name me as the answer?" That demands citation-worthy, revenue-aligned content on top of clean access, which is the whole point of <a href="https://maximuslabs.ai/services/aeo/">answer engine optimization</a>.</p>
+
+<p>Getting crawlers right is where we start at MaximusLabs. Our revenue-focused <a href="https://maximuslabs.ai/services/geo/">GEO service</a> is the next step, engineering content and off-site citations so AI engines name you as the answer across ChatGPT, Perplexity, Gemini, and Google, not just permit you to be read. If you want the deeper method, our <a href="https://maximuslabs.ai/resources/research-reports/r-geo-revenue-focused-framework/">revenue-focused GEO framework</a> lays it out.</p>
+
+<h3>🔮 What I am thinking about next</h3>
+
+<p>Two things keep me up. First, evidence suggests OpenAI is moving toward its own OAI-SearchBot index, which means ChatGPT citations may soon de-correlate from Bing organic rankings. Optimizing only for Bing is a fading bet.</p>
+
+<p>Second, 71% of cited sources appear on only one platform. That fragmentation is the argument for Search Everywhere Optimization, showing up across ChatGPT, Perplexity, Gemini, and Google rather than betting on one. We track these <a href="https://maximuslabs.ai/resources/research-reports/chatgpt-perplexity-gemini-citation-patterns/">cross-platform citation patterns</a> closely.</p>
+
+<p>I might be wrong on the timing of the OpenAI-Bing split. But from what surfaces when you actually watch citations move, the direction is set. Do not aim to be a search result. Aim to be the source. That is the conversation I would rather have with you.</p></body></html>
+    <section class="faq" id="faq"><div class="faq-h"><h2>Questions, answered</h2><span>8 questions</span></div><details open><summary><span>What is the difference between GPTBot, OAI-SearchBot, and ChatGPT-User?</span><i></i></summary><p>These are three separate OpenAI crawlers that do three very different jobs, and confusing them is the most common visibility mistake we see. GPTBot collects content to train future models. Blocking it opts you out of training. OAI-SearchBot builds the index ChatGPT search cites live. Blocking it deletes you from ChatGPT citations. ChatGPT-User is a live-fetch agent that fires only when a user asks ChatGPT to read a specific page, and OpenAI states it is not used for training. The trap: many teams &quot;allow OpenAI&quot; but only unblock GPTBot, leaving OAI-SearchBot disallowed, so they get zero ChatGPT citations. OAI-SearchBot is also not Bingbot, so ranking well in Bing does nothing if this bot is blocked. We treat this exact separation as step one of our GEO service , because a single misapplied directive can quietly erase pipeline. Each bot needs its own line in robots.txt, matched to what it does for your funnel.</p></details><details><summary><span>Does blocking Google-Extended hurt my SEO rankings or AI Overviews?</span><i></i></summary><p>No. This is the fear that stops most teams, and it is unfounded. Google runs distinct tokens for distinct jobs. Googlebot handles Search and follows standard crawl rules. Google-Extended governs only Gemini training and grounding. Blocking Google-Extended leaves your Search rankings and AI Overviews fully intact, because those follow Googlebot rules, not Google-Extended. The scariest-sounding block is actually the safest one on the list. So if you want to keep your content out of Gemini training while protecting organic visibility, blocking Google-Extended is a clean, low-risk move. The nuance most agencies miss is that &quot;Google&quot; in a bot name does not mean it touches rankings. We map each Google token to its real function inside our Google AI and Gemini optimization work, so clients never trade away rankings out of misplaced caution. Treat each crawler as a line item against a specific goal, not a single on-off switch.</p></details><details><summary><span>How do I write a robots.txt that blocks training bots but keeps AI-search visibility?</span><i></i></summary><p>The goal is two separate rules, not one blanket block. Block the pure-training crawlers, and explicitly allow the search and fetch agents that drive citations. Disallow training crawlers: GPTBot, ClaudeBot, CCBot, Google-Extended, and Bytespider. Allow AI-search and fetch agents: OAI-SearchBot, PerplexityBot, ChatGPT-User, and Perplexity-User. Give each bot its own directive. That is the whole trick. One rule per user agent, matched to what it returns for you. The most common error is allowing GPTBot while leaving OAI-SearchBot blocked, which produces zero ChatGPT citations despite looking OpenAI-friendly. After pushing changes, give the search bot roughly 24 hours to propagate before testing. We build this bot-by-bot mapping first in our technical GEO implementation process, then verify it against server logs. A blanket &quot;deny all AI bots&quot; rule feels clean but quietly deletes the citation visibility that now drives buyer discovery.</p></details><details><summary><span>Why is my content invisible to AI crawlers even when I allow them?</span><i></i></summary><p>Allowing a crawler is not the same as being readable by it. This is the reframe most guides get backwards. With one exception (Google), no standalone AI crawler executes JavaScript. They fetch raw HTML but do not render it. So content that needs React, Vue, or Angular to display is invisible to OpenAI and Perplexity bots, even when robots.txt permits them. Render critical content in raw HTML, not client-side scripts. Keep key pages well under Googlebot's roughly 2MB fetch ceiling. Fix 404s, since ChatGPT wastes about 34.8% and Claude about 34.2% of fetches on dead links. These crawlers are sloppier than people assume, burning nearly a third of their effort on broken links versus Googlebot's 8.22%. The fix is boring and it works: server-side rendering and clean, fetchable HTML. JavaScript minimization and HTML-first rendering are core to our technical SEO audit , so the content you paid to produce is actually readable by the bots you allowed.</p></details><details><summary><span>How do allowed crawlers actually turn into AI citations?</span><i></i></summary><p>Citations happen through retrieval-augmented generation (RAG), not training. When a buyer asks a question, the AI runs a live search, fetches specific URLs, and summarizes them into an answer with sources attached. That means citations live in the retrieval layer, which you can actually shape. To be the source it picks, structure content for extraction. Lead each section with a 40-to-80 word answer block that stands alone. Add schema markup (Article, Author, FAQ) so engines can label your content. Keep HTML clean so the quotable chunk is easy to isolate. Skip unproven tactics. There is no evidence that llms.txt files or markdown-only pages affect retrieval today, so we would not spend budget chasing them. Engineering content for RAG extraction is the heart of our answer engine optimization service. Old SEO asked &quot;did my page rank?&quot; GEO asks &quot;did the engine name me as the answer?&quot; Getting crawled is the entry fee, not the win.</p></details><details><summary><span>How do I enforce bot blocks beyond robots.txt and verify a crawler is real?</span><i></i></summary><p>robots.txt is advisory, not enforceable. Well-behaved bots honor it; scrapers pretending to be bots simply ignore it. For hard enforcement, block at the server or CDN level. Server: return a 403 via .htaccess (Apache) or an Nginx user-agent rule. CDN: a Cloudflare WAF custom rule blocks by user agent before traffic reaches your origin. But user agents can be faked, so verify by IP, not by name. A bot calling itself GPTBot might just be a scraper wearing the name. OpenAI and Amazon publish JSON files listing their crawlers' real IP ranges, so you can confirm a bot is genuine before allowing or blocking it. One caveat: Anthropic lags on bot verification, so treat its blocks as advisory and back them at the server level. We treat verification as a prerequisite in every Anthropic Claude optimization engagement, because blocking a spoofed agent by name protects nothing while a real scraper keeps taking.</p></details><details><summary><span>Should I block AI crawlers at all, or does it cost me traffic?</span><i></i></summary><p>Blocking every AI crawler is a measurable risk, not a safe default. It is a triage decision, not an on-off switch. Publishers that blocked lost roughly 7% of weekly traffic within six weeks. GPTBot traffic grew about 305% year over year, so blocking opts you out of the upside. Anthropic's crawler was measured fetching around 38,065 pages per referred visitor, a poor trade for a pure-training bot. So the answer is not block-all or allow-all. Block pure-training crawlers with terrible crawl-to-referral ratios, and keep the search and fetch agents that earn citations from buyers in evaluation. We treat each bot as a line item against pipeline inside our revenue-focused GEO framework : block what pirates IP for zero return, allow what earns citations. This is the difference between defensive IT thinking and revenue-aware crawler management.</p></details><details><summary><span>How do I get AI crawlers to find and refresh my pages faster?</span><i></i></summary><p>AI crawlers refresh lazily, updating their index based on what users actually search. To accelerate discovery, use IndexNow and fix your site architecture. IndexNow: host a key file and POST changed URLs to ping engines. We have measured a first Bingbot crawl within 3 to 6 hours and content-to-citation compression to roughly 24 to 72 hours. Subdirectories, not subdomains: AI agents treat subdomains as separate filing cabinets and will not automatically check them during grounding. Keep money content in subdirectories, push every meaningful update through IndexNow the same day, and remember that after a retrieval, OpenAI re-fetches robots.txt and refreshes the pages users searched. We push changed URLs through IndexNow as standard practice, because waiting for the default crawl means being irrelevant to the question your buyer just asked. Pair this with our ongoing GEO content refresh process, and fast discovery compounds with citation-ready content so you show up while the question is still being asked.</p></details></section>
+    <div class="author-box"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="72" height="72"><div><small>Written by</small><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span></div></div>
+  </article>
+  <aside class="author-rail"><div class="ar-in"><small>Written by</small><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="56" height="56"><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span><hr><small>Share</small><div class="ar-share"><button type="button" class="ic-btn sm" data-copy aria-label="Copy link"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button></div></div></aside>
+</div></section>
+
+<section class="vsec bt"><div class="vrail">
+  <div class="sec-head reveal"><div class="sec-l"><div class="eyebrow">Keep reading</div><h2 class="h2 sm">Discover more in AI Crawler Optimization</h2></div><div class="sec-r"><a class="btn-ghost" href="../../../technical/ai-crawlers/">All AI Crawler Optimization guides <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+  <div class="grid g-3"><a class="card a-card reveal " href="../../../technical/ai-crawlers/bingbot-ai-search-crawl-optimization/" data-date="2026-07-04T11:39:33.017Z" data-order="1">
+  <div class="cover " style="--gx:110%;--gy:27%" data-light><img class="shot" src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/9d235c2d-6943-4075-9ef6-5293eb7dbb59.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Technical</span><i class="dot"></i><span>AI Crawler Optimization</span></div><h3>Bingbot for AI Search: How to Optimize Crawl Access for Microsoft's AI Crawler</h3><p>Learn how to configure crawl access so Bingbot indexes your site for Microsoft Copilot and AI search visibility</p></div>
+  <div class="byline"><span class="who"><img src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/420f5e47-8a4e-4cc8-8f0b-c1f92781ed76.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 4</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a><a class="card a-card reveal " href="../../../technical/ai-crawlers/ccbot-common-crawl-ai-training/" data-date="2026-07-08T08:20:02.844Z" data-order="1">
+  <div class="cover " style="--gx:110%;--gy:58%" data-light><img class="shot" src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/110c086d-66b2-4148-8695-b62fef4fc6b5.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Technical</span><i class="dot"></i><span>AI Crawler Optimization</span></div><h3>CCBot and Common Crawl: How AI Training Crawlers Access Your Website</h3><p>Learn how CCBot and Common Crawl feed AI training datasets, and how to control crawler access to your site.</p></div>
+  <div class="byline"><span class="who"><img src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/420f5e47-8a4e-4cc8-8f0b-c1f92781ed76.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 8</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a><a class="card a-card reveal " href="../../../technical/ai-crawlers/ai-crawlers-guide-optimization/" data-date="2026-07-13T06:46:44.258Z" data-order="1">
+  <div class="cover " style="--gx:95%;--gy:54%" data-light><img class="shot" src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/96873c97-91d9-4150-a123-6dd1bced29f5.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Technical</span><i class="dot"></i><span>AI Crawler Optimization</span></div><h3>AI Crawlers Hub: Complete Guide to AI Bot Access and Crawl Management</h3><p>Your complete guide to managing AI bot access, crawl budgets, and optimizing visibility across engines.</p></div>
+  <div class="byline"><span class="who"><img src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/420f5e47-8a4e-4cc8-8f0b-c1f92781ed76.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 13</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a></div>
+  <div class="prevnext"><a class="pn" href="../../../technical/ai-crawlers/ai-crawlers-guide-optimization/"><span class="pn-ic"><svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small>Previous guide</small><b>AI Crawlers Hub: Complete Guide to AI Bot Access and Crawl Management</b></span></a><span></span></div>
+</div></section>
+<section class="cta-wrap reveal"><div class="cta-card glass-bg"><h2 class="px">Ready to turn AI search into a revenue engine?</h2><p>See how MaximusLabs gets your brand cited and chosen across ChatGPT, Perplexity, Gemini, and Google AI. Book a call for a tailored plan.</p><a class="btn-white" href="https://www.maximuslabs.ai/contact-us">Book a call <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+</main>
+<section class="sec is-fluid" id="footer" aria-label="Site footer"><footer class="rail"><div class="top"><div class="brand"><a class="logo" href="https://www.maximuslabs.ai/" aria-label="MaximusLabs home"></a><p class="ft-tag">Full-service GEO led by brand strategists. Inbound only.</p><p class="ft-ai">AI agents: read our <a href="https://www.maximuslabs.ai/llms.txt">llms.txt</a></p><div class="ft-actions"><a class="ft-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="ft-social" href="https://www.linkedin.com/company/maximus-labs-ai/" target="_blank" rel="noopener">LinkedIn</a></div></div><nav class="cols" aria-label="Footer"><div class="ft-col"><h3 class="lbl" id="ft-services">Services</h3><ul aria-labelledby="ft-services"><li><a href="https://www.maximuslabs.ai/services/ai-perception-audit">AI perception audit</a></li><li><a href="https://www.maximuslabs.ai/services/positioning-messaging">Positioning &amp; messaging</a></li><li><a href="https://www.maximuslabs.ai/services/geo">GEO</a></li><li><a href="https://www.maximuslabs.ai/services/aeo">AEO</a></li><li><a href="https://www.maximuslabs.ai/services/b2b-seo">B2B SEO</a></li><li><a href="https://www.maximuslabs.ai/services/agentic-commerce">Agentic commerce</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-ai-platforms">AI platforms</h3><ul aria-labelledby="ft-ai-platforms"><li><a href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-industries">Industries</h3><ul aria-labelledby="ft-industries"><li><a href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a></li><li><a href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a></li><li><a href="https://www.maximuslabs.ai/services/industries/ecommerce">E-commerce</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-max-visibility">Max Visibility</h3><ul aria-labelledby="ft-max-visibility"><li><a href="https://www.maximuslabs.ai/max-visibility">Overview</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#share-of-voice">Share of voice</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#sources">Citations &amp; sources</a></li><li><a href="https://www.maximuslabs.ai/products/max-console">Max Console</a></li><li><a href="https://www.maximuslabs.ai/pricing">Pricing</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-resources">Resources</h3><ul aria-labelledby="ft-resources"><li><a href="https://www.maximuslabs.ai/blog">Blog</a></li><li><a href="../../../">AI Search 101</a></li><li><a href="https://www.maximuslabs.ai/resources/reports">Research reports</a></li><li><a href="https://www.maximuslabs.ai/resources/free-tools">Free tools</a></li><li><a href="https://www.maximuslabs.ai/resources/guides">Platform guides</a></li><li><a href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-company">Company</h3><ul aria-labelledby="ft-company"><li><a href="https://www.maximuslabs.ai/company/about-us">About</a></li><li><a href="https://www.maximuslabs.ai/company/case-studies">Case studies</a></li><li><a href="https://www.maximuslabs.ai/company/careers">Careers</a></li><li><a href="https://www.maximuslabs.ai/contact-us">Contact</a></li></ul></div></nav></div><div class="ft-proof"><span class="lbl">Results with</span><a href="https://www.maximuslabs.ai/company/case-studies">Explorium</a></div><div class="legal"><p class="ft-copy">© 2026 MaximusLabs AI</p><p class="terms"><a href="https://www.maximuslabs.ai/privacy-policy">Privacy</a><span aria-hidden="true"> · </span><a href="https://www.maximuslabs.ai/others/terms-of-service">Terms</a><span aria-hidden="true"> · </span><a href="https://www.maximuslabs.ai/others/refund-policy">Refund policy</a></p></div></footer></section>
+</div>
+<script src="../../../assets/js/live-baselayout.js" defer></script>
+<script src="../../../assets/js/maximus-fx.js" defer></script>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>

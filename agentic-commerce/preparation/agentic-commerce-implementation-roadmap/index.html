@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic Commerce Implementation Roadmap: A 6-Step Plan to Prepare Your E-commerce Business | AI Search 101</title>
+<meta name="description" content="From product data audit to agent checkout: six steps to make your store agent-ready.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../../assets/live/logo-full.svg">
+<link rel="stylesheet" href="../../../assets/css/live-nav-plan.css">
+<link rel="stylesheet" href="../../../assets/css/live-baselayout.css">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+</head>
+<body class="v2 k-article" data-root="../../../" data-fx="signal">
+<div class="page">
+<header class="nav is-fluid" id="nav"><div class="nav-left"><a href="https://www.maximuslabs.ai/" class="nav-logo" aria-label="MaximusLabs home"></a></div><nav class="nav-center" aria-label="Primary"><button type="button" class="nav-item" data-menu="services" aria-expanded="false" aria-controls="menu-services">Services <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-services"><div class="mega-grid"><div class="col"><div class="col-label">Optimization</div><a class="mi" href="https://www.maximuslabs.ai/services/geo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#7FB5FF" stroke-width="1.3"/><circle cx="8" cy="8" r="2.2" fill="#7FB5FF"/></svg></span><span><span class="mi-t">Generative Engine Optimization</span><span class="mi-d">Get named and recommended across ChatGPT, Gemini, Perplexity and Google.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/aeo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Answer Engine Optimization</span><span class="mi-d">Own the answer box and AI Overviews, in your own words.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/b2b-seo"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">B2B SEO</span><span class="mi-d">Buying-stage pages, written for Google and AI answers, traced to pipeline.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/technical-seo-website-audit"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Technical SEO foundation</span><span class="mi-d">Rendering, Markdown for agents, schema, bot access and agent protocols.</span></span></a><a class="mi muted" href="https://www.maximuslabs.ai/services/agentic-commerce"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 2.5h2l1.6 7.5h7l1.4-5.2H4.6" fill="none" stroke="#6E6E6E" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6.2" cy="12.8" r="1" fill="#6E6E6E"/><circle cx="11.4" cy="12.8" r="1" fill="#6E6E6E"/></svg></span><span><span class="mi-t">Agentic commerce</span><span class="mi-d">Make your product readable by the AI agents that shop for buyers.</span></span></a></div><div class="col w" style="--w:200px"><div class="col-label">By AI platform</div><div class="links"><a href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a><a href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a><a href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a><a href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a><a href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></div><div class="col-label">By industry</div><div class="links"><a href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a><a href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a><a href="https://www.maximuslabs.ai/services/industries/ecommerce">Ecommerce</a></div></div><div class="col"><div class="col-label">Brand strategy</div><a class="mi" href="https://www.maximuslabs.ai/services/ai-perception-audit"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><circle cx="8" cy="8" r="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">AI perception audit</span><span class="mi-d">How AI describes you today, who it compares you to, which sources it trusts.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/services/positioning-messaging"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M10.6 5.4L9.1 9.1 5.4 10.6 6.9 6.9z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Positioning &amp; messaging</span><span class="mi-d">ICP, buyer journey and positioning, written so AI repeats your story.</span></span></a></div></div><div class="mega-foot"><a href="https://www.maximuslabs.ai/#services">All services <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span>Full-service GEO led by brand strategists. Inbound only: we never run paid media.</span></div></div><button type="button" class="nav-item" data-menu="products" aria-expanded="false" aria-controls="menu-products">Products <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-products"><div class="mega-grid"><div class="col"><div class="col-label">AI visibility</div><a class="mi" href="https://www.maximuslabs.ai/max-visibility"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><span class="mi-t">Max Visibility <span class="tag">AI visibility</span></span><span class="mi-d">See what ChatGPT, Claude, Gemini, Perplexity and every major AI model say about your brand, and what to fix next.</span></span></a><div class="col-label" style="padding-top:18px">Client workspace</div><a class="mi" href="https://www.maximuslabs.ai/products/max-console"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2 6h12M6.5 6v7.5" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">Max Console</span><span class="mi-d">Your engagement in one place: meeting notes, decisions, tasks and results.</span></span></a></div><div class="col w" style="--w:260px"><div class="col-label">Max Visibility</div><div class="links"><a href="https://www.maximuslabs.ai/max-visibility#ai-visibility">AI visibility &amp; share of voice</a><a href="https://www.maximuslabs.ai/max-visibility#models">Every AI model</a><a href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a><a href="https://www.maximuslabs.ai/max-visibility#competitors">Competitors &amp; sources</a><a href="https://www.maximuslabs.ai/max-visibility#brand-perception">Brand perception</a><a href="https://www.maximuslabs.ai/max-visibility#actions">Actions</a><a href="https://www.maximuslabs.ai/max-visibility#agent-analytics">Agent analytics</a><a href="https://www.maximuslabs.ai/pricing#max-visibility">Pricing</a></div><div class="col-label">For clients</div><div class="links"><a href="https://www.maximuslabs.ai/#how-we-work">How the engagement works</a></div></div><div class="feature"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></i>Our instrument</div><h4>Max Visibility</h4><p>Change your positioning, then watch how AI&#39;s story about you moves across every major model. Experiments, not dashboards.</p></div><a class="f-cta" href="https://www.maximuslabs.ai/max-visibility">See Max Visibility <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><button type="button" class="nav-item" data-menu="resources" aria-expanded="false" aria-controls="menu-resources">Resources <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-resources"><div class="mega-grid"><div class="col"><div class="col-label">Learn</div><a class="mi" href="../../../"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5c2-.8 3.8-.8 5.5.4 1.7-1.2 3.5-1.2 5.5-.4v9c-2-.8-3.8-.8-5.5.4-1.7-1.2-3.5-1.2-5.5-.4z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 3.9v9" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">AI Search 101</span><span class="mi-d">How AI search works, from first principles.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/blog"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">Blog</span><span class="mi-d">What we test and learn, published openly.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/resources/reports"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#A9B5C9" stroke-width="1.5" stroke-linecap="round"/></svg></span><span><span class="mi-t">Research reports</span><span class="mi-d">Benchmarks on how B2B brands show up in AI answers.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/company/case-studies"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Case studies</span><span class="mi-d">How B2B SaaS and AI brands earned their place in AI answers.</span></span></a></div><div class="col w" style="--w:230px"><div class="col-label">Platform guides</div><div class="links"><a href="https://www.maximuslabs.ai/chatgpt-seo-guide">ChatGPT SEO guide</a><a href="https://www.maximuslabs.ai/perplexity-seo-guide">Perplexity SEO guide</a><a href="https://www.maximuslabs.ai/google-gemini-ai-mode-guide">Gemini &amp; AI Mode guide</a><a href="https://www.maximuslabs.ai/technical-seo-guide">Technical SEO guide</a><a href="https://www.maximuslabs.ai/resources/guides">All guides</a></div><div class="col-label">GEO &amp; AEO library</div><div class="links"><a href="https://www.maximuslabs.ai/blog/what-is-generative-engine-optimization-geo">What is GEO?</a><a href="../../../aeo/fundamentals/what-is-aeo/">What is AEO?</a><a href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison">GEO vs SEO</a><a href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></div></div><div class="col w" style="--w:230px"><div class="col-label">Free tools</div><div class="links"><a href="https://www.maximuslabs.ai/resources/free-tools/ai-crawlability-checker">AI Crawlability Checker</a><a href="https://www.maximuslabs.ai/resources/free-tools/reddit-threads-finder">Reddit Threads Finder</a><a href="https://www.maximuslabs.ai/resources/free-tools/ai-content-optimizer">AI Content Optimizer</a><a href="https://www.maximuslabs.ai/resources/free-tools/llms-txt-generator">LLMs.txt Generator</a><a href="https://www.maximuslabs.ai/resources/free-tools/ai-content-humanizer">AI Content Humanizer</a><a href="https://www.maximuslabs.ai/resources/ai-tool-directory">AI Tool Directory</a><a href="https://www.maximuslabs.ai/resources/free-tools">All free tools</a></div></div><div class="feature" style="min-height:300px"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></i>Industry report</div><h4>How 200+ B2B SaaS and AI companies show up in AI search</h4></div><a class="f-cta" href="https://www.maximuslabs.ai/resources/research-reports/ai-search-in-b2b-saas-2026/interactive-html">Read the report <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><button type="button" class="nav-item" data-menu="company" aria-expanded="false" aria-controls="menu-company">Company <span class="chev" aria-hidden="true"><svg class="chev-a" viewBox="0 0 16 16"><path d="M5 6l3-3 3 3M5 10l3 3 3-3" fill="none" stroke="#A9B5C9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><svg class="chev-b" viewBox="0 0 16 16"><path d="M4.5 10l3.5-3.5 3.5 3.5" fill="none" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="mega" id="menu-company"><div class="mega-grid"><div class="col"><div class="col-label">Company</div><a class="mi" href="https://www.maximuslabs.ai/company/about-us"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.5" r="2.6" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M3 13.5c.8-2.6 2.8-3.8 5-3.8s4.2 1.2 5 3.8" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span><span class="mi-t">About us</span><span class="mi-d">Brand strategists for the AI search era.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/company/case-studies"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Case studies</span><span class="mi-d">The work, the numbers and how we got there.</span></span></a></div><div class="col"><div class="col-label"> </div><a class="mi" href="https://www.maximuslabs.ai/company/careers"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="5" width="12" height="8.5" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5.8 5V3.6c0-.6.5-1.1 1.1-1.1h2.2c.6 0 1.1.5 1.1 1.1V5" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span><span class="mi-t">Careers</span><span class="mi-d">Join a team that experiments every day.</span></span></a><a class="mi" href="https://www.maximuslabs.ai/contact-us"><span class="mi-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2.6 4.5L8 8.6l5.4-4.1" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span><span class="mi-t">Contact</span><span class="mi-d">Talk to a strategist about your AI search story.</span></span></a></div><div class="col w" style="--w:220px"><div class="col-label">For AI agents</div><div class="links"><a href="https://www.maximuslabs.ai/llms.txt">Information for AI (llms.txt)</a></div></div><div class="feature" style="min-height:280px"><div><div class="f-label"><i><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 9.5c0-2.5 1.2-4.2 3.2-5M9.3 9.5c0-2.5 1.2-4.2 3.2-5" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></i>From the founder</div><p class="quote">AI search is a positioning problem before it&#39;s a technical one.</p><p>Krishna Kaanth M, Founder</p></div><a class="f-cta" href="https://www.maximuslabs.ai/company/about-us">Read our story <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div><a class="nav-item" href="https://www.maximuslabs.ai/pricing">Pricing</a></nav><div class="nav-right"><button type="button" class="icon-btn nav-search" data-cmdk-open aria-label="Search" aria-haspopup="dialog" aria-controls="cmdk"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="#fff" stroke-width="1.8"></circle><path d="M20 20l-4.4-4.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"></path></svg></button><a class="pill-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button type="button" class="icon-btn nav-burger" data-drawer-open aria-label="Open menu" aria-haspopup="dialog" aria-expanded="false" aria-controls="site-drawer" popovertarget="site-drawer"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2.5 5.5h13M2.5 9h13M2.5 12.5h13" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg></button></div></header>
+<dialog class="drawer" id="site-drawer" aria-label="Menu" popover><div class="drawer-panel"><div class="drawer-head"><a href="https://www.maximuslabs.ai/" class="nav-logo" aria-label="MaximusLabs home"></a><button type="button" class="icon-btn drawer-close" data-drawer-close aria-label="Close menu" popovertarget="site-drawer" popovertargetaction="hide" autofocus><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg></button></div><nav class="drawer-body" aria-label="Primary (mobile)"><details class="acc" name="drawer-menu"><summary class="acc-sum">Services<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Optimization</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/services/geo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#7FB5FF" stroke-width="1.3"/><circle cx="8" cy="8" r="2.2" fill="#7FB5FF"/></svg></span><span class="acc-t">Generative Engine Optimization</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/aeo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Answer Engine Optimization</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/b2b-seo"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">B2B SEO</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/technical-seo-website-audit"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Technical SEO foundation</span></a></li><li><a class="acc-link muted" href="https://www.maximuslabs.ai/services/agentic-commerce"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 2.5h2l1.6 7.5h7l1.4-5.2H4.6" fill="none" stroke="#6E6E6E" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6.2" cy="12.8" r="1" fill="#6E6E6E"/><circle cx="11.4" cy="12.8" r="1" fill="#6E6E6E"/></svg></span><span class="acc-t">Agentic commerce</span></a></li></ul></div><div class="acc-group"><div class="acc-label">By AI platform</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></li></ul></div><div class="acc-group"><div class="acc-label">By industry</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/services/industries/ecommerce">Ecommerce</a></li></ul></div><div class="acc-group"><div class="acc-label">Brand strategy</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/services/ai-perception-audit"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><circle cx="8" cy="8" r="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">AI perception audit</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/services/positioning-messaging"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M10.6 5.4L9.1 9.1 5.4 10.6 6.9 6.9z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Positioning &amp; messaging</span></a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/#services">All services <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Products<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">AI visibility</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/max-visibility"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#7FB5FF" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="acc-t">Max Visibility</span><span class="tag">AI visibility</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Client workspace</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/products/max-console"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2.5" width="12" height="11" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2 6h12M6.5 6v7.5" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">Max Console</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Max Visibility</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#ai-visibility">AI visibility &amp; share of voice</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#models">Every AI model</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#competitors">Competitors &amp; sources</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#brand-perception">Brand perception</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#actions">Actions</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/max-visibility#agent-analytics">Agent analytics</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/pricing#max-visibility">Pricing</a></li></ul></div><div class="acc-group"><div class="acc-label">For clients</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/#how-we-work">How the engagement works</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/max-visibility">See Max Visibility <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Resources<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Learn</div><ul><li><a class="acc-link" href="../../../"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5c2-.8 3.8-.8 5.5.4 1.7-1.2 3.5-1.2 5.5-.4v9c-2-.8-3.8-.8-5.5.4-1.7-1.2-3.5-1.2-5.5-.4z" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 3.9v9" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">AI Search 101</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/blog"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 4h9M3.5 7h9M3.5 10h6" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">Blog</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/resources/reports"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8.5M6.3 13V5M9.7 13V7M13 13V3" stroke="#A9B5C9" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="acc-t">Research reports</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/company/case-studies"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Case studies</span></a></li></ul></div><div class="acc-group"><div class="acc-label">Platform guides</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/chatgpt-seo-guide">ChatGPT SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/perplexity-seo-guide">Perplexity SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/google-gemini-ai-mode-guide">Gemini &amp; AI Mode guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/technical-seo-guide">Technical SEO guide</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/guides">All guides</a></li></ul></div><div class="acc-group"><div class="acc-label">GEO &amp; AEO library</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/blog/what-is-generative-engine-optimization-geo">What is GEO?</a></li><li><a class="acc-link is-plain" href="../../../aeo/fundamentals/what-is-aeo/">What is AEO?</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison">GEO vs SEO</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></li></ul></div><div class="acc-group"><div class="acc-label">Free tools</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-crawlability-checker">AI Crawlability Checker</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/reddit-threads-finder">Reddit Threads Finder</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-content-optimizer">AI Content Optimizer</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/llms-txt-generator">LLMs.txt Generator</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools/ai-content-humanizer">AI Content Humanizer</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/ai-tool-directory">AI Tool Directory</a></li><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/resources/free-tools">All free tools</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/resources/research-reports/ai-search-in-b2b-saas-2026/interactive-html">Read the report <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><details class="acc" name="drawer-menu"><summary class="acc-sum">Company<svg class="acc-chev" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></summary><div class="acc-panel"><div class="acc-group"><div class="acc-label">Company</div><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/company/about-us"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.5" r="2.6" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M3 13.5c.8-2.6 2.8-3.8 5-3.8s4.2 1.2 5 3.8" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="acc-t">About us</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/company/case-studies"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="3" width="11.6" height="10" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5 7.5l2 2 4-4" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="acc-t">Case studies</span></a></li></ul></div><div class="acc-group"><ul><li><a class="acc-link" href="https://www.maximuslabs.ai/company/careers"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="5" width="12" height="8.5" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M5.8 5V3.6c0-.6.5-1.1 1.1-1.1h2.2c.6 0 1.1.5 1.1 1.1V5" fill="none" stroke="#A9B5C9" stroke-width="1.3"/></svg></span><span class="acc-t">Careers</span></a></li><li><a class="acc-link" href="https://www.maximuslabs.ai/contact-us"><span class="acc-ico"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="2" fill="none" stroke="#A9B5C9" stroke-width="1.3"/><path d="M2.6 4.5L8 8.6l5.4-4.1" fill="none" stroke="#A9B5C9" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="acc-t">Contact</span></a></li></ul></div><div class="acc-group"><div class="acc-label">For AI agents</div><ul><li><a class="acc-link is-plain" href="https://www.maximuslabs.ai/llms.txt">Information for AI (llms.txt)</a></li></ul></div><a class="acc-more" href="https://www.maximuslabs.ai/company/about-us">Read our story <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></details><a class="acc-row" href="https://www.maximuslabs.ai/pricing">Pricing</a></nav><div class="drawer-foot"><a class="pill-cta drawer-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></dialog>
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Search" hidden><div class="cmdk-box"><div class="cmdk-in"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="#ABABAB" stroke-width="1.8"></circle><path d="M20 20l-4.4-4.4" stroke="#ABABAB" stroke-width="1.8" stroke-linecap="round"></path></svg><input id="cmdkInput" type="search" enterkeyhint="go" aria-label="Search the site" placeholder="Search services, sections, resources…" autocomplete="off"><button type="button" class="cmdk-esc" data-cmdk-close aria-label="Close search">ESC</button></div><div class="cmdk-list" id="cmdkList"></div></div></div>
+<div class="toast" id="toast">This page is coming soon.</div>
+<div class="proto-flag" role="note">Design prototype · v2 · real content from AI Search 101</div>
+<main id="main">
+
+<div class="read-progress" aria-hidden="true"><i></i></div>
+<section class="inner-hero-wrap"><div class="inner-hero art" data-fx-host>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../">AI Search 101</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><a href="../../../agentic-commerce/">Agentic Commerce</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><a href="../../../agentic-commerce/preparation/">Preparing for Agentic Commerce</a><svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><path d="M2.5 1.5 5 4 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><span aria-current="page">Agentic Commerce Implementation Roadmap: A 6…</span></nav>
+  <div class="art-title">
+    <div class="at-l">
+      <div class="chips"><span class="chip-b">Preparing for Agentic Commerce</span><span class="chip-o">Agentic Commerce</span></div>
+      <h1 class="art-h1">Agentic Commerce Implementation Roadmap: A 6-Step Plan to Prepare Your E-commerce Business</h1>
+      <p class="ih-sub">From product data audit to agent checkout: six steps to make your store agent-ready.</p>
+    </div>
+    <div class="share"><button type="button" class="ic-btn" data-copy aria-label="Copy link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button><a class="ic-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.maximuslabs.ai%2Fai-search-101%2Fagentic-commerce%2Fpreparation%2Fagentic-commerce-implementation-roadmap" aria-label="Share on LinkedIn"><img src="../../../assets/live/platforms/linkedin.svg" alt="" width="15" height="15"></a></div>
+  </div>
+  <div class="art-meta">
+    <span class="who"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="44" height="44"><span><b>Krishna Kaanth M</b><small>CEO, MaximusLabs</small></span></span>
+    <span class="vr"></span>
+    <span class="mi"><small>Published</small><b>10 August 2026</b></span>
+    <span class="mi"><small>Reading time</small><b>13 minutes</b></span>
+    <span class="mi"><small>Last updated</small><b>10 August 2026</b></span>
+  </div>
+  
+</div></section>
+
+<div class="m-toc" data-mtoc><button type="button" class="m-toc-bar" aria-expanded="false"><span class="m-n">01/12</span><span class="m-t">Roadmap Defined</span><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 4.5 6 7.5 9 4.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><i class="m-prog"></i></button><ol class="m-list"><li><a href="#q1-what-is-an-agentic-commerce-implementation-roadmap-and-what-are-the-six-steps"><span>01</span>Roadmap Defined</a></li><li><a href="#q2-why-does-agentic-readiness-matter-now-and-how-do-you-size-the-bet"><span>02</span>Why Now</a></li><li><a href="#q3-step-1-how-do-you-audit-product-data-before-touching-any-protocol"><span>03</span>Step 1 Data Foundation</a></li><li><a href="#q4-step-2-how-do-you-make-your-store-readable-to-agents-that-do-not-execute-javascript"><span>04</span>Step 2 Discovery Readiness</a></li><li><a href="#q5-how-do-you-become-the-answer-ai-engines-recommend-not-just-a-purchasable-sku"><span>05</span>Become The Answer</a></li><li><a href="#q6-step-3-which-protocol-should-you-implement-first-acp-ucp-or-ap2"><span>06</span>Step 3 Protocol Choice</a></li><li><a href="#q7-step-4-what-does-agentic-checkout-require-and-who-carries-the-payment-risk"><span>07</span>Step 4 Checkout &amp;amp; Payments</a></li><li><a href="#q8-step-5-how-do-you-certify-pilot-and-set-safe-limits-on-agent-driven-orders"><span>08</span>Step 5 Certify &amp;amp; Pilot</a></li><li><a href="#q9-step-6-how-do-you-measure-ai-referred-revenue-instead-of-vanity-visibility"><span>09</span>Step 6 Measurement</a></li><li><a href="#q10-how-long-does-agentic-readiness-take-what-does-it-cost-and-when-does-it-pay-back"><span>10</span>Timeline &amp;amp; ROI</a></li><li><a href="#q11-what-are-the-most-common-agentic-commerce-implementation-mistakes"><span>11</span>Mistakes To Avoid</a></li><li><a href="#q12-what-comes-next-as-agents-start-buying-without-a-human-present"><span>12</span>What's Next</a></li></ol></div>
+
+<section class="art-body"><div class="art-rail">
+  <aside class="toc" aria-label="On this page"><div class="toc-in">
+    <div class="toc-h"><span>On this page</span><span class="toc-count">1 / 12</span></div>
+    <div class="toc-prog"><i></i></div>
+    <ol><li><a href="#q1-what-is-an-agentic-commerce-implementation-roadmap-and-what-are-the-six-steps"><span class="n">01</span><span>Roadmap Defined</span></a></li><li><a href="#q2-why-does-agentic-readiness-matter-now-and-how-do-you-size-the-bet"><span class="n">02</span><span>Why Now</span></a></li><li><a href="#q3-step-1-how-do-you-audit-product-data-before-touching-any-protocol"><span class="n">03</span><span>Step 1 Data Foundation</span></a></li><li><a href="#q4-step-2-how-do-you-make-your-store-readable-to-agents-that-do-not-execute-javascript"><span class="n">04</span><span>Step 2 Discovery Readiness</span></a></li><li><a href="#q5-how-do-you-become-the-answer-ai-engines-recommend-not-just-a-purchasable-sku"><span class="n">05</span><span>Become The Answer</span></a></li><li><a href="#q6-step-3-which-protocol-should-you-implement-first-acp-ucp-or-ap2"><span class="n">06</span><span>Step 3 Protocol Choice</span></a></li><li><a href="#q7-step-4-what-does-agentic-checkout-require-and-who-carries-the-payment-risk"><span class="n">07</span><span>Step 4 Checkout &amp;amp; Payments</span></a></li><li><a href="#q8-step-5-how-do-you-certify-pilot-and-set-safe-limits-on-agent-driven-orders"><span class="n">08</span><span>Step 5 Certify &amp;amp; Pilot</span></a></li><li><a href="#q9-step-6-how-do-you-measure-ai-referred-revenue-instead-of-vanity-visibility"><span class="n">09</span><span>Step 6 Measurement</span></a></li><li><a href="#q10-how-long-does-agentic-readiness-take-what-does-it-cost-and-when-does-it-pay-back"><span class="n">10</span><span>Timeline &amp;amp; ROI</span></a></li><li><a href="#q11-what-are-the-most-common-agentic-commerce-implementation-mistakes"><span class="n">11</span><span>Mistakes To Avoid</span></a></li><li><a href="#q12-what-comes-next-as-agents-start-buying-without-a-human-present"><span class="n">12</span><span>What's Next</span></a></li></ol>
+    <a class="toc-faq" href="#faq">7 questions answered</a>
+    <div class="toc-cta glass-bg"><b>Want ChatGPT to name you, not just list you?</b><a class="btn-white sm" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div></aside>
+  <article class="prose">
+    
+    <div class="tldr reveal"><div class="px">TL;DR</div><ul><li>An agentic commerce implementation roadmap runs six phases: product data foundation, discovery readiness, protocol selection, checkout and payments, certification and pilot, then revenue measurement.</li><li>Adobe measured AI-referred retail traffic up 693.4% in holiday 2025 and 393% in Q1 2026, converting about 31% better with 32% higher revenue per visit.</li><li>Discovery readiness and transaction readiness are parallel tracks. A purchasable store nobody recommends still receives zero agent orders.</li><li>OAI-SearchBot, PerplexityBot, and Claude-SearchBot do not execute JavaScript, so async prices, stock, and reviews are invisible to them.</li><li>You remain merchant of record in agentic checkout, owning processing, refunds, and chargebacks, while feed and checkout specs stay outside PCI scope.</li><li>Most mid-market stores need three to six months, with the data-foundation phase published at roughly $20,000 to $50,000 before endpoint work begins.</li></ul></div>
+    <h2 id="q1-what-is-an-agentic-commerce-implementation-roadmap-and-what-are-the-six-steps" data-n=""><a class="anchor" href="#q1-what-is-an-agentic-commerce-implementation-roadmap-and-what-are-the-six-steps" aria-label="Link to section"></a>Q1. What is an agentic commerce implementation roadmap, and what are the six steps?</h2>
+
+<p>An agentic commerce implementation roadmap is a phased plan that makes a store transactable by AI agents: audit and structure product data, expose discovery signals like schema and feeds, select a protocol (ACP, UCP, or AP2), build compliant checkout and delegated-payment endpoints, certify and pilot, then measure AI-referred revenue. Most mid-market stores need three to six months.</p>
+
+<h3>Why it is a roadmap, not an integration ticket</h3>
+
+<p>Two things must be true before an agent buys from you. It has to pick you, and it has to be able to pay you. Those are separate engineering problems with separate owners.</p>
+
+<p>Most teams treat this as one integration. That is where six weeks turns into six months of rework.</p>
+
+<h4>🎯 The two tracks that run in parallel</h4><figure><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/cbe8ad3f-5fc4-4d54-b56a-f625991e1f66.png" alt="Diagram showing agentic commerce readiness split into a discovery track and a transaction track running in parallel"><figcaption>Discovery readiness and transaction readiness are separate workstreams with separate owners, and they belong on the same calendar.</figcaption></figure>
+
+<p>MaximusLabs AI runs discovery readiness and transaction readiness as parallel tracks, because a purchasable store that no engine recommends still gets zero agent orders. The discovery track owns feeds, rendering, schema, and citations. The transaction track owns <a href="https://maximuslabs.ai/ai-search-101/agentic-commerce/fundamentals/a2a-protocols-agentic-commerce">protocol choice, endpoints, payments, and certification</a>.</p>
+
+<p>Sequencing them one after the other wastes the cheapest wins. Feed hygiene pays off in weeks. Endpoint work does not.</p>
+
+<h3>The ghost kitchen problem</h3>
+
+<p>Think of your storefront as a restaurant. Your UI is the dining room, built for people who walk in and look around.</p>
+
+<p><a href="https://maximuslabs.ai/ai-search-101/agentic-commerce/fundamentals/what-is-agentic-commerce">Agentic commerce</a> is the ghost kitchen. The agent is the delivery driver, and it only needs the machine-legible data feed to fulfil an order for a customer who never enters the building.</p>
+
+<h4>🍽️ What that changes about priorities</h4>
+
+<p>OpenAI's commerce documentation makes the split explicit: a product feed for discovery, a checkout specification for the transaction, and a delegated payment specification for money movement. Nothing in that stack reads your dining room.</p>
+
+<p>The reader's instinct is to redesign product pages. The roadmap says fix the feed first.</p>
+
+<h3>The six steps at a glance</h3>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>The Six Steps of an Agentic Commerce Implementation Roadmap</caption>
+<tbody><tr>
+<td class="highlight">Step</td>
+<td class="highlight">Weeks</td>
+<td class="highlight">Owner</td>
+<td class="highlight">Exit criteria</td>
+</tr>
+<tr>
+<td>1. Product data foundation</td>
+<td>1 to 6</td>
+<td>Merchandising, data</td>
+<td>Every SKU populates required feed fields</td>
+</tr>
+<tr>
+<td>2. Discovery readiness</td>
+<td>4 to 8</td>
+<td>Web, SEO</td>
+<td>Content visible with JavaScript disabled, schema live</td>
+</tr>
+<tr>
+<td>3. Protocol selection</td>
+<td>6 to 12</td>
+<td>Growth, engineering</td>
+<td>Written decision, merchant applications filed</td>
+</tr>
+<tr>
+<td>4. Checkout and payments</td>
+<td>12 to 16</td>
+<td>Engineering, finance</td>
+<td>Endpoints and webhooks pass sandbox tests</td>
+</tr>
+<tr>
+<td>5. Certification and pilot</td>
+<td>16 to 24</td>
+<td>Engineering, ops</td>
+<td>One category live, rollback owner named</td>
+</tr>
+<tr>
+<td>6. Measurement</td>
+<td>Ongoing</td>
+<td>Analytics</td>
+<td>AI referral revenue reported monthly</td>
+</tr>
+</tbody></table></div></div>
+
+<h4>⏰ How to read the rest of this guide</h4>
+
+<p>Weeks overlap on purpose. Steps 1 and 2 should be running at the same time in most teams.</p>
+
+<p>Ask MaximusLabs AI to <a href="https://maximuslabs.ai/services/agentic-commerce/">sequence the two tracks against your current platform</a>, since native protocol support changes which steps you can skip. Everything after this section goes step by step, with the exact platform requirement behind each one.</p>
+
+<p>MaximusLabs AI treats this roadmap as two tracks rather than one project, because the agent chooses from a shortlist assembled long before checkout, and pays through plumbing that has nothing to do with your design system.</p>
+
+<h2 id="q2-why-does-agentic-readiness-matter-now-and-how-do-you-size-the-bet" data-n=""><a class="anchor" href="#q2-why-does-agentic-readiness-matter-now-and-how-do-you-size-the-bet" aria-label="Link to section"></a>Q2. Why does agentic readiness matter now, and how do you size the bet?</h2>
+
+<p>AI-referred retail traffic grew 693.4% year over year in the 2025 holiday season and 393% in Q1 2026, and those visitors converted about 31% better with 32% higher revenue per visit than non-AI traffic. Salesforce reports agentic search growing roughly 200% year over year as the first step of the purchase journey. Treat it as an additional high-conversion channel, not a Google replacement.</p>
+
+<h3>The situation: small channel, unusual quality</h3>
+
+<p>Adobe Analytics measured a 693.4% year over year jump in generative AI traffic to retail sites during the 2025 holiday season. In Q1 2026, AI traffic to US retailers rose 393%, with a 269% lift in March alone.</p>
+
+<p>Volume is still modest for most stores. Quality is not.</p><figure><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/d7bc9a28-729b-4fed-8e61-fbfb17749035.png" alt="Bar chart comparing AI referral traffic and non-AI traffic on conversion rate, revenue per visit, and growth"><figcaption>AI-referred visitors are few, but they convert about 31% better and spend more per visit than everyone else.</figcaption></figure>
+
+<h4>📊 What operators actually see in their dashboards</h4>
+
+<p>Practitioners report the same shape as the analyst data, which is rare and worth noting.</p>
+
+<blockquote><cite>"It's still significantly under 1% of my overall traffic. However, its conversion rate is impressive, better than Google, in fact."</cite><br><cite>— r/ecommercemarketing, <a href="https://www.reddit.com/r/ecommercemarketing/comments/1oi75br/chatgpt_referred_65m_visits_to_ecommerce_sites_in/">Reddit Thread</a></cite></blockquote>
+
+<blockquote><cite>"It seems that around 2% comes from Agentic, primarily driven by the Shop App rather than ChatGPT."</cite><br><cite>— r/shopify, <a href="https://www.reddit.com/r/shopify/comments/1trdkdk/whats_the_consensus_on_the_agentic_storefront/">Reddit Thread</a></cite></blockquote>
+
+<h3>The complication: the forecasts disagree</h3>
+
+<p>Gartner's digital commerce research now places agentic buying, AI checkout, and <a href="https://maximuslabs.ai/ai-search-101/aeo/fundamentals/what-is-aeo">answer engine optimization</a> at the centre of how products get discovered and purchased. Gartner has also projected traditional search volume falling by around 25%.</p>
+
+<p>Clickstream data from SparkToro points the other way, with Google searches growing roughly 21.6% in 2024. Both cannot be the headline.</p>
+
+<h4>⚠️ How to hold both numbers honestly</h4>
+
+<p>The defensible reading is fragmentation, not collapse. Search is splitting into more surfaces, and one of those surfaces converts unusually well.</p>
+
+<p>MaximusLabs AI sizes agentic commerce against pipeline and revenue per visit, and my honest hedge is that the conversion premium may narrow as volume scales. I would still fund the work today, because the data structures you build keep paying after the premium normalises.</p>
+
+<h3>The resolution: fund it as additive, measure it as revenue</h3>
+
+<p>There is a useful parallel from paid media. Running ads is renting someone else's stage, and the traffic stops the day the budget stops.</p>
+
+<p>Structured feeds, server-rendered pages, and citations behave like owned assets. Engines keep using them.</p>
+
+<h4>💰 The board-ready version</h4>
+
+<p>Traditional SEO agencies frame this quarter as impressions and rankings. That framing does not survive a CFO's second question.</p>
+
+<p>The reframe is simple: the job is <a href="https://maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison/">becoming the answer an engine cites</a> and can transact against, not just ranking a blue link. Then report it in conversion rate and revenue per visit, the two numbers your finance team already trusts.</p>
+
+<p>MaximusLabs AI reports AI-search work against pipeline and revenue per visit rather than impressions, because betting a roadmap on Google collapsing is not something anyone can defend in a board meeting.</p>
+
+<h2 id="q3-step-1-how-do-you-audit-product-data-before-touching-any-protocol" data-n=""><a class="anchor" href="#q3-step-1-how-do-you-audit-product-data-before-touching-any-protocol" aria-label="Link to section"></a>Q3. Step 1, how do you audit product data before touching any protocol?</h2>
+
+<p>MaximusLabs AI uses OpenAI's is_eligible_search and is_eligible_checkout booleans as gate one of every catalog audit, because a feed that cannot populate them is unbuyable regardless of product quality. Agents also need complete structured attributes, accurate real-time stock, and delivery windows. Merchant-supplied popularity_score (0 to 5) and return_rate (0 to 100%) feed recommendation weighting. Budget four to six weeks.</p>
+
+<h3>Start with the feed, not the integration</h3>
+
+<p>Your catalog was built for people who browse. Agents do not browse. They filter, compare, and reject on missing fields.</p>
+
+<p>OpenAI's commerce feed spec is the clearest published statement of what "complete" means. Two booleans act as hard gates: one for appearing in recommendations, one for <a href="https://maximuslabs.ai/answer-engine-optimizations/chatgpt-instant-checkout/">autonomous checkout</a>.</p>
+
+<h4>✅ The fields that decide inclusion</h4>
+
+<p>Two performance attributes are merchant-supplied and used as ranking inputs. Popularity score runs 0 to 5. Return rate runs 0 to 100%.</p>
+
+<p>That means your own data quality influences your own recommendation weight. Sloppy or absent values are not neutral.</p>
+
+<h3>What the audit actually checks</h3>
+
+<p>Stock status and delivery time matter more than most teams expect. When an engine has to choose between two similar products, availability breaks the tie.</p>
+
+<p>I would put it plainly. Structured catalog, plus live inventory, plus delivery windows, is the prerequisite. Everything else is polish.</p>
+
+<h4>📋 The pass and fail table</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>Product Data Audit: Pass and Fail Criteria</caption>
+<tbody><tr>
+<td class="highlight">Field group</td>
+<td class="highlight">Pass</td>
+<td class="highlight">Fail</td>
+</tr>
+<tr>
+<td>Identifiers (GTIN, SKU, brand)</td>
+<td>Present on every variant</td>
+<td>Parent-only or missing</td>
+</tr>
+<tr>
+<td>Core attributes</td>
+<td>Size, color, material, ingredients as structured values</td>
+<td>Buried in description prose</td>
+</tr>
+<tr>
+<td>Variant model</td>
+<td>Each variant separately addressable</td>
+<td>Options rendered client side only</td>
+</tr>
+<tr>
+<td>Price and currency</td>
+<td>Matches storefront exactly</td>
+<td>Stale or region-mismatched</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>Real-time stock per variant</td>
+<td>Daily batch or absent</td>
+</tr>
+<tr>
+<td>Delivery window</td>
+<td>Stated per region</td>
+<td>Generic shipping page link</td>
+</tr>
+<tr>
+<td>Return and warranty terms</td>
+<td>Machine-readable values</td>
+<td>PDF or policy page only</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>Stable URLs, correct variant mapping</td>
+<td>Hotlinked or mismatched</td>
+</tr>
+<tr>
+<td>Popularity score</td>
+<td>Populated 0 to 5</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>Return rate</td>
+<td>Populated 0 to 100%</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>Eligibility booleans</td>
+<td>Both true where intended</td>
+<td>Defaulting to false</td>
+</tr>
+<tr>
+<td>Feed freshness</td>
+<td>Refresh matches inventory velocity</td>
+<td>Weekly or manual</td>
+</tr>
+</tbody></table></div></div>
+
+<h4>⚠️ The mismatch that quietly deletes you</h4>
+
+<p>Amazon holds a claim-verification patent, US 12353469B1, that runs checks on numeric claims against ground truth and swaps the citation when they do not match. Price and spec drift between your marketing copy and your database is therefore not cosmetic.</p>
+
+<p>Practitioners report the same pattern from the feed side. Fluctuating agentic sales often trace back to feed completeness rather than daily operations, per one r/shopify operator discussion on pushing agentic channel volume.</p>
+
+<blockquote><cite>"The fluctuations you're noticing are likely due to the volume of queries rather than any mistake on your part."</cite><br><cite>— r/shopify, <a href="https://www.reddit.com/r/shopify/comments/1v7tue4/agentic_sales_channel_how_to_push_more/">Reddit Thread</a></cite></blockquote>
+
+<h3>Who owns this and what it costs</h3>
+
+<p>This step is merchandising and data work, not engineering work. That is good news for cash, because it does not queue behind your roadmap.</p>
+
+<p>MaximusLabs AI runs the <a href="https://maximuslabs.ai/services/industries/ecommerce/">eligibility audit</a> before any protocol conversation, since fixing thirty feed fields costs a fraction of rebuilding a checkout twice.</p>
+
+<p>MaximusLabs AI treats feed eligibility as phase gate one, because a catalog that cannot populate the booleans stays invisible no matter how strong the product or the brand behind it is.</p>
+
+<h2 id="q4-step-2-how-do-you-make-your-store-readable-to-agents-that-do-not-execute-javascript" data-n=""><a class="anchor" href="#q4-step-2-how-do-you-make-your-store-readable-to-agents-that-do-not-execute-javascript" aria-label="Link to section"></a>Q4. Step 2, how do you make your store readable to agents that do not execute JavaScript?</h2>
+
+<p>OAI-SearchBot, PerplexityBot, and Claude-SearchBot do not execute JavaScript, so async reviews, prices, and stock do not exist for them. Render product and review data server-side, keep a crawlable server-side search field agents can query, expose hidden facet data as on-page text, and publish Product and Offer schema plus machine-readable return, warranty, and shipping policies.</p>
+
+<h3>The situation: your site looks perfect to humans</h3>
+
+<p>Modern storefronts load the good stuff late. Reviews arrive by API call. Inventory badges hydrate after paint. Facets live inside dropdown widgets.</p>
+
+<p>For a shopper, that feels fast. For a retrieval bot, most of it never happened.</p><figure><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/bc239a5a-7e32-46b0-9056-6ac6cb963b06.png" alt="Side-by-side comparison of a product page as a shopper sees it versus what a non-JavaScript AI crawler retrieves"><figcaption>Disable JavaScript and you are looking at roughly the same page an AI shopping agent retrieves.</figcaption></figure>
+
+<h4>❌ The complication in one line</h4>
+
+<p>Vercel's network analysis of 569 million GPTBot requests and 370 million ClaudeBot requests found that <a href="https://maximuslabs.ai/ai-search-101/technical/ai-crawlers/ai-crawlers-complete-guide-all-bots">AI crawlers download JavaScript files without executing them</a>. PerplexityBot's own documentation says the same.</p>
+
+<p>Crawl efficiency compounds the loss. OpenAI's search bot has been measured wasting about 34.8% of requests on 404s, against roughly 8.22% for Googlebot. Dead links burn a budget you never see.</p>
+
+<h3>What practitioners keep confirming</h3>
+
+<p>This is the most tested claim in technical GEO right now, and the community verdict is consistent.</p>
+
+<blockquote><cite>"Three out of six crawlers don't execute JS at all. If your content needs JavaScript to render, half of AI tools won't even access it."</cite><br><cite>— r/TechSEO, <a href="https://www.reddit.com/r/TechSEO/comments/1s9l4be/we_tested_whether_ai_crawlers_can_actually_read/">Reddit Thread</a></cite></blockquote>
+
+<blockquote><cite>"If your application provides blank HTML to a crawler, it effectively doesn't exist. It's not just ranked poorly, it's completely missing."</cite><br><cite>— r/nextjs, <a href="https://www.reddit.com/r/nextjs/comments/1sjb7a2/ai_search_tools_cant_see_your_site_if_youre/">Reddit Thread</a></cite></blockquote>
+
+<h4>🔍 The uncomfortable implication</h4>
+
+<p>Product quality is not the gate here. Parseability is.</p>
+
+<p>If an agent can navigate your competitor's catalog and not yours, it buys theirs. The better product loses to the more readable one, and nobody sends you a notification when that happens.</p>
+
+<h3>The resolution: four fixes, in order</h3>
+
+<p>Server-render the commercial facts first. Prices, variants, stock, and reviews belong in the initial HTML response.</p>
+
+<p>Then give agents a door. A crawlable, server-side search field lets a bot query your catalog directly instead of guessing at URLs.</p>
+
+<h4>🛠️ Expose the facets, then the schema</h4>
+
+<p>Facet data is the hidden win. Material, closure, sizing, ingredients, and fit usually live inside filter widgets an agent cannot click.</p>
+
+<p>Move those values into on-page text and category-level tags, and follow-up questions like "best waterproof jacket in merino" become answerable from your page. Then publish <a href="https://maximuslabs.ai/generative-engine-optimization/schema-markup-basics/">Product and Offer schema</a> and machine-readable return, warranty, and shipping terms.</p>
+
+<p>Be honest about schema's weight. SALT.agency concluded it is a hygiene factor at best rather than a differentiator, and that study did not control for domain authority. My read is that schema is cheap insurance, not a growth lever.</p>
+
+<h4>🧪 The Monday test</h4>
+
+<p>MaximusLabs AI audits storefronts with JavaScript disabled first, and on one enterprise supplements catalog that stripped view was missing reviews, stock state, and every facet value. We fixed rendering before touching a single protocol endpoint.</p>
+
+<p>Do the same in ten minutes. Disable JavaScript, load three product pages and two category pages, and write down what disappears. An <a href="https://maximuslabs.ai/tools/ai-crawlability-checker/">AI crawlability check</a> will confirm what the bots see on the same URLs.</p>
+
+<p>MaximusLabs AI starts discovery work from the JavaScript-off view, because that stripped page is much closer to what an AI shopping agent actually retrieves than anything in your browser.</p>
+
+<h2 id="q5-how-do-you-become-the-answer-ai-engines-recommend-not-just-a-purchasable-sku" data-n=""><a class="anchor" href="#q5-how-do-you-become-the-answer-ai-engines-recommend-not-just-a-purchasable-sku" aria-label="Link to section"></a>Q5. How do you become the answer AI engines recommend, not just a purchasable SKU?</h2>
+
+<p>Protocol work makes you purchasable. GEO and AEO make you the recommendation. MaximusLabs AI's own citation tracking puts roughly 44.2% of AI citations in the first 30% of a page, and brand mentions correlate with AI visibility at r=0.664. Where you cannot rank your own domain, optimize the community and review pages ChatGPT and Perplexity already cite for your category.</p>
+
+<h3>The situation: teams file this under engineering</h3>
+
+<p>Most agentic commerce projects start in a sprint board. Feeds, endpoints, webhooks, done.</p>
+
+<p>That work is necessary. It is also invisible until an engine decides to mention you.</p>
+
+<h4>⚠️ The complication nobody scopes</h4>
+
+<p>By the time an agent calls your checkout endpoint, the shortlist already exists. The engine picked two or three products upstream, in a retrieval step you never see.</p>
+
+<p>Gartner's 2026 digital commerce research names <a href="https://maximuslabs.ai/services/aeo/">answer engine optimization</a> alongside agentic buying and AI checkout as the technologies reshaping discovery. Being purchasable does not put you on the list. Being cited does.</p>
+
+<h3>What the prompt shape does to your odds</h3>
+
+<p>Buying-intent prompts behave very differently from brand prompts. Operators are now measuring this directly.</p>
+
+<blockquote><cite>"Brand name prompts trigger ChatGPT shopping at 3.1%. Open ended 'best X for Y' prompts trigger at 12.1%"</cite><br><cite>— r/ecommerce, <a href="https://www.reddit.com/r/ecommerce/comments/1unza01/brand_name_prompts_trigger_chatgpt_shopping_at_31/">Reddit Thread</a></cite></blockquote>
+
+<blockquote><cite>"It honestly feels like smaller stores like mine don't even show up anymore."</cite><br><cite>— r/ecommerce, <a href="https://www.reddit.com/r/ecommerce/comments/1lywzoh/anyone_else_losing_traffic_wondering_if_ai_search/">Reddit Thread</a></cite></blockquote>
+
+<h4>✅ Front-load the answer, then the detail</h4>
+
+<p>Ask MaximusLabs AI to restructure a category page so the buying answer sits in the first screen, since <a href="https://maximuslabs.ai/ai-search-101/strategies/citations/citation-worthy-content-ai-engines">citation extraction favours early blocks</a>. Long preamble essays get skipped.</p>
+
+<p>Put the recommendation, the attribute, and the price context up top. Keep the storytelling below it.</p>
+
+<h3>The resolution: three moves, in cash-conscious order</h3>
+
+<p>Move one costs nothing but attention. Run twenty buying-intent prompts across ChatGPT, Perplexity, and Gemini, then log who gets cited.</p>
+
+<p>Move two is <a href="https://maximuslabs.ai/answer-engine-optimizations/reddit-forum-aeo/">citation borrowing</a>. If a Reddit thread or a review roundup keeps getting cited for your category, your presence on that page matters more than another blog post on your own domain.</p>
+
+<h4>💰 Where not to spend</h4>
+
+<p>Skip glossary pages and definitional content. The engine writes its own definition, so there is nothing left for a reader to click.</p>
+
+<p>MaximusLabs AI concentrates content spend on <a href="https://maximuslabs.ai/answer-engine-optimizations/e-commerce-product-aeo/">bottom and middle of funnel pages</a> that name products, attributes, and use cases, because those are the prompts where a purchase link can appear. Traditional agencies still bill for top-of-funnel volume plays built for impressions, which is a fine Google tactic and a poor agent tactic.</p>
+
+<h3>The brand argument, said plainly</h3>
+
+<p>Algorithms churn. Brands do not.</p>
+
+<p>If you are genuinely the brand in your category, models have to include you, because their training priors and their live retrieval both keep pointing at you. My read is that this is the only durable moat here, and the academic GEO work supports the mechanism: content that carries credible sourcing and quotable structure gets cited more often.</p>
+
+<h4>🎯 The Monday version</h4>
+
+<p>Pick your five highest-margin categories. Write the twenty prompts a real buyer would type, not the keywords a tool suggests.</p>
+
+<p>Log citation share per prompt in a sheet. That single sheet becomes your discovery scoreboard for the next two quarters.</p>
+
+<p>MaximusLabs AI pairs <a href="https://maximuslabs.ai/services/geo/">Search Everywhere Optimization</a> with protocol work, because the agent chooses from a shortlist formed long before checkout, and that shortlist is built on third-party pages as much as your own.</p>
+
+<h2 id="q6-step-3-which-protocol-should-you-implement-first-acp-ucp-or-ap2" data-n=""><a class="anchor" href="#q6-step-3-which-protocol-should-you-implement-first-acp-ucp-or-ap2" aria-label="Link to section"></a>Q6. Step 3, which protocol should you implement first: ACP, UCP, or AP2?</h2>
+
+<p>Go ACP-first if payments already run on Stripe and your buyers sit inside ChatGPT. Go UCP-first if you have strong Google Merchant Center presence and want broad agent-marketplace reach, since Google's UCP is compatible with A2A, AP2, and MCP. Competitive categories should plan for both. MaximusLabs AI files merchant-program applications in week one, because ChatGPT feed onboarding is approved-partners-only, and approval lead time gates everything downstream.</p>
+
+<h3>The decision is smaller than it looks</h3>
+
+<p>Protocol choice paralyses teams because the acronyms arrived faster than the documentation. It helps to remember what each one actually does.</p>
+
+<p>Two of them are commerce protocols. One is a payments protocol that sits underneath either.</p>
+
+<h4>📋 The four-column view</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>Agentic Commerce Protocols Compared</caption>
+<tbody><tr>
+<td class="highlight">Protocol</td>
+<td class="highlight">Owner</td>
+<td class="highlight">Best fit</td>
+<td class="highlight">What it gates</td>
+</tr>
+<tr>
+<td>ACP (Agentic Commerce Protocol)</td>
+<td>OpenAI with Stripe</td>
+<td>Stripe-based stacks selling to ChatGPT users</td>
+<td>Instant Checkout inside ChatGPT</td>
+</tr>
+<tr>
+<td>UCP (Universal Commerce Protocol)</td>
+<td>Google, open standard</td>
+<td>Strong Merchant Center feeds, broad agent reach</td>
+<td>Discovery, buying, and post-purchase across agents</td>
+</tr>
+<tr>
+<td>AP2 (Agent Payments Protocol)</td>
+<td>Google, donated to FIDO Alliance</td>
+<td>Any agent-initiated payment flow</td>
+<td>Signed intent, cart, and payment mandates</td>
+</tr>
+<tr>
+<td>MCP (Model Context Protocol)</td>
+<td>Anthropic, widely adopted</td>
+<td>Exposing store tools to assistants</td>
+<td>Tool access, not payment</td>
+</tr>
+</tbody></table></div></div>
+
+<h3>What the changelogs actually say</h3>
+
+<p>Google launched UCP as an open standard in January 2026, covering discovery, buying, and post-purchase, and built it to work with <a href="https://maximuslabs.ai/resources/research-reports/the-agentic-web-stack----how-mcp-a2a-and-webmcp-fit-together/">A2A, AP2, and MCP</a>. That compatibility is the reason a UCP-first path does not lock you out of other agents.</p>
+
+<p>AP2 arrived in September 2025 and moved to the FIDO Alliance in April 2026, with version 0.2 adding Human Not Present payments for pre-authorized purchases. Treat AP2 as the payment rail decision, not the storefront decision.</p>
+
+<h4>⏰ The gate people miss</h4>
+
+<p>Access is not self-serve. ChatGPT's commerce onboarding runs through an approved-partner application, and Perplexity's Merchant Program requires signing up with a product catalog.</p>
+
+<p>MaximusLabs AI submits those applications before endpoint scoping starts, since a two-week approval wait can idle an engineering sprint you already paid for.</p>
+
+<h3>Velocity beats feature shopping</h3>
+
+<p>Here is the honest version from client work. The protocol you can ship this quarter beats the protocol that scores better on a comparison chart.</p>
+
+<p>A common conversation goes like this. We scope the work, the internal engineering team quotes nine months, and the opportunity closes before anyone writes code.</p>
+
+<h4>⚡ How the delivery models compare</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>Delivery Models for Agent-Ready Templates</caption>
+<tbody><tr>
+<td class="highlight">Approach</td>
+<td class="highlight">Typical time to first agent-ready template</td>
+<td class="highlight">Trade-off</td>
+</tr>
+<tr>
+<td>In-house engineering queue</td>
+<td>Six to nine months</td>
+<td>Deep platform control, slow to test</td>
+</tr>
+<tr>
+<td>Traditional SEO agency</td>
+<td>Not offered, recommendations only</td>
+<td>Cheap advice, no shipped surface</td>
+</tr>
+<tr>
+<td>MaximusLabs AI Webflow delivery team</td>
+<td>Days for programmatic pages, search, and product templates</td>
+<td>Faster iteration, requires CMS fit</td>
+</tr>
+</tbody></table></div></div>
+
+<p>I would not oversell that speed. It works because we chose a stack for iteration, and it will not suit every enterprise platform.</p>
+
+<h4>✅ The one-page decision rule</h4>
+
+<p>Check native support first. If your platform already ships ACP or UCP hooks, your build shrinks to configuration.</p>
+
+<p>Then pick based on where your buyers already ask. Everything else is a second-quarter problem.</p>
+
+<p>MaximusLabs AI built a dedicated <a href="https://maximuslabs.ai/programmatic-seo/">programmatic delivery team</a> because engineering queues, not protocol choice, are what actually stall agentic readiness, and a shipped ACP pilot teaches more than a perfect protocol memo.</p>
+
+<h2 id="q7-step-4-what-does-agentic-checkout-require-and-who-carries-the-payment-risk" data-n=""><a class="anchor" href="#q7-step-4-what-does-agentic-checkout-require-and-who-carries-the-payment-risk" aria-label="Link to section"></a>Q7. Step 4, what does agentic checkout require, and who carries the payment risk?</h2>
+
+<p>Agentic checkout means exposing five REST endpoints, emitting order_created and order_updated webhooks with HMAC signatures, returning HTTP 409 on idempotency conflicts, and handling documented errors like out_of_stock and payment_declined. You stay merchant of record, so you own processing, refunds, and chargebacks. Feed and checkout specs sit outside PCI scope. Direct delegated-payment integration usually does not.</p>
+
+<h3>The assumption that costs money</h3>
+
+<p>Teams assume the AI platform absorbs the risk. It does not.</p>
+
+<p>OpenAI's commerce documentation is explicit that the merchant selling the goods remains merchant of record. Every refund, dispute, and chargeback lands on your account.</p>
+
+<h4>🧾 What engineering actually builds</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>Agentic Checkout Components and Common Failures</caption>
+<tbody><tr>
+<td class="highlight">Component</td>
+<td class="highlight">Requirement</td>
+<td class="highlight">Common failure</td>
+</tr>
+<tr>
+<td>Checkout session create</td>
+<td>Accept items, address, and buyer context</td>
+<td>Missing tax or shipping calculation</td>
+</tr>
+<tr>
+<td>Session update</td>
+<td>Recalculate totals on change</td>
+<td>Stale price returned</td>
+</tr>
+<tr>
+<td>Session retrieve</td>
+<td>Return current state</td>
+<td>No idempotency handling</td>
+</tr>
+<tr>
+<td>Complete</td>
+<td>Finalise with payment token</td>
+<td>Order created twice</td>
+</tr>
+<tr>
+<td>Cancel</td>
+<td>Release inventory</td>
+<td>Ghost reservations</td>
+</tr>
+<tr>
+<td>Webhooks</td>
+<td>order_created, order_updated, HMAC signed</td>
+<td>Signature never verified</td>
+</tr>
+</tbody></table></div></div>
+
+<h3>The specifications behind each field</h3>
+
+<p>Two specs govern this. The Agentic Checkout Spec defines the session lifecycle. The Delegated Payment Spec defines how a payment token reaches your processor.</p>
+
+<p>Error handling is not optional decoration. Documented codes such as out_of_stock and payment_declined let the agent recover gracefully instead of abandoning the cart.</p>
+
+<h4>⚠️ Idempotency, in plain language</h4>
+
+<p>Idempotency means the same request sent twice produces one result. Agents retry aggressively, often on flaky networks.</p>
+
+<p>Return HTTP 409 on a conflicting retry with the same idempotency key. Skip this, and you will ship duplicate orders in week one.</p>
+
+<h3>The PCI decision tree</h3>
+
+<p>PCI DSS is the card industry's security standard. Scope determines how much compliance paperwork you inherit.</p>
+
+<p>Three branches cover most stores. Feed and checkout endpoints alone keep you outside PCI scope, because no card data touches them.</p>
+
+<h4>🔐 When scope changes</h4>
+
+<ul><li><strong>Branch one:</strong> Feed plus checkout endpoints only, payment handled by your existing PSP. PCI scope unchanged.</li><li><strong>Branch two:</strong> Delegated payment tokens passed through your PSP's vaulted integration. Scope usually unchanged, confirm with your provider.</li><li><strong>Branch three:</strong> Direct delegated-payment handling in your own systems. Scope expands, and an Attestation of Compliance may be required before production access.</li></ul>
+
+<p>Ask MaximusLabs AI to <a href="https://maximuslabs.ai/technical-seo-website-audit/">map which branch you are on</a> before engineering estimates the work, because branch three changes both the timeline and the audit budget.</p>
+
+<h3>Latency is a gate, not a nice-to-have</h3>
+
+<p>There is a detail engineers appreciate and marketers usually miss. Grounding layers behind AI answers run on tight time budgets, with Microsoft's Web IQ pipeline reported at 164ms p95, roughly 2.5 times faster than its nearest alternative.</p>
+
+<p>If your endpoint cannot answer inside a comparable window, you drop out of the real-time loop. No error message tells you this happened.</p>
+
+<h4>💸 The handoff list for your engineer</h4>
+
+<p>Give them five things on Monday. The two specs, your PSP's token documentation, the error code list, the webhook signature method, and the branch decision from above.</p>
+
+<p>That packet turns a vague project into a two-sprint build. It also stops the finance conversation from arriving late.</p>
+
+<p>MaximusLabs AI maps <a href="https://maximuslabs.ai/answer-engine-optimizations/chatgpt-instant-checkout/">checkout liability</a> before integration begins, because merchant-of-record status means every refund and chargeback lands on the brand, and that belongs in the plan rather than in a surprise invoice.</p>
+
+<h2 id="q8-step-5-how-do-you-certify-pilot-and-set-safe-limits-on-agent-driven-orders" data-n=""><a class="anchor" href="#q8-step-5-how-do-you-certify-pilot-and-set-safe-limits-on-agent-driven-orders" aria-label="Link to section"></a>Q8. Step 5, how do you certify, pilot, and set safe limits on agent-driven orders?</h2>
+
+<p>Before production, pass launch certification: sandbox tests for every endpoint, webhook signature verification, idempotency conflicts, and each documented error path. Then pilot one narrow product category rather than the full catalog. Set bounded autonomy limits, including spend caps, approval thresholds, revocation paths, and fraud anomaly alerts for agent-initiated orders. Name the rollback owner before launch day.</p>
+
+<h3>Certification is a checklist, not a ceremony</h3>
+
+<p>The gap between a working demo and a production integration is entirely test coverage. OpenAI publishes a launch certification checklist for exactly this reason.</p>
+
+<p>Run it as a gap audit first. Log what you cannot yet emit, then fix in order.</p>
+
+<h4>✅ The eight tests worth running twice</h4>
+
+<ol><li>Create, update, retrieve, complete, and cancel a session end to end.</li><li>Verify HMAC signatures on order_created and order_updated.</li><li>Replay a request with the same idempotency key, and confirm HTTP 409.</li><li>Force out_of_stock mid-session, and confirm graceful recovery.</li><li>Force payment_declined, and confirm the agent gets a usable error.</li><li>Cancel after reservation, and confirm inventory releases.</li><li>Confirm price, tax, and shipping match your storefront exactly.</li><li>Confirm order status syncs back after a manual refund.</li></ol>
+
+<h3>Pilot narrow, and pick the boring category</h3>
+
+<p>Full-catalog launches hide failures inside volume. One category makes every gap visible in a week.</p>
+
+<p>Choose a category with stable inventory, simple variants, and predictable shipping. Elogic's 2026 platform readiness index reaches the same conclusion, recommending <a href="https://maximuslabs.ai/ai-search-101/agentic-commerce/optimization/agentic-commerce-optimization">phased readiness over broad rollout</a>.</p>
+
+<h4>🔍 What operators report from live pilots</h4>
+
+<blockquote><cite>"The fluctuations you're noticing are likely due to the volume of queries rather than any mistake on your part."</cite><br><cite>— r/shopify, <a href="https://www.reddit.com/r/shopify/comments/1v7tue4/agentic_sales_channel_how_to_push_more/">Reddit Thread</a></cite></blockquote>
+
+<blockquote><cite>"Skyvern: It allows you to test if agents can successfully complete purchases."</cite><br><cite>— r/ecommerce, <a href="https://www.reddit.com/r/ecommerce/comments/1u32lv3/useful_tools_for_agent_optimization_axo_in/">Reddit Thread</a></cite></blockquote>
+
+<p>Both point the same way. Early agentic volume is noisy, so judge a pilot on completed orders and error rates, not week-to-week swings.</p>
+
+<h3>Bounded autonomy, defined before launch</h3>
+
+<p>Bounded autonomy means the agent can act, but only inside limits you set. Four controls cover most risk.</p>
+
+<p>Spend caps per session, approval thresholds above a value you choose, revocation paths to kill agent access instantly, and anomaly alerts on unusual order patterns.</p>
+
+<h4>⚠️ The rollback question</h4>
+
+<p>Ask MaximusLabs AI to name the rollback owner in the launch doc, because an unowned kill switch is the same as no kill switch. One person, one runbook, one Slack channel.</p>
+
+<p>Write down what triggers rollback in advance. Duplicate orders, mismatched prices, or fulfilment failures above a set rate all qualify.</p>
+
+<h3>The blind spots you will not list yourself</h3>
+
+<p>A useful habit from my own workflow: I ran an agent across community threads while planning a content project, and it surfaced a top pain point I had completely missed.</p>
+
+<p>Do the same for your pilot. Have an agent read your own support tickets and category threads, then list the failure modes you did not think to test.</p>
+
+<h4>⏰ The two-week rhythm</h4>
+
+<p>Review pilot data every two weeks, not every day. Track completed agent orders, error rates by code, and refund rate against your normal baseline.</p>
+
+<p>Expand one category at a time. Speed comes from reversibility, not from launching everything at once.</p>
+
+<p>MaximusLabs AI pilots one category first, because a narrow launch surfaces the data and fulfilment gaps that a <a href="https://maximuslabs.ai/company/case-studies/e-commerce/nutrition-seo-agentic-commerce-case-study/">full-catalog rollout</a> only reveals after real orders have already failed.</p>
+
+<h2 id="q9-step-6-how-do-you-measure-ai-referred-revenue-instead-of-vanity-visibility" data-n=""><a class="anchor" href="#q9-step-6-how-do-you-measure-ai-referred-revenue-instead-of-vanity-visibility" aria-label="Link to section"></a>Q9. Step 6, how do you measure AI-referred revenue instead of vanity visibility?</h2>
+
+<p>MaximusLabs AI measures agentic readiness across four separate layers: crawl (bot hits and 404 waste in server logs), retrieval (citation share for buying-intent prompts across ChatGPT, Perplexity, and Gemini), referral (AI-source segments in GA4 with conversion and revenue per visit), and orders (agentic checkout completions plus feed attribution parameters). Adobe measured AI referrals converting about 31% higher with 32% higher revenue per visit.</p>
+
+<h3>Why one dashboard number fails</h3>
+
+<p>Teams report a single figure called "AI traffic." That number hides four different problems with four different owners.</p>
+
+<p>A crawl problem looks identical to a citation problem in a traffic chart. Separating them is the whole job.</p>
+
+<h4>📊 The four-layer scoreboard</h4>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>The Four Layers of Agentic Commerce Measurement</caption>
+<tbody><tr>
+<td class="highlight">Layer</td>
+<td class="highlight">Metric</td>
+<td class="highlight">Where to get it</td>
+<td class="highlight">Healthy signal</td>
+</tr>
+<tr>
+<td>Crawl</td>
+<td>Bot hits, 404 rate by user agent</td>
+<td>Server or CDN logs</td>
+<td>404 waste trending down</td>
+</tr>
+<tr>
+<td>Retrieval</td>
+<td>Citation share per buying prompt</td>
+<td>Manual prompt log or a tracker</td>
+<td>Share rising in your top five categories</td>
+</tr>
+<tr>
+<td>Referral</td>
+<td>Sessions, conversion rate, revenue per visit</td>
+<td>GA4 traffic acquisition</td>
+<td>AI conversion above site average</td>
+</tr>
+<tr>
+<td>Orders</td>
+<td>Agentic checkout completions, refund rate</td>
+<td>Platform reports, feed attribution</td>
+<td>Refund rate at or below baseline</td>
+</tr>
+</tbody></table></div></div>
+
+<h3>The referral layer is the easiest win</h3>
+
+<p>GA4 already separates traffic sources. Building an AI referral segment takes about twenty minutes.</p>
+
+<p>Operators are running exactly this and posting the steps publicly.</p>
+
+<blockquote><cite>"<strong>Step 1:</strong> Navigate to Reports, Acquisition, Traffic acquisition."</cite><br><cite>— r/ecommerce, <a href="https://www.reddit.com/r/ecommerce/comments/1r9c8mz/are_you_watching_the_rise_of_ai_traffic_to_your/">Reddit Thread</a></cite></blockquote>
+
+<blockquote><cite>"It's still significantly under 1% of my overall traffic. However, its conversion rate is impressive, better than Google, in fact."</cite><br><cite>— r/ecommercemarketing, <a href="https://www.reddit.com/r/ecommercemarketing/comments/1oi75br/chatgpt_referred_65m_visits_to_ecommerce_sites_in/">Reddit Thread</a></cite></blockquote>
+
+<h4>⚠️ Read the ratio, not the volume</h4>
+
+<p>Small volume with high conversion is a normal early pattern. Webflow reported roughly a 6x conversion difference between LLM traffic and Google search traffic.</p>
+
+<p>MaximusLabs AI treats that ratio as the headline for <a href="https://maximuslabs.ai/generative-engine-optimization/calculating-roi-for-geo-initiatives-revenue-attribution/">finance conversations</a>, and my honest caveat is that the premium may compress as agentic volume scales. The build still pays for itself while the gap exists.</p>
+
+<h3>The orders layer is where arguments end</h3>
+
+<p>Referral sessions can be debated. Completed orders cannot.</p>
+
+<p>Track agentic checkout completions separately from web orders, and keep attribution parameters from your feed intact so revenue maps back to source. Then watch refund rate, because agent orders with poor data can refund at a higher rate than normal.</p>
+
+<h4>💰 Concentration changes what you monitor</h4>
+
+<p>Value clusters hard in commerce content. Roughly nineteen out of twenty pages carry a small share of traffic, while a handful carry most of it.</p>
+
+<p>Ask MaximusLabs AI to <a href="https://maximuslabs.ai/generative-engine-optimization/measurement-and-metrics-in-geo/">instrument the top twenty revenue pages first</a>, rather than the full site, because that is where measurable movement appears within a quarter. Traditional SEO reporting still leads with impressions and average position, which are fine Google diagnostics and poor predictors of agent orders.</p>
+
+<h3>What to build this week</h3>
+
+<p>Three artifacts, nothing more. A GA4 AI referral segment, a log query for bot user agents, and a sheet of twenty buying prompts with citation status.</p>
+
+<p>That gives you a baseline before you spend on engineering. Baselines are cheap, and they make every later budget request easier. A <a href="https://maximuslabs.ai/answer-engine-optimizations/ai-search-visibility-brand-mentions-tracking-tools/">brand mention tracker</a> can automate the citation column once the sheet proves useful.</p>
+
+<h4>✅ The reporting cadence that sticks</h4>
+
+<p>Report monthly, not weekly. Agentic volume is noisy enough that weekly swings mean very little.</p>
+
+<p>Lead with conversion rate and revenue per visit. Put citation share second, and keep crawl health as a diagnostic footnote for the technical team.</p>
+
+<p>MaximusLabs AI reports AI-search work against pipeline and revenue per visit, because impressions have never survived a CFO's second question, and agent orders are now a line item finance can actually verify.</p>
+
+<h2 id="q10-how-long-does-agentic-readiness-take-what-does-it-cost-and-when-does-it-pay-back" data-n=""><a class="anchor" href="#q10-how-long-does-agentic-readiness-take-what-does-it-cost-and-when-does-it-pay-back" aria-label="Link to section"></a>Q10. How long does agentic readiness take, what does it cost, and when does it pay back?</h2>
+
+<p>Most mid-sized stores need three to six months, and mature product data moves faster. Published figures put the data-foundation phase at roughly $20,000 to $50,000, with protocol and checkout work after that. Model payback by applying the measured AI-traffic deltas, about 31% higher conversion and 32% higher revenue per visit, to your current AI referral volume, then compare that against phase cost.</p>
+
+<h3>The timeline, phase by phase</h3>
+
+<p>Nothing here requires a nine-month engineering epic. It requires sequencing.</p>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>Agentic Readiness Phases, Cost Profile, and Cash Notes</caption>
+<tbody><tr>
+<td class="highlight">Phase</td>
+<td class="highlight">Weeks</td>
+<td class="highlight">Cost profile</td>
+<td class="highlight">Cash note</td>
+</tr>
+<tr>
+<td>Product data foundation</td>
+<td>1 to 6</td>
+<td>$20,000 to $50,000 published band</td>
+<td>Mostly merchandising time, not dev</td>
+</tr>
+<tr>
+<td>Discovery readiness</td>
+<td>4 to 8</td>
+<td>Low to moderate</td>
+<td>Rendering fixes often reuse existing templates</td>
+</tr>
+<tr>
+<td>Protocol selection</td>
+<td>6 to 12</td>
+<td>Low</td>
+<td>Decision cost, not build cost</td>
+</tr>
+<tr>
+<td>Checkout and payments</td>
+<td>12 to 16</td>
+<td>Highest</td>
+<td>Scope depends on PCI branch</td>
+</tr>
+<tr>
+<td>Certification and pilot</td>
+<td>16 to 24</td>
+<td>Moderate</td>
+<td>QA time dominates</td>
+</tr>
+<tr>
+<td>Measurement</td>
+<td>Ongoing</td>
+<td>Low</td>
+<td>Analyst hours, no license needed</td>
+</tr>
+</tbody></table></div></div>
+
+<h4>💰 A worked payback example</h4>
+
+<p>Take a store doing 200,000 monthly sessions with 1.5% from AI sources, so 3,000 sessions. At a $60 average order value and 2% baseline conversion, that is roughly $3,600 monthly.</p>
+
+<p>Apply the measured deltas and revenue per visit lifts, and the same traffic yields materially more. Double AI session share through <a href="https://maximuslabs.ai/services/agentic-commerce/">discovery work</a>, and a $30,000 data phase pays back inside two to three quarters. Run this with your own numbers before approving anything.</p>
+
+<h3>What operators actually report</h3>
+
+<p>Expectations should stay grounded. Agentic revenue share is still small for most stores.</p>
+
+<blockquote><cite>"It seems that around 2% comes from Agentic, primarily driven by the Shop App rather than ChatGPT."</cite><br><cite>— r/shopify, <a href="https://www.reddit.com/r/shopify/comments/1trdkdk/whats_the_consensus_on_the_agentic_storefront/">Reddit Thread</a></cite></blockquote>
+
+<blockquote><cite>"Examine the traffic sources for AI and AI referrals. Inquire with your customers about how they discovered your business."</cite><br><cite>— r/ecommerce, <a href="https://www.reddit.com/r/ecommerce/comments/1rct8ck/how_are_people_thinking_about_chatgpt_strategy/">Reddit Thread</a></cite></blockquote>
+
+<h4>⏰ Sequence for cash, not for elegance</h4>
+
+<p>MaximusLabs AI sequences the cheap, high-yield work first, meaning feed data and crawlable rendering, because that is where measurable order lift shows up inside a quarter. We push endpoint work later, after the discovery track proves demand exists.</p>
+
+<p>That ordering matters when your money is sitting in inventory. Spending $40,000 on checkout endpoints before anyone can find your products is the expensive mistake.</p>
+
+<h3>What to cut from the budget</h3>
+
+<p>Deep technical AEO audits belong near the bottom of the list. The published practitioner view is blunt: focus little to no time on it, because like <a href="https://maximuslabs.ai/technical-seo-guide/">technical SEO</a> it usually drives little to no impact.</p>
+
+<p>Ethan Smith put the adjacent point plainly, saying that in fifteen years he has never seen Core Web Vitals drive a traffic increase. A fifty-page PDF is a security blanket, not a transaction.</p>
+
+<h4>❌ Three line items to decline</h4>
+
+<ul><li>Custom LLM-only landing pages, since bots bypass them for well-structured standard pages.</li><li>Full-site schema rewrites before feed and rendering fixes land.</li><li>Monthly retainers priced on impressions and average position rather than agent orders.</li></ul>
+
+<p>Traditional SEO agencies quote the last one confidently, and it is a reasonable Google deliverable. It is not an agentic commerce deliverable.</p>
+
+<p>MaximusLabs AI sequences feed data and rendering ahead of endpoint builds, because those two phases cost the least, ship the fastest, and produce the order lift that funds everything after them. Compare that ordering against the <a href="https://maximuslabs.ai/resources/research-reports/the-geo-budget-benchmark-2026/">published GEO budget benchmarks</a> before you sign anything.</p>
+
+<h2 id="q11-what-are-the-most-common-agentic-commerce-implementation-mistakes" data-n=""><a class="anchor" href="#q11-what-are-the-most-common-agentic-commerce-implementation-mistakes" aria-label="Link to section"></a>Q11. What are the most common agentic commerce implementation mistakes?</h2>
+
+<p>Five mistakes dominate: price and spec mismatches between marketing copy and your database, treating schema as a silver bullet, chasing FAQPage rich results after Google retired that display on 7 May 2026, building LLM-only landing pages bots ignore, and shipping API-only checkout with no plan for brand touchpoints when the customer never visits your domain.</p>
+
+<h3>1. Letting your numbers disagree with themselves</h3>
+
+<p>Amazon holds a claim-verification patent, US 12353469B1, that checks numeric claims against ground truth and swaps the citation when they do not match. Price drift between your feed, your PDP, and your marketing copy is therefore a deletion risk.</p>
+
+<p>The fix takes one afternoon. Pick fifty SKUs, compare feed price against storefront price, and log every mismatch.</p>
+
+<h4>⚠️ 2. Treating schema as the whole answer</h4>
+
+<p><a href="https://maximuslabs.ai/generative-engine-optimization/schema-markup-basics/">Schema markup</a> helps machines classify your content. It is not a ranking lever on its own.</p>
+
+<p>SALT.agency concluded schema is a hygiene factor at best rather than a differentiator, and that analysis did not control for domain authority. The pro-schema camp counters that structured data measurably improves inclusion odds.</p>
+
+<h3>The honest read on that disagreement</h3>
+
+<p>MaximusLabs AI flags contested tactics as contested, and my current view is that schema is cheap insurance rather than growth. Ship it, then move on to rendering and feeds.</p>
+
+<p>Practitioners keep landing on the same priority order.</p>
+
+<blockquote><cite>"Almost all AI crawlers don't run JavaScript, so your CMS and rendering setup decide what they see"</cite><br><cite>— r/cms, <a href="https://www.reddit.com/r/cms/comments/1v44yui/almost_all_ai_crawlers_dont_run_javascript_so/">Reddit Thread</a></cite></blockquote>
+
+<blockquote><cite>"Google's bot struggles with JavaScript on occasion."</cite><br><cite>— r/TechSEO, <a href="https://www.reddit.com/r/TechSEO/comments/1lcr3vv/do_i_need_to_worry_about_ai_crawlers_not_indexing/">Reddit Thread</a></cite></blockquote>
+
+<h4>❌ 3. Chasing a rich result that no longer displays</h4>
+
+<p>Google retired the FAQ rich-result display on 7 May 2026. Teams still budget for FAQPage schema as a visibility play.</p>
+
+<p>Keep FAQ content, because it answers follow-up questions agents actually ask. Stop counting on the SERP widget.</p>
+
+<h3>4. Building pages for bots instead of buyers</h3>
+
+<p>The instinct is understandable. Make a clean, text-only page just for <a href="https://maximuslabs.ai/answer-engine-optimizations/understanding-managing-ai-crawlers-gptbot-google-extended/">AI crawlers</a>.</p>
+
+<p>Testing keeps showing bots bypass those pages and crawl the standard, well-structured ones instead. Fix the real pages, and you fix both audiences at once.</p>
+
+<h4>💸 5. Shipping checkout with no brand plan</h4>
+
+<p>API-first checkout has a structural cost nobody prices in. When an assistant transacts through your endpoints, the customer may never see your site.</p>
+
+<p>You become a warehouse with good margins and no relationship. Ask MaximusLabs AI to build post-purchase touchpoints into the pilot, since packaging inserts, order emails, and reorder flows are the only brand surface left in that path.</p>
+
+<h3>The pattern behind all five</h3>
+
+<p>Each mistake shares a root cause. Someone optimised for a signal instead of a transaction.</p>
+
+<p>The correction is boring and effective. Ask one question of every task: will this change whether an agent can find, trust, and complete a purchase.</p><figure><img loading="lazy" decoding="async" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/76f9eb4e-093f-464a-9c54-da5d80e3f158.png" alt="Radial diagram of five common agentic commerce implementation mistakes radiating from one shared root cause"><figcaption>Every one of these five mistakes traces back to optimising for a signal instead of a completed purchase.</figcaption></figure>
+
+<h4>✅ The Monday audit</h4>
+
+<p>Run three checks before your next sprint. Price parity across fifty SKUs, JavaScript-off rendering on five templates, and a list of every post-purchase touchpoint you still control.</p>
+
+<p>That list usually reveals the gap faster than any vendor audit will.</p>
+
+<p>MaximusLabs AI flags contested tactics as contested, because a roadmap built on one vendor's certainty breaks the first time a platform changes its display rules or its <a href="https://maximuslabs.ai/ai-search-101/technical/ai-crawlers/ai-crawlers-guide-optimization">crawler behaviour</a>.</p>
+
+<h2 id="q12-what-comes-next-as-agents-start-buying-without-a-human-present" data-n=""><a class="anchor" href="#q12-what-comes-next-as-agents-start-buying-without-a-human-present" aria-label="Link to section"></a>Q12. What comes next as agents start buying without a human present?</h2>
+
+<p>AP2 v0.2 adds Human Not Present payments, letting agents transact against pre-authorized mandates, and Google donated the protocol to the FIDO Alliance in April 2026 with 60-plus partners. MaximusLabs AI runs the same three-phase start for every store: audit and baseline in days 1 to 30, ship rendering and protocol choice in days 31 to 60, then certify and pilot in days 61 to 90.</p>
+
+<h3>What Human Not Present actually changes</h3>
+
+<p>Today's agentic shopping is mostly assisted. A person asks, the agent finds, and the person approves.</p>
+
+<p>Mandate-based payments break that link. The agent holds signed authority to buy inside limits you and the buyer agreed earlier.</p>
+
+<h4>⚠️ The policies that need updating first</h4>
+
+<p>Fraud rules built around human sessions will misfire on agent-initiated orders. Velocity checks, device fingerprints, and CAPTCHA gates all assume a person.</p>
+
+<p>Review three policies this quarter: authorization rules for pre-approved mandates, refund handling for orders no human saw, and dispute evidence when the buyer was software.</p>
+
+<h3>The first 90 days</h3>
+
+<div data-rt-embed-type="true"><div class="table-wrap"><table>
+<tbody><tr></tr></tbody><caption>The First 90 Days of Agentic Commerce Execution</caption>
+<tbody><tr>
+<td class="highlight">Window</td>
+<td class="highlight">Do this</td>
+<td class="highlight">Exit criteria</td>
+</tr>
+<tr>
+<td>Days 1 to 30</td>
+<td>JavaScript-off crawl audit, feed gap list, GA4 AI baseline, merchant program applications filed</td>
+<td>Written gap list, baseline conversion and revenue per visit recorded</td>
+</tr>
+<tr>
+<td>Days 31 to 60</td>
+<td>Server-render commercial facts, expose facet data, publish Product and Offer schema, choose protocol</td>
+<td>Content visible without JavaScript, protocol decision documented</td>
+</tr>
+<tr>
+<td>Days 61 to 90</td>
+<td>Sandbox certification tests, one narrow category pilot, bounded autonomy limits set</td>
+<td>Pilot live, rollback owner named, error paths tested</td>
+</tr>
+</tbody></table></div></div>
+
+<h4>⏰ Why the order matters</h4>
+
+<p>Applications go first because approval waits are outside your control. Rendering goes second because it is the cheapest lift with the widest effect.</p>
+
+<p>MaximusLabs AI ran this exact sequence for a <a href="https://maximuslabs.ai/company/case-studies/e-commerce/nutrition-seo-agentic-commerce-case-study/">California supplements brand</a>, and that client's e-commerce sales doubled over the following six months and are still climbing. We started with feed and rendering, not endpoints.</p>
+
+<h3>What I am still unsure about</h3>
+
+<p>Two things genuinely bother me. First, I do not know how long the AI conversion premium lasts once agentic volume becomes normal traffic.</p>
+
+<p>Second, I suspect mandate-based buying will push value further toward structured catalog data and away from brand storytelling. That would be an uncomfortable outcome for anyone who has spent a decade building brand equity through content.</p>
+
+<h4>💡 The hypothesis I am testing</h4>
+
+<p>My working theory is that catalogs become the new landing pages. The product feed carries the persuasion, and the website becomes the place humans go to verify a decision an agent already made.</p>
+
+<p>If that holds, the teams who win are the ones treating feed quality as a marketing discipline rather than an operations chore. The <a href="https://maximuslabs.ai/resources/research-reports/the-state-of-agentic-commerce-2026/">state of agentic commerce data</a> is where I keep checking that assumption.</p>
+
+<h3>An open question, not a pitch</h3>
+
+<p>Here is what I would like to compare notes on. If you are tracking agent orders separately, is your refund rate on those orders higher, lower, or flat against your normal baseline?</p>
+
+<p>That single number will tell the industry more about agentic commerce readiness than any forecast will. Write to me at <a href="https://maximuslabs.ai/contact-us/">krishna@maximuslabs.ai</a>, and I will share what MaximusLabs AI is seeing across current engagements in return.</p>
+
+<p>MaximusLabs AI runs this ninety-day sequence with feed and rendering work first, because the supplements engagement showed order lift arriving well before any protocol endpoint went live.</p>
+    <section class="faq" id="faq"><div class="faq-h"><h2>Questions, answered</h2><span>7 questions</span></div><details open><summary><span>What are the six steps in an agentic commerce implementation roadmap?</span><i></i></summary><p>An agentic commerce implementation roadmap is a phased plan that makes a store both findable and purchasable by AI agents. MaximusLabs AI runs it as six steps across two parallel tracks, discovery readiness and transaction readiness. Step 1, product data foundation (weeks 1 to 6): audit identifiers, variants, attributes, live stock, and delivery windows until every SKU populates required feed fields. Step 2, discovery readiness (weeks 4 to 8): server-render commercial facts, expose facet data as text, publish Product and Offer schema, and make policies machine-readable. Step 3, protocol selection (weeks 6 to 12): choose between ACP, UCP, and AP2, then file merchant-program applications. Step 4, checkout and payments (weeks 12 to 16): build the required endpoints, signed webhooks, and error paths. Step 5, certification and pilot (weeks 16 to 24): pass sandbox tests, launch one narrow category, and set bounded autonomy limits. Step 6, measurement (ongoing): separate crawl, retrieval, referral, and order data. We sequence the cheap phases first because feed and rendering fixes produce order lift long before endpoints ship. Our agentic commerce work starts with that audit.</p></details><details><summary><span>How long does agentic commerce readiness take, and what does it cost?</span><i></i></summary><p>Most mid-sized stores need three to six months. Stores with mature product data and server-rendered templates move faster, sometimes inside a single quarter. Data foundation: published cost bands put this phase at roughly $20,000 to $50,000, and most of it is merchandising time rather than engineering time. Discovery readiness: low to moderate, because rendering fixes usually reuse existing templates. Protocol selection: low, since this is a decision cost. Checkout and payments: the highest line item, and scope depends on which PCI branch you fall into. Certification and pilot: moderate, dominated by QA hours. MaximusLabs AI sequences feed data and crawlable rendering ahead of endpoint builds, because those two phases cost the least and produce measurable order lift inside a quarter. We model payback by applying the measured AI-traffic deltas to your current AI referral volume, then comparing that against phase cost. Cut deep technical audits, LLM-only landing pages, and retainers priced on impressions. Compare your quote against our GEO budget benchmark before signing.</p></details><details><summary><span>Should I implement ACP, UCP, or AP2 first?</span><i></i></summary><p>Pick based on where your buyers already ask and what your payment stack already supports. Go ACP-first if payments already run on Stripe and your customers sit inside ChatGPT. ACP gates Instant Checkout in that surface. Go UCP-first if you have strong Google Merchant Center presence and want broad agent-marketplace reach. Google launched UCP as an open standard in January 2026, built to work alongside A2A, AP2, and MCP. Treat AP2 as the payment rail rather than the storefront decision. Google donated it to the FIDO Alliance in April 2026, and version 0.2 adds Human Not Present payments. MCP exposes store tools to assistants. It handles access, not payment. Competitive categories should plan for both commerce protocols. Check native platform support first, because if your platform already ships hooks, the build shrinks to configuration. MaximusLabs AI files merchant-program applications in week one, since ChatGPT feed onboarding is approved-partners-only and approval lead time gates everything downstream. Our protocol breakdown covers how these standards interlock.</p></details><details><summary><span>Who is the merchant of record in agentic checkout, and who owns chargebacks?</span><i></i></summary><p>The merchant selling the goods remains merchant of record. The AI platform is not. That single fact reshapes how finance and operations should scope this project. You own payment processing, refunds, disputes, and chargebacks on every agent-originated order. You must sync order status back through the order-update webhook, so cancellations and refunds reconcile on both sides. PCI scope: feed and checkout specifications sit outside PCI DSS, because no card data touches them. Direct delegated-payment handling inside your own systems usually expands scope, and an Attestation of Compliance may be required before production access. MaximusLabs AI maps checkout liability before integration begins, because merchant-of-record status means every refund lands on the brand rather than the platform. We put the PCI branch decision in writing before engineering estimates the work, since branch choice changes both the timeline and the audit budget. If you are scoping this now, our instant checkout guide walks through the endpoint and liability detail your engineers will ask about first.</p></details><details><summary><span>Do AI crawlers execute JavaScript on product pages?</span><i></i></summary><p>No. OAI-SearchBot, PerplexityBot, and Claude-SearchBot do not execute JavaScript. Vercel's analysis of 569 million GPTBot requests and 370 million ClaudeBot requests found these crawlers download JavaScript files without running them. That has three practical consequences for a storefront. Async reviews vanish. If ratings load by API call after paint, agents never see your social proof. Stock and price may vanish. Badges that hydrate client-side are invisible, and availability often breaks the tie between two similar products. Facets are unreachable. Agents cannot click dropdown filters, so material, sizing, and ingredient values must appear as on-page text. Crawl waste compounds the loss. OpenAI's search bot has been measured wasting about 34.8% of requests on 404s, against roughly 8.22% for Googlebot. MaximusLabs AI audits storefronts with JavaScript disabled first, because that stripped view is much closer to what an agent actually retrieves. Run the same test in ten minutes, or use our AI crawlability checker to confirm what the bots see.</p></details><details><summary><span>How do we measure AI-referred revenue instead of vanity visibility?</span><i></i></summary><p>Separate four layers, because a single number called AI traffic hides four different problems with four different owners. Crawl: bot hits and 404 rate by user agent, pulled from server or CDN logs. Healthy means 404 waste trending down. Retrieval: citation share for buying-intent prompts across ChatGPT, Perplexity, and Gemini. Log twenty real buyer prompts per category. Referral: AI-source segments in GA4 with conversion rate and revenue per visit compared against site average. Orders: agentic checkout completions, feed attribution parameters, and refund rate against your normal baseline. Adobe measured AI referrals converting about 31% higher with 32% higher revenue per visit than non-AI traffic, and Webflow reported roughly a 6x conversion difference between LLM and Google search traffic. MaximusLabs AI reports AI-search work against pipeline and revenue per visit, because impressions have never survived a CFO's second question. Report monthly rather than weekly, since early agentic volume is noisy. Our revenue attribution framework shows the full model.</p></details><details><summary><span>What changes when agents buy without a human present?</span><i></i></summary><p>Today's agentic shopping is mostly assisted. A person asks, the agent finds options, and the person approves the purchase. Mandate-based payments break that link. AP2 version 0.2 adds Human Not Present payments, letting an agent transact against signed, pre-authorized mandates inside limits agreed earlier. Google donated the protocol to the FIDO Alliance in April 2026, with more than sixty partners involved. Fraud rules need rework. Velocity checks, device fingerprints, and CAPTCHA gates all assume a human session. Authorization policy needs a mandate path for pre-approved, agent-initiated orders. Dispute evidence changes when the buyer was software and no human saw the cart. Bounded autonomy becomes mandatory: spend caps, approval thresholds, revocation paths, and anomaly alerts. MaximusLabs AI builds those limits into the pilot rather than after launch, because an unowned kill switch is the same as no kill switch. My working hypothesis is that catalogs become the new landing pages, with the feed carrying the persuasion. We track that shift in our state of agentic commerce research .</p></details></section>
+    <div class="author-box"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="72" height="72"><div><small>Written by</small><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span></div></div>
+  </article>
+  <aside class="author-rail"><div class="ar-in"><small>Written by</small><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="56" height="56"><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span><hr><small>Share</small><div class="ar-share"><button type="button" class="ic-btn sm" data-copy aria-label="Copy link"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button></div></div></aside>
+</div></section>
+
+<section class="vsec bt"><div class="vrail">
+  <div class="sec-head reveal"><div class="sec-l"><div class="eyebrow">Keep reading</div><h2 class="h2 sm">Discover more in Preparing for Agentic Commerce</h2></div><div class="sec-r"><a class="btn-ghost" href="../../../agentic-commerce/preparation/">All Preparing for Agentic Commerce guides <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+  <div class="grid g-3"><a class="card a-card reveal " href="../../../agentic-commerce/fundamentals/what-is-agentic-commerce/" data-date="2026-06-16T09:00:00.000Z" data-order="1">
+  <div class="cover " style="--gx:110%;--gy:65%" data-light><img class="shot" src="https://cdn.sanity.io/images/bict0s25/production/76cbd749e9c2c61e46e4c5ed529e068095efb0b9-2350x1074.png?w=900&amp;auto=format&amp;q=82" alt="Four-stage funnel flow showing AI agent purchase stages: interpret, discover, evaluate, and transact with filters at each step" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Agentic Commerce</span><i class="dot"></i><span>Agentic Commerce Fundamentals</span></div><h3>What is Agentic Commerce? How AI Agents Buy on Your Behalf</h3><p>How AI shopping agents discover, compare, and buy products, and what brands must do to be the one an agent chooses.</p></div>
+  <div class="byline"><span class="who"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>8 min</b><em>· Jun 16</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a><a class="card a-card reveal " href="../../../agentic-commerce/fundamentals/agentic-commerce-fundamentals-ai/" data-date="2026-07-03T05:30:33.003Z" data-order="1">
+  <div class="cover " style="--gx:92%;--gy:69%" data-light><img class="shot" src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/9ba4cf64-1a6b-4f14-a49e-c03eca49ae80.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Agentic Commerce</span><i class="dot"></i><span>Agentic Commerce Fundamentals</span></div><h3>Agentic Commerce Fundamentals: The Rise of AI-Powered Shopping Agents</h3><p>How AI agents discover, compare, and buy products, and how to be the one they choose.</p></div>
+  <div class="byline"><span class="who"><img src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/420f5e47-8a4e-4cc8-8f0b-c1f92781ed76.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 3</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a><a class="card a-card reveal " href="../../../agentic-commerce/fundamentals/a2a-protocols-agentic-commerce/" data-date="2026-07-07T06:23:37.538Z" data-order="1">
+  <div class="cover " style="--gx:108%;--gy:92%" data-light><img class="shot" src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/uploads/cfc6c2ac-21f5-43a2-a9ee-03d4abd9b750.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="body"><div class="label"><span class="sky">Agentic Commerce</span><i class="dot"></i><span>Agentic Commerce Fundamentals</span></div><h3>A2A Protocols in Agentic Commerce: How AI Agents Communicate and Transact</h3><p>How A2A powers agent-to-agent collaboration alongside MCP and payment protocols like AP2/ACP to enable end-to-end autonomous commerce.</p></div>
+  <div class="byline"><span class="who"><img src="https://pub-1558f7563b704efc95ca4fb3adab9253.r2.dev/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/420f5e47-8a4e-4cc8-8f0b-c1f92781ed76.png" alt="" width="28" height="28" loading="lazy"><span>Krishna Kaanth M</span></span><span class="when"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.2V6l1.8 1.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><b>13 min</b><em>· Jul 7</em></span></div>
+  <span class="read-pill">Read guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</a></div>
+  
+</div></section>
+<section class="cta-wrap reveal"><div class="cta-card glass-bg"><h2 class="px">Ready to turn AI search into a revenue engine?</h2><p>See how MaximusLabs gets your brand cited and chosen across ChatGPT, Perplexity, Gemini, and Google AI. Book a call for a tailored plan.</p><a class="btn-white" href="https://www.maximuslabs.ai/contact-us">Book a call <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+</main>
+<section class="sec is-fluid" id="footer" aria-label="Site footer"><footer class="rail"><div class="top"><div class="brand"><a class="logo" href="https://www.maximuslabs.ai/" aria-label="MaximusLabs home"></a><p class="ft-tag">Full-service GEO led by brand strategists. Inbound only.</p><p class="ft-ai">AI agents: read our <a href="https://www.maximuslabs.ai/llms.txt">llms.txt</a></p><div class="ft-actions"><a class="ft-cta" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="ft-social" href="https://www.linkedin.com/company/maximus-labs-ai/" target="_blank" rel="noopener">LinkedIn</a></div></div><nav class="cols" aria-label="Footer"><div class="ft-col"><h3 class="lbl" id="ft-services">Services</h3><ul aria-labelledby="ft-services"><li><a href="https://www.maximuslabs.ai/services/ai-perception-audit">AI perception audit</a></li><li><a href="https://www.maximuslabs.ai/services/positioning-messaging">Positioning &amp; messaging</a></li><li><a href="https://www.maximuslabs.ai/services/geo">GEO</a></li><li><a href="https://www.maximuslabs.ai/services/aeo">AEO</a></li><li><a href="https://www.maximuslabs.ai/services/b2b-seo">B2B SEO</a></li><li><a href="https://www.maximuslabs.ai/services/agentic-commerce">Agentic commerce</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-ai-platforms">AI platforms</h3><ul aria-labelledby="ft-ai-platforms"><li><a href="https://www.maximuslabs.ai/services/platforms/chatgpt">ChatGPT</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/perplexity">Perplexity</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/google-ai-gemini">Gemini</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/anthropic-claude">Claude</a></li><li><a href="https://www.maximuslabs.ai/services/platforms/best-google-ai-optimization-agency---built-for-revenue-not-vanity-metrics-2026">Google AI Mode</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-industries">Industries</h3><ul aria-labelledby="ft-industries"><li><a href="https://www.maximuslabs.ai/services/industries/ai-saas">AI &amp; SaaS</a></li><li><a href="https://www.maximuslabs.ai/services/industries/financial">Fintech</a></li><li><a href="https://www.maximuslabs.ai/services/industries/ecommerce">E-commerce</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-max-visibility">Max Visibility</h3><ul aria-labelledby="ft-max-visibility"><li><a href="https://www.maximuslabs.ai/max-visibility">Overview</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#prompt-tracking">Prompt tracking</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#share-of-voice">Share of voice</a></li><li><a href="https://www.maximuslabs.ai/max-visibility#sources">Citations &amp; sources</a></li><li><a href="https://www.maximuslabs.ai/products/max-console">Max Console</a></li><li><a href="https://www.maximuslabs.ai/pricing">Pricing</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-resources">Resources</h3><ul aria-labelledby="ft-resources"><li><a href="https://www.maximuslabs.ai/blog">Blog</a></li><li><a href="../../../">AI Search 101</a></li><li><a href="https://www.maximuslabs.ai/resources/reports">Research reports</a></li><li><a href="https://www.maximuslabs.ai/resources/free-tools">Free tools</a></li><li><a href="https://www.maximuslabs.ai/resources/guides">Platform guides</a></li><li><a href="https://www.maximuslabs.ai/ai-search-faqs">AI search FAQs</a></li></ul></div><div class="ft-col"><h3 class="lbl" id="ft-company">Company</h3><ul aria-labelledby="ft-company"><li><a href="https://www.maximuslabs.ai/company/about-us">About</a></li><li><a href="https://www.maximuslabs.ai/company/case-studies">Case studies</a></li><li><a href="https://www.maximuslabs.ai/company/careers">Careers</a></li><li><a href="https://www.maximuslabs.ai/contact-us">Contact</a></li></ul></div></nav></div><div class="ft-proof"><span class="lbl">Results with</span><a href="https://www.maximuslabs.ai/company/case-studies">Explorium</a></div><div class="legal"><p class="ft-copy">© 2026 MaximusLabs AI</p><p class="terms"><a href="https://www.maximuslabs.ai/privacy-policy">Privacy</a><span aria-hidden="true"> · </span><a href="https://www.maximuslabs.ai/others/terms-of-service">Terms</a><span aria-hidden="true"> · </span><a href="https://www.maximuslabs.ai/others/refund-policy">Refund policy</a></p></div></footer></section>
+</div>
+<script src="../../../assets/js/live-baselayout.js" defer></script>
+<script src="../../../assets/js/maximus-fx.js" defer></script>
+<script src="../../../assets/js/site.js" defer></script>
+</body>
+</html>
