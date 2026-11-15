@@ -71,6 +71,6 @@ npx serve .                 # or any static server
 
 ## Known gaps
 
-- **Placeholder CTA:** the call to action in the contents list is a design suggestion, not an existing field.
-- **New design suggestions:** the "In order / Newest" switch on clusters and the reading path bar are also new suggestions.
+- **New design suggestions:** the Ask the author card, the Book a call page, the "In order / Newest" switch on clusters and the reading path bar are new. The author quote and the "124 guides" count are not fields in Sanity today.
+- **Dead links in guide text:** 25 outside links in guide bodies are dead on the live site too. [DEAD-LINKS.md](DEAD-LINKS.md) lists each one with its guide.
 - **Guide text is verbatim:** guide bodies are shown as stored in Sanity, including any dashes in the original copy. Titles and card text drop dashes.
