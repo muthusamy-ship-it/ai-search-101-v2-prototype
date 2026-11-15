@@ -19,7 +19,7 @@
 
   /* 2. Glass light follows the pointer (two CSS variables, rAF throttled). */
   if (!reduce) $$('[data-light]').forEach((cov) => {
-    const card = cov.closest('.card') || cov
+    const card = cov.closest('.card, .ask') || cov
     const base = { x: getComputedStyle(cov).getPropertyValue('--gx'), y: getComputedStyle(cov).getPropertyValue('--gy') }
     let raf = 0, tx = 0, ty = 0
     card.addEventListener('pointermove', (e) => {
@@ -37,8 +37,42 @@
     const isHub = document.body.classList.contains('k-hub')
     window.MaxFX.mount(host, fx, isHub
       ? { intensity: 0.55, mask: 'none', tone: 'light', gain: 1.2, strength: 1, pointerEl: host, boostEl: $('.searchbar', host) }
-      : { intensity: document.body.classList.contains('k-article') ? 0.3 : 0.7, mask: 'side', focus: [0.7, 0.12], pointerEl: host })
+      : { intensity: document.body.classList.contains('k-article') ? 0.3 : document.body.classList.contains('k-book') ? 0.4 : 0.7, mask: 'side', focus: [0.7, 0.12], pointerEl: host })
   })
+
+  /* 9. Ask the author: a typed question travels to the Book a call page (session only, never in the URL). */
+  $$('[data-ask]').forEach((form) => {
+    const field = $('textarea, input[name="q"]', form)
+    const sync = () => form.classList.toggle('has-q', !!field.value.trim())
+    field.addEventListener('input', sync)
+    field.addEventListener('keydown', (e) => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey || field.tagName === 'INPUT')) { e.preventDefault(); form.requestSubmit() } })
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      try { sessionStorage.setItem('v2-ask', JSON.stringify({ q: field.value.trim().slice(0, 280), guide: form.dataset.guide, topic: form.dataset.topic, url: form.dataset.url })) } catch (_) {}
+      location.href = form.getAttribute('action')
+    })
+  })
+
+  /* 10. Book a call: the real Cal.com event used by the live article CTA, rendered inline in dark. */
+  const calEl = $('#cal-inline')
+  if (calEl) {
+    let ctx = {}
+    try { ctx = JSON.parse(sessionStorage.getItem('v2-ask') || '{}') } catch (_) {}
+    const qa = $('#bq-text'), src = $('[data-bq-src]')
+    if (ctx.q) qa.value = ctx.q
+    if (ctx.guide && ctx.url) { src.textContent = `From: ${ctx.guide}`; src.href = root + ctx.url; src.hidden = false }
+    ;(function (C, A, L) { const p = function (a, ar) { a.q.push(ar) }; const d = C.document; C.Cal = C.Cal || function () { const cal = C.Cal; const ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement('script')).src = A; cal.loaded = true } if (ar[0] === L) { const api = function () { p(api, arguments) }; const ns = ar[1]; api.q = api.q || []; if (typeof ns === 'string') { cal.ns[ns] = cal.ns[ns] || api; p(cal.ns[ns], ar); p(cal, ['initNamespace', ns]) } else p(cal, ar); return } p(cal, ar) } })(window, 'https://app.cal.com/embed/embed.js', 'init')
+    const NS = 'exploring-aeo-geo', Cal = window.Cal
+    Cal('init', NS, { origin: 'https://app.cal.com' })
+    Cal.ns[NS]('ui', { theme: 'dark', cssVarsPerTheme: { dark: { 'cal-brand': '#449afb' }, light: { 'cal-brand': '#013087' } }, hideEventTypeDetails: false, layout: 'month_view' })
+    const render = () => {
+      const notes = [qa.value.trim(), ctx.guide ? `(Reading: ${ctx.guide})` : ''].filter(Boolean).join(' ')
+      calEl.innerHTML = ''
+      Cal.ns[NS]('inline', { elementOrSelector: '#cal-inline', calLink: 'krishna-kaanth/exploring-aeo-geo', config: Object.assign({ layout: 'month_view', theme: 'dark' }, notes ? { notes } : {}) })
+    }
+    render()
+    qa.addEventListener('change', render)
+  }
 
   /* 4. Hub: icons drift and lean away from the pointer; stats count up. */
   const hubHero = $('.hub-hero')

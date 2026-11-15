@@ -1,3 +1,4 @@
 tools/data/
 .claude/
 node_modules/
+tools/link-report.json

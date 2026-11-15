@@ -87,17 +87,32 @@ const urlOf = { hub: () => '', pillar: (p) => `${p}/`, cluster: (p, c) => `${p}/
 
 /* ---------- live chrome (exact markup from maximuslabs.ai) ---------- */
 const chromeRaw = Object.fromEntries(['nav', 'footer', 'drawer', 'cmdk'].map((k) => [k, fs.readFileSync(path.join(CHROME, `${k}.html`), 'utf8')]))
-function chrome(pre) {
-  const fix = (h) => h
-    .replace(/href="https:\/\/www\.maximuslabs\.ai\/ai-search-101\/?([^"]*)"/g, (_m, rest) => {
+// Links that point into AI Search 101 open the matching prototype page; every other site link
+// (root relative like "/services/geo/" or absolute) opens the real page on maximuslabs.ai.
+// Guide bodies (verbatim from Sanity) carry a few maximuslabs.ai links that are dead on the live
+// site or redirect into AI Search 101. Found by `node tools/check-links.mjs --external`.
+const MOVED = {
+  '/generative-engine-optimization/geo-common-mistakes-avoid': '/ai-search-101/geo/common-mistakes/geo-common-mistakes-avoid', // 404 live
+  '/generative-engine-optimization/geo-common-mistakes': '/ai-search-101/geo/common-mistakes/geo-common-mistakes-avoid', // 404 live
+  '/company/case-studies/e-commerce/nutrition-seo-agentic-commerce-case-study': '/company/case-studies', // 404 live
+  '/programmatic-seo': '/ai-search-101/geo/advanced/programmatic-geo-automation', // live redirect
+  '/programmatic-seo-guide': '/ai-search-101/geo/advanced/programmatic-geo-automation', // live redirect
+}
+function fixLinks(h, pre) {
+  return h
+    .replace(/href="(?:https?:\/\/(?:www\.)?maximuslabs\.ai)?(\/[^"#?]*?)\/?"/g, (m, p) => (MOVED[p] ? `href="${MOVED[p]}/"` : m))
+    .replace(/src="https?:\/\/(?:www\.)?maximuslabs\.ai\/logo\.png"/g, `src="${pre}assets/live/logo-mark.svg"`) // 404 live
+    .replace(/href="(?:https?:\/\/(?:www\.)?maximuslabs\.ai)?\/ai-search-101\/?([^"#?]*)([^"]*)"/g, (_m, rest, tail) => {
       const r = rest.replace(/\/$/, '')
-      if (!r) return `href="${pre || './'}"`
+      if (!r) return `href="${pre || './'}${tail}"`
       const [p, c, a] = r.split('/')
       const ok = a ? live.some((x) => x.p === p && x.c === c && x.slug === a) : c ? !!C(p, c) : !!P[p]
-      return ok ? `href="${pre}${r}/"` : `href="${LIVE}/ai-search-101/${r}"`
+      return ok ? `href="${pre}${r}/${tail}"` : `href="${LIVE}/ai-search-101/${r}${tail}"`
     })
     .replace(/href="\/(?!\/)/g, `href="${LIVE}/`)
-  return Object.fromEntries(Object.entries(chromeRaw).map(([k, v]) => [k, fix(v)]))
+}
+function chrome(pre) {
+  return Object.fromEntries(Object.entries(chromeRaw).map(([k, v]) => [k, fixLinks(v, pre)]))
 }
 
 /* ---------- small pieces ---------- */
@@ -206,7 +221,62 @@ ${body}
 </html>`
 }
 
-const ctaBand = () => `<section class="cta-wrap reveal"><div class="cta-card glass-bg"><h2 class="px">Ready to turn AI search into a revenue engine?</h2><p>See how MaximusLabs gets your brand cited and chosen across ChatGPT, Perplexity, Gemini, and Google AI. Book a call for a tailored plan.</p><a class="btn-white" href="${LIVE}/contact-us">Book a call ${arrow('#080808')}</a></div></section>`
+/* ---------- Ask the author (article rail + phone inline) and the Book a call page ---------- */
+const LINKEDIN = 'https://www.linkedin.com/company/maximus-labs-ai/'
+const CAL_LINK = 'krishna-kaanth/exploring-aeo-geo' // the same Cal.com event the live article CTA opens
+const authored = articlesRaw.filter((x) => x.author && x.author.name === 'Krishna Kaanth M').length
+const proof = (pre) => `<div class="ask-proof"><small>Results with</small><span><img src="${pre}assets/live/clients/explorium.png" alt="Explorium" height="14"><img src="${pre}assets/live/clients/oliv-ai.svg" alt="Oliv AI" height="16"><img src="${pre}assets/live/clients/luca.png" alt="Luca AI" height="14"></span></div>`
+const liIcon = (pre) => `<a class="ask-li" href="${LINKEDIN}" target="_blank" rel="noopener" aria-label="MaximusLabs on LinkedIn"><img src="${S(pre, 'linkedin')}" alt="" width="13" height="13"></a>`
+function askCard(pre, a, c, mode) {
+  const data = `action="${pre}book-a-call/" data-ask data-guide="${esc(a.title)}" data-topic="${esc(c.title)}" data-url="${esc(urlOf.article(a))}"`
+  const id = `ask-${mode}`
+  const btn = `<button type="submit" class="ask-btn"><span class="t-def">${mode === 'rail' ? 'Book a 15 min chat' : 'Book'}</span><span class="t-q">${mode === 'rail' ? 'Book with my question' : 'Book'}</span>${arrow('currentColor', 12)}</button>`
+  if (mode === 'inline') return `<form class="ask ask-inline reveal" ${data}>
+    <div class="ai-top"><img src="${AVATAR}" alt="Krishna Kaanth M" width="52" height="52"><span><small>Author perspective · 15 min</small><b>Krishna Kaanth M ${liIcon(pre)}</b><em>CEO, MaximusLabs</em></span></div>
+    <label for="${id}" class="ai-hook">Questions about ${esc(c.title)}? Ask one and Krishna answers it on a 15 minute call.</label>
+    <div class="ai-field"><input id="${id}" name="q" maxlength="280" autocomplete="off" placeholder="Type your question…">${btn}</div>
+  </form>`
+  return `<form class="ask ask-rail" ${data}>
+  <div class="ask-glass cover" style="${glass(a.p, a.slug + 'ask')}" data-light><span class="ask-lab">Author perspective</span><span class="ask-chip"><i></i>15 min</span><img class="ask-photo" src="${AVATAR}" alt="Krishna Kaanth M" width="64" height="64"></div>
+  <div class="ask-body">
+    <div class="ask-who"><b>Krishna Kaanth M ${liIcon(pre)}</b><span>CEO, MaximusLabs · ${authored} guides</span></div>
+    <p class="ask-quote">“I help brands turn AI search into revenue engines, not vanity metrics.”</p>
+    <div class="ask-q"><label for="${id}">Questions about ${esc(c.title)}?</label><textarea id="${id}" name="q" rows="3" maxlength="280" placeholder="Ask KK one question, he answers it on the call…"></textarea>${btn}</div>
+    ${proof(pre)}
+  </div>
+</form>`
+}
+
+function bookPage() {
+  const pre = '../'
+  const body = `
+<section class="inner-hero-wrap"><div class="inner-hero book" data-fx-host>
+  ${crumbs(pre, [{ label: 'AI Search 101', href: '' }, { label: 'Book a call' }])}
+  <div class="book-cols">
+    <div class="book-l">
+      <div class="chips"><span class="chip-b">15 min call</span><span class="chip-o">With the author</span></div>
+      <h1 class="px ih-h1">Talk to the author</h1>
+      <p class="ih-sub">15 minutes with Krishna Kaanth M, CEO of MaximusLabs and author of AI Search 101. Bring one question about getting cited in AI search and leave with a clear next step.</p>
+      <div class="bq">
+        <div class="bq-h"><label for="bq-text">Your question</label><a class="bq-src" data-bq-src hidden href="#"></a></div>
+        <textarea id="bq-text" rows="3" maxlength="280" placeholder="What do you want to ask? For example: should we test ChatGPT ads before we have any citations?"></textarea>
+        <small>Added to your booking notes, so Krishna sees it before the call. Edit it any time before you pick a slot.</small>
+      </div>
+      <ol class="book-steps"><li><span class="px">01</span><b>Pick a time</b><em>On the calendar.</em></li><li><span class="px">02</span><b>Bring your question</b><em>It is already in your notes.</em></li><li><span class="px">03</span><b>Get a straight answer</b><em>And the first moves for your brand.</em></li></ol>
+      ${proof(pre)}
+      <p class="book-alt">Need the full 30 minute GEO strategy call with your category's AI answers? <a href="${LIVE}/contact-us">Book it on maximuslabs.ai</a></p>
+    </div>
+    <div class="cal-shell reveal">
+      <div class="cal-head"><img src="${AVATAR}" alt="" width="36" height="36"><span><b>15 min chat with Krishna</b><small>Video call · your time zone</small></span><em>Cal.com</em></div>
+      <div id="cal-inline" class="cal-inline"><div class="cal-loading"><i></i>Loading Krishna's calendar…</div></div>
+      <div class="cal-foot">Booking runs on Cal.com, the same calendar the live article button opens. <a href="https://cal.com/${CAL_LINK}" target="_blank" rel="noopener">Open in Cal.com</a></div>
+    </div>
+  </div>
+</div></section>`
+  return page({ pre, title: 'Book a call with the author | AI Search 101', desc: '15 minutes with Krishna Kaanth M, author of AI Search 101.', body, fx: 'signal', kind: 'book' })
+}
+
+const ctaBand = () =>`<section class="cta-wrap reveal"><div class="cta-card glass-bg"><h2 class="px">Ready to turn AI search into a revenue engine?</h2><p>See how MaximusLabs gets your brand cited and chosen across ChatGPT, Perplexity, Gemini, and Google AI. Book a call for a tailored plan.</p><a class="btn-white" href="${LIVE}/contact-us">Book a call ${arrow('#080808')}</a></div></section>`
 
 /* ---------- L1 hub ---------- */
 function hub() {
@@ -384,7 +454,8 @@ function ptBody(a) {
 function articlePage(a) {
   const pre = '../../../'
   const p = P[a.p], c = C(a.p, a.c)
-  const { html, toc } = a.bodyHtml ? htmlBody(a) : ptBody(a)
+  const built = a.bodyHtml ? htmlBody(a) : ptBody(a)
+  const html = fixLinks(built.html, pre), toc = built.toc
   const faq = (a.faq || []).filter((f) => f.question)
   const idx = c.articles.findIndex((x) => x.slug === a.slug)
   const prev = c.articles[idx - 1], next = c.articles[idx + 1]
@@ -403,7 +474,7 @@ function articlePage(a) {
       <h1 class="art-h1">${esc(a.title)}</h1>
       ${a.excerpt ? `<p class="ih-sub">${esc(a.excerpt)}</p>` : ''}
     </div>
-    <div class="share"><button type="button" class="ic-btn" data-copy aria-label="Copy link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button><a class="ic-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${LIVE}/ai-search-101/${a.p}/${a.c}/${a.slug}`)}" aria-label="Share on LinkedIn"><img src="${S(pre, 'linkedin')}" alt="" width="15" height="15"></a></div>
+    <div class="share"><button type="button" class="ic-btn" data-copy aria-label="Copy link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button><a class="ic-btn" target="_blank" rel="noopener" href="${LINKEDIN}" aria-label="MaximusLabs on LinkedIn"><img src="${S(pre, 'linkedin')}" alt="" width="15" height="15"></a></div>
   </div>
   <div class="art-meta">
     <span class="who"><img src="${esc(a.author.avatarUrl || AVATAR)}" alt="" width="44" height="44"><span><b>${esc(a.author.name)}</b><small>${esc(a.author.designation || 'CEO')}, MaximusLabs</small></span></span>
@@ -423,16 +494,16 @@ function articlePage(a) {
     <div class="toc-prog"><i></i></div>
     <ol>${toc.map((t, i) => `<li><a href="#${t.id}"><span class="n">${pad2(i + 1)}</span><span>${esc(t.text)}</span></a></li>`).join('')}</ol>
     ${faq.length ? `<a class="toc-faq" href="#faq">${plural(faq.length, 'question')} answered</a>` : ''}
-    <div class="toc-cta glass-bg"><b>Want ChatGPT to name you, not just list you?</b><a class="btn-white sm" href="${LIVE}/contact-us">Book a GEO strategy call ${arrow('#080808', 12)}</a></div>
   </div></aside>
   <article class="prose">
     ${a.answer ? `<div class="answer reveal"><div class="lab"><svg width="14" height="14" viewBox="0 0 12 12"><path d="M6 .5C6.4 3.4 8.6 5.6 11.5 6 8.6 6.4 6.4 8.6 6 11.5 5.6 8.6 3.4 6.4.5 6 3.4 5.6 5.6 3.4 6 .5z" fill="#449AFB"/></svg>The short answer</div><p>${esc(a.answer)}</p></div>` : ''}
     ${tldr.trim() ? `<div class="tldr reveal"><div class="px">TL;DR</div>${tldr}</div>` : ''}
     ${html}
     ${faq.length ? `<section class="faq" id="faq"><div class="faq-h"><h2>Questions, answered</h2><span>${plural(faq.length, 'question')}</span></div>${faq.map((f, i) => `<details${i === 0 ? ' open' : ''}><summary><span>${esc(f.question)}</span><i></i></summary><p>${esc(f.answer || '')}</p></details>`).join('')}</section>` : ''}
+    ${askCard(pre, a, c, 'inline')}
     <div class="author-box"><img src="${esc(a.author.avatarUrl || AVATAR)}" alt="" width="72" height="72"><div><small>Written by</small><b>${esc(a.author.name)}</b><span>${esc(a.author.designation || 'CEO')}, MaximusLabs</span>${a.author.bio ? `<p>${esc(a.author.bio)}</p>` : ''}</div></div>
   </article>
-  <aside class="author-rail"><div class="ar-in"><small>Written by</small><img src="${esc(a.author.avatarUrl || AVATAR)}" alt="" width="56" height="56"><b>${esc(a.author.name)}</b><span>${esc(a.author.designation || 'CEO')}, MaximusLabs</span><hr><small>Share</small><div class="ar-share"><button type="button" class="ic-btn sm" data-copy aria-label="Copy link"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button></div></div></aside>
+  <aside class="author-rail">${askCard(pre, a, c, 'rail')}</aside>
 </div></section>
 
 <section class="vsec bt"><div class="vrail">
@@ -447,7 +518,8 @@ ${ctaBand()}`
 /* ---------- write ---------- */
 const write = (rel, html) => { const f = path.join(ROOT, rel, 'index.html'); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, html) }
 write('', hub())
-let n = 1
+write('book-a-call', bookPage())
+let n = 2
 for (const p of pillars) {
   write(p.slug, pillarPage(p)); n++
   for (const c of p.clusters) {

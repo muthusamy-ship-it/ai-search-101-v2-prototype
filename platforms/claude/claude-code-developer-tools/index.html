@@ -29,7 +29,7 @@
       <h1 class="art-h1">How Claude Code and VS Code turned Anthropic from a safety lab into a developer phenomenon</h1>
       <p class="ih-sub">The story behind Claude Code's rise: from research lab experiment to daily developer workflow staple.</p>
     </div>
-    <div class="share"><button type="button" class="ic-btn" data-copy aria-label="Copy link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button><a class="ic-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.maximuslabs.ai%2Fai-search-101%2Fplatforms%2Fclaude%2Fclaude-code-developer-tools" aria-label="Share on LinkedIn"><img src="../../../assets/live/platforms/linkedin.svg" alt="" width="15" height="15"></a></div>
+    <div class="share"><button type="button" class="ic-btn" data-copy aria-label="Copy link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button><a class="ic-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/maximus-labs-ai/" aria-label="MaximusLabs on LinkedIn"><img src="../../../assets/live/platforms/linkedin.svg" alt="" width="15" height="15"></a></div>
   </div>
   <div class="art-meta">
     <span class="who"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="44" height="44"><span><b>Krishna Kaanth M</b><small>CEO, MaximusLabs</small></span></span>
@@ -49,7 +49,6 @@
     <div class="toc-prog"><i></i></div>
     <ol><li><a href="#q1-what-are-claude-code-developer-tools-and-why-is-a-coding-agent-now-a-search-problem"><span class="n">01</span><span>Claude Code Defined</span></a></li><li><a href="#q2-how-did-an-ai-safety-lab-become-the-developer-tooling-category-default"><span class="n">02</span><span>Safety Lab to Category Default</span></a></li><li><a href="#q3-why-was-the-native-vs-code-extension-a-distribution-decision-not-a-feature-release"><span class="n">03</span><span>VS Code Distribution Play</span></a></li><li><a href="#q4-how-do-you-actually-set-up-claude-code-including-install-path-permission-modes-and-claudemd-context"><span class="n">04</span><span>Setup, Permissions, Context</span></a></li><li><a href="#q5-what-does-the-mcp-and-plugin-ecosystem-prove-about-claude-codes-moat"><span class="n">05</span><span>MCP &amp;amp; Ecosystem Moat</span></a></li><li><a href="#q6-what-did-anthropics-own-teams-reveal-about-using-claude-code-on-real-codebases"><span class="n">06</span><span>Dogfooding &amp;amp; Enterprise Reality</span></a></li><li><a href="#q7-claude-code-vs-cursor-vs-github-copilot-vs-openai-codex-and-which-comparison-actually-matters"><span class="n">07</span><span>Claude Code vs Alternatives</span></a></li><li><a href="#q8-how-does-claudes-code-based-result-filtering-decide-whether-your-content-is-retrieved-at-all"><span class="n">08</span><span>Retrieval Filter Mechanics</span></a></li><li><a href="#q9-does-deeper-agentic-retrieval-actually-produce-more-accurate-citations"><span class="n">09</span><span>Retrieval Depth vs Accuracy</span></a></li><li><a href="#q10-are-schema-llmstxt-and-machine-readable-rules-a-differentiator-or-is-velocity-the-real-variable"><span class="n">10</span><span>Schema, llms.txt, Velocity</span></a></li><li><a href="#q11-how-do-you-become-the-answer-inside-an-agentic-workflow-instead-of-a-blue-link-outside-it"><span class="n">11</span><span>Agentic Answer Eligibility</span></a></li><li><a href="#q12-how-do-you-measure-ai-citation-share-and-does-that-traffic-actually-convert"><span class="n">12</span><span>Measuring Citations &amp;amp; Revenue</span></a></li></ol>
     <a class="toc-faq" href="#faq">7 questions answered</a>
-    <div class="toc-cta glass-bg"><b>Want ChatGPT to name you, not just list you?</b><a class="btn-white sm" href="https://www.maximuslabs.ai/contact-us">Book a GEO strategy call <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="#080808" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div></aside>
   <article class="prose">
     
@@ -62,7 +61,7 @@
 
 <p>Fair question. Most coverage of Claude Code is written for engineers who want install steps.</p>
 
-<p>The reason it lands on your desk is simpler. The same retrieval machinery that decides which files an agent reads also decides which pages an answer engine reads, which is the core premise of <a href="/generative-engine-optimization-geo/">generative engine optimization</a>.</p>
+<p>The reason it lands on your desk is simpler. The same retrieval machinery that decides which files an agent reads also decides which pages an answer engine reads, which is the core premise of <a href="https://www.maximuslabs.ai/generative-engine-optimization-geo/">generative engine optimization</a>.</p>
 
 <h4>⭐ What actually ships across the surfaces</h4>
 
@@ -100,7 +99,7 @@
 
 <p>That is not a ranking system. That is a gatekeeper with a script.</p>
 
-<p>MaximusLabs AI runs prompt sets across ChatGPT, Claude, Perplexity, and Gemini, then maps which specific URLs each engine cites most often for a target query. What we keep seeing is that <a href="/resources/research-reports/chatgpt-perplexity-gemini-citation-patterns/">citation sets and Google rankings diverge</a>, sometimes badly, for the same company.</p>
+<p>MaximusLabs AI runs prompt sets across ChatGPT, Claude, Perplexity, and Gemini, then maps which specific URLs each engine cites most often for a target query. What we keep seeing is that <a href="https://www.maximuslabs.ai/resources/research-reports/chatgpt-perplexity-gemini-citation-patterns/">citation sets and Google rankings diverge</a>, sometimes badly, for the same company.</p>
 
 <h4>💡 The universal intent decoder, and why keyword lists broke</h4>
 
@@ -108,9 +107,9 @@
 
 <p>That kills the old logic of mapping one page to one keyword string. Ethan Smith, CEO of Graphite, puts the scale of the shift plainly: chat queries average roughly 25 words against about six words for Google search.</p>
 
-<p>So the honest framing is this. Generative Engine Optimization is closer to a data science problem than an SEO problem, because you are optimizing for a retrieval threshold, not a ranking factor. That distinction is unpacked further in our breakdown of <a href="/generative-engine-optimization/geo-vs-traditional-seo-comparison/">how GEO differs from traditional SEO</a>.</p>
+<p>So the honest framing is this. Generative Engine Optimization is closer to a data science problem than an SEO problem, because you are optimizing for a retrieval threshold, not a ranking factor. That distinction is unpacked further in our breakdown of <a href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison/">how GEO differs from traditional SEO</a>.</p>
 
-<p>MaximusLabs AI treats Claude, ChatGPT, Perplexity, and Gemini as four separate algorithms with four separate trust signals, which is why we handle <a href="/services/platforms/anthropic-claude/">Anthropic Claude optimization</a> as its own discipline instead of shipping one generic AI-ready content template.</p>
+<p>MaximusLabs AI treats Claude, ChatGPT, Perplexity, and Gemini as four separate algorithms with four separate trust signals, which is why we handle <a href="https://www.maximuslabs.ai/services/platforms/anthropic-claude/">Anthropic Claude optimization</a> as its own discipline instead of shipping one generic AI-ready content template.</p>
 
 <h2 id="q2-how-did-an-ai-safety-lab-become-the-developer-tooling-category-default" data-n=""><a class="anchor" href="#q2-how-did-an-ai-safety-lab-become-the-developer-tooling-category-default" aria-label="Link to section"></a>Q2. How did an AI safety lab become the developer tooling category default?</h2>
 
@@ -152,7 +151,7 @@
 
 <p>The trust question sits underneath all of it. One published multi-model evaluation put Claude Opus 4.5 at 77% fact-check accuracy, the highest of 14 models tested, which is part of why developers were willing to hand over write access at all.</p>
 
-<p>MaximusLabs AI labels every statistic by its source before publication, because our <a href="/company/case-studies/b2b-ai-saas/oliv-ai-case-study/">Oliv AI engagement</a> showed citation rate climbing when an engine can verify a claim's origin instead of trusting a floating number.</p>
+<p>MaximusLabs AI labels every statistic by its source before publication, because our <a href="https://www.maximuslabs.ai/company/case-studies/b2b-ai-saas/oliv-ai-case-study/">Oliv AI engagement</a> showed citation rate climbing when an engine can verify a claim's origin instead of trusting a floating number.</p>
 
 <h2 id="q3-why-was-the-native-vs-code-extension-a-distribution-decision-not-a-feature-release" data-n=""><a class="anchor" href="#q3-why-was-the-native-vs-code-extension-a-distribution-decision-not-a-feature-release" aria-label="Link to section"></a>Q3. Why was the native VS Code extension a distribution decision, not a feature release?</h2>
 
@@ -204,7 +203,7 @@
 
 <p>Now look at who ranks for "Claude Code developer tools." Anthropic's docs, yes, but also curated GitHub repositories, chaptered YouTube walkthroughs, and third-party publishers.</p>
 
-<p>Properties you do not own are doing your ranking for you. Traditional Google-only SEO has no framework for that, because it was built to optimize a website, not a presence, which is exactly the gap our <a href="/ai-search-101/strategies/citations/ai-citation-acquisition-tactics">citation acquisition work</a> addresses.</p>
+<p>Properties you do not own are doing your ranking for you. Traditional Google-only SEO has no framework for that, because it was built to optimize a website, not a presence, which is exactly the gap our <a href="../../../strategies/citations/ai-citation-acquisition-tactics/">citation acquisition work</a> addresses.</p>
 
 <p>The clickstream data makes the stakes concrete. Semrush and Datos found ChatGPT enabled web search on only 34.5% of queries by early 2026, down from 46%, meaning most answers draw on the corpus rather than a live crawl.</p>
 
@@ -218,7 +217,7 @@
 
 <p>My read on the agentic version of this is uncomfortable but simple. If an agent can navigate your surfaces and cannot navigate a competitor's, you win by default, and the reverse is equally true.</p>
 
-<p>MaximusLabs AI builds Search Everywhere Optimization into every engagement, covering G2 and Capterra profiles, the <a href="/answer-engine-optimizations/reddit-forum-aeo/">Reddit threads engines already cite</a>, YouTube, and LinkedIn founder publishing, because answers get assembled from off-site sources more often than clients expect.</p>
+<p>MaximusLabs AI builds Search Everywhere Optimization into every engagement, covering G2 and Capterra profiles, the <a href="https://www.maximuslabs.ai/answer-engine-optimizations/reddit-forum-aeo/">Reddit threads engines already cite</a>, YouTube, and LinkedIn founder publishing, because answers get assembled from off-site sources more often than clients expect.</p>
 
 <h2 id="q4-how-do-you-actually-set-up-claude-code-including-install-path-permission-modes-and-claudemd-context" data-n=""><a class="anchor" href="#q4-how-do-you-actually-set-up-claude-code-including-install-path-permission-modes-and-claudemd-context" aria-label="Link to section"></a>Q4. How do you actually set up Claude Code, including install path, permission modes, and CLAUDE.md context?</h2>
 
@@ -244,7 +243,7 @@
 
 <p>CLAUDE.md is a plain text file at your project root. It holds permanent context about the codebase, conventions, and rules you never want restated.</p>
 
-<p>Without it, the agent answers as though it has never seen your project. With it, the same tool behaves like it has been on the team a while. The public-facing analogue is a <a href="/generative-engine-optimization/llms-txt/">llms.txt file</a>, which does the same job for answer engines.</p>
+<p>Without it, the agent answers as though it has never seen your project. With it, the same tool behaves like it has been on the team a while. The public-facing analogue is a <a href="https://www.maximuslabs.ai/generative-engine-optimization/llms-txt/">llms.txt file</a>, which does the same job for answer engines.</p>
 
 <p>Useful contents, kept short:</p>
 
@@ -296,7 +295,7 @@
 
 <p>One caution worth stating plainly. Auto-edit mode is genuinely faster, and it is also where teams create the messes they later blame on the model.</p>
 
-<p>MaximusLabs AI encodes the same rule-file discipline into content operations, holding banned phrases, source requirements, and paragraph ceilings in one place, which is how our <a href="/content-marketing/">content marketing engine</a> scales volume without quality drift.</p>
+<p>MaximusLabs AI encodes the same rule-file discipline into content operations, holding banned phrases, source requirements, and paragraph ceilings in one place, which is how our <a href="https://www.maximuslabs.ai/content-marketing/">content marketing engine</a> scales volume without quality drift.</p>
 
 <h2 id="q5-what-does-the-mcp-and-plugin-ecosystem-prove-about-claude-codes-moat" data-n=""><a class="anchor" href="#q5-what-does-the-mcp-and-plugin-ecosystem-prove-about-claude-codes-moat" aria-label="Link to section"></a>Q5. What does the MCP and plugin ecosystem prove about Claude Code's moat?</h2>
 
@@ -308,7 +307,7 @@
 
 <ul><li><strong>MCP configs:</strong> connections that let the agent reach outside systems, like a database or a ticketing tool.</li><li><strong>Hooks:</strong> rules that fire automatically, so behaviour is enforced instead of requested.</li><li><strong>Subagents:</strong> separate workers running tasks in parallel under one instruction.</li><li><strong>Skills and slash commands:</strong> packaged instructions a team reuses instead of retyping.</li></ul>
 
-<p>MaximusLabs AI maps the top-cited sources and specific URLs for a client's target queries across ChatGPT, Claude, Perplexity, and Gemini, and community-maintained indexes show up in those <a href="/resources/research-reports/chatgpt-perplexity-gemini-citation-patterns/">citation sets</a> far more often than brand blogs do.</p>
+<p>MaximusLabs AI maps the top-cited sources and specific URLs for a client's target queries across ChatGPT, Claude, Perplexity, and Gemini, and community-maintained indexes show up in those <a href="https://www.maximuslabs.ai/resources/research-reports/chatgpt-perplexity-gemini-citation-patterns/">citation sets</a> far more often than brand blogs do.</p>
 
 <h4>📈 Why a GitHub repo ranks on page one at all</h4>
 
@@ -338,7 +337,7 @@
 
 <p>A maintained public resource that other people cite is worth more than a page you own and nobody links. Integration directories, comparison matrices kept current, and open datasets all do this job.</p>
 
-<p>MaximusLabs AI identifies the specific <a href="/answer-engine-optimizations/reddit-forum-aeo/">Reddit, Quora, and GitHub resources</a> engines already cite for a client's category before any writing starts. Our position is that earning a place inside an existing cited artefact beats publishing a fresh page nobody retrieves.</p>
+<p>MaximusLabs AI identifies the specific <a href="https://www.maximuslabs.ai/answer-engine-optimizations/reddit-forum-aeo/">Reddit, Quora, and GitHub resources</a> engines already cite for a client's category before any writing starts. Our position is that earning a place inside an existing cited artefact beats publishing a fresh page nobody retrieves.</p>
 
 <h4>⚠️ Where I would hedge this</h4>
 
@@ -346,7 +345,7 @@
 
 <p>Treat it as a lagging signal that compounds, not a lever you pull once.</p>
 
-<p>MaximusLabs AI builds Search Everywhere Optimization into every engagement, covering community indexes, review profiles, and third-party surfaces, because engines <a href="/ai-search-101/strategies/citations/ai-citation-acquisition-tactics">assemble answers from properties clients do not own</a> more often than their reporting suggests.</p>
+<p>MaximusLabs AI builds Search Everywhere Optimization into every engagement, covering community indexes, review profiles, and third-party surfaces, because engines <a href="../../../strategies/citations/ai-citation-acquisition-tactics/">assemble answers from properties clients do not own</a> more often than their reporting suggests.</p>
 
 <h2 id="q6-what-did-anthropics-own-teams-reveal-about-using-claude-code-on-real-codebases" data-n=""><a class="anchor" href="#q6-what-did-anthropics-own-teams-reveal-about-using-claude-code-on-real-codebases" aria-label="Link to section"></a>Q6. What did Anthropic's own teams reveal about using Claude Code on real codebases?</h2>
 
@@ -390,7 +389,7 @@
     </tr>
 </tbody></table></div></div>
 
-<p>MaximusLabs AI runs hybrid human-plus-AI workflows on internal tooling, using AI for research aggregation, formatting, and first drafts while humans keep voice, originality, and strategic calls, which is how our <a href="/content-marketing/">content production engine</a> holds quality at volume.</p>
+<p>MaximusLabs AI runs hybrid human-plus-AI workflows on internal tooling, using AI for research aggregation, formatting, and first drafts while humans keep voice, originality, and strategic calls, which is how our <a href="https://www.maximuslabs.ai/content-marketing/">content production engine</a> holds quality at volume.</p>
 
 <h4>💰 The part that belongs to marketing, not engineering</h4>
 
@@ -404,7 +403,7 @@
 
 <p>I have sat in the version of this meeting that never gets written about. A client wants a landing system built, and the work is genuinely a few weeks.</p>
 
-<p>Then engineering scopes it at nine months because of queue, not difficulty. That gap is why MaximusLabs AI built full-stack delivery in-house, including a dedicated <a href="/technical-seo/best-webflow-seo-agencies/">Webflow team</a>, so shipping speed stops depending on someone else's sprint.</p>
+<p>Then engineering scopes it at nine months because of queue, not difficulty. That gap is why MaximusLabs AI built full-stack delivery in-house, including a dedicated <a href="https://www.maximuslabs.ai/technical-seo/best-webflow-seo-agencies/">Webflow team</a>, so shipping speed stops depending on someone else's sprint.</p>
 
 <p>Anthropic's internal teams routed around the same bottleneck by handing non-engineers a tool that builds.</p>
 
@@ -418,7 +417,7 @@
 
 <blockquote><cite>"The quality of outcomes is directly proportional to the number of iterations."</cite><br><cite>Dharmesh Shah, Co-founder and CTO, HubSpot, My First Million episode notes</cite></blockquote>
 
-<p>MaximusLabs AI publishes its own <a href="/resources/research-reports/founder-voice-methodology-guide/">methodology</a> because you cannot credibly sell a workflow you do not run daily. Our dogfooding rule is simple: if a process does not survive inside our own delivery, it does not reach a client engagement.</p>
+<p>MaximusLabs AI publishes its own <a href="https://www.maximuslabs.ai/resources/research-reports/founder-voice-methodology-guide/">methodology</a> because you cannot credibly sell a workflow you do not run daily. Our dogfooding rule is simple: if a process does not survive inside our own delivery, it does not reach a client engagement.</p>
 
 <h2 id="q7-claude-code-vs-cursor-vs-github-copilot-vs-openai-codex-and-which-comparison-actually-matters" data-n=""><a class="anchor" href="#q7-claude-code-vs-cursor-vs-github-copilot-vs-openai-codex-and-which-comparison-actually-matters" aria-label="Link to section"></a>Q7. Claude Code vs Cursor vs GitHub Copilot vs OpenAI Codex, and which comparison actually matters?</h2>
 
@@ -476,7 +475,7 @@
 
 <p>Claude filters search results with executed code before anything reaches its context window. ChatGPT enabled web search on only 34.5% of queries by early 2026, down from 46%, meaning most answers lean on the corpus.</p>
 
-<p>So two agents asked the same buying question can produce completely different vendor sets. That is the comparison a revenue owner should care about, and it is why we treat <a href="/services/platforms/chatgpt/">ChatGPT optimization</a> as distinct work from Claude or Perplexity.</p>
+<p>So two agents asked the same buying question can produce completely different vendor sets. That is the comparison a revenue owner should care about, and it is why we treat <a href="https://www.maximuslabs.ai/services/platforms/chatgpt/">ChatGPT optimization</a> as distinct work from Claude or Perplexity.</p>
 
 <h4>💰 What this changes about your comparison pages</h4>
 
@@ -484,7 +483,7 @@
 
 <p>Your comparison pages are a different problem. They need to survive extraction by four engines with four retrieval behaviours, or they influence nothing.</p>
 
-<p>MaximusLabs AI builds competitor-alternative and versus pages aimed at <a href="/resources/research-reports/b2b-saas-buyer-journey-ai-search/">buyers already in evaluation</a>, comparing on the dimension that decides the deal rather than padding a matrix nobody reads twice.</p>
+<p>MaximusLabs AI builds competitor-alternative and versus pages aimed at <a href="https://www.maximuslabs.ai/resources/research-reports/b2b-saas-buyer-journey-ai-search/">buyers already in evaluation</a>, comparing on the dimension that decides the deal rather than padding a matrix nobody reads twice.</p>
 
 <h4>⚠️ The penalty for being average</h4>
 
@@ -496,7 +495,7 @@
 
 <blockquote><cite>"Most best practices, most blog posts, are not correct."</cite><br><cite>Ethan Smith, CEO, Graphite, Reforge Summer Sessions session notes</cite></blockquote>
 
-<p>MaximusLabs AI treats each engine as a separate algorithm with separate trust signals, because a page tuned only for Google can rank first and still miss every AI evaluation set that matters to pipeline. That gap is measured in our <a href="/resources/research-reports/the-ai-visibility-gap--2026-geo-and-aeo-benchmark-report/">2026 AI visibility benchmark</a>.</p>
+<p>MaximusLabs AI treats each engine as a separate algorithm with separate trust signals, because a page tuned only for Google can rank first and still miss every AI evaluation set that matters to pipeline. That gap is measured in our <a href="https://www.maximuslabs.ai/resources/research-reports/the-ai-visibility-gap--2026-geo-and-aeo-benchmark-report/">2026 AI visibility benchmark</a>.</p>
 
 <h2 id="q8-how-does-claudes-code-based-result-filtering-decide-whether-your-content-is-retrieved-at-all" data-n=""><a class="anchor" href="#q8-how-does-claudes-code-based-result-filtering-decide-whether-your-content-is-retrieved-at-all" aria-label="Link to section"></a>Q8. How does Claude's code-based result filtering decide whether your content is retrieved at all?</h2>
 
@@ -522,7 +521,7 @@
 
 <ul><li><strong>40 to 60 word paragraphs:</strong> sentence-level chunking associated with up to 15% better recall accuracy.</li><li><strong>Question-form subheads:</strong> the retrieval unit gets a label matching how people ask.</li><li><strong>Self-contained answers:</strong> each block makes sense alone, with no "as mentioned above".</li><li><strong>Labelled sections:</strong> definitions, lists, and tables a model can lift whole.</li><li><strong>Named sources inline:</strong> the claim carries its own provenance.</li></ul>
 
-<p>MaximusLabs AI enforces a five-part structure on every H2, opening each with a standalone extractable nugget, because the block is the retrieval unit and the article is not. The full pattern sits in our <a href="/ai-search-101/aeo/content/aeo-content-writing-formatting">AEO content formatting guide</a>.</p>
+<p>MaximusLabs AI enforces a five-part structure on every H2, opening each with a standalone extractable nugget, because the block is the retrieval unit and the article is not. The full pattern sits in our <a href="../../../aeo/content/aeo-content-writing-formatting/">AEO content formatting guide</a>.</p>
 
 <h4>💡 Why I call this a data science problem, not SEO+</h4>
 
@@ -530,7 +529,7 @@
 
 <p>Generative Engine Optimization is closer to a data science problem. Filtering thresholds are mathematics, and you cannot message your way past a function that already excluded you.</p>
 
-<p>MaximusLabs AI's read is that <a href="/generative-engine-optimization/geo-vs-traditional-seo-comparison/">the standard advice gets this backwards</a> by starting with content volume, when the first question is whether a block survives the filter at all.</p>
+<p>MaximusLabs AI's read is that <a href="https://www.maximuslabs.ai/generative-engine-optimization/geo-vs-traditional-seo-comparison/">the standard advice gets this backwards</a> by starting with content volume, when the first question is whether a block survives the filter at all.</p>
 
 <h4>✅ What to do on Monday</h4>
 
@@ -544,7 +543,7 @@
 
 <p>Re-chunking is cheap in cash and expensive in attention. It will not manufacture authority you have not earned, and it compounds slowly.</p>
 
-<p>MaximusLabs AI tracks <a href="/ai-search-101/geo/measurement/geo-metrics-kpis">share of voice across prompt variants</a> rather than rank position, because there is no position one in an answer, only presence or absence.</p>
+<p>MaximusLabs AI tracks <a href="../../../geo/measurement/geo-metrics-kpis/">share of voice across prompt variants</a> rather than rank position, because there is no position one in an answer, only presence or absence.</p>
 
 <h2 id="q9-does-deeper-agentic-retrieval-actually-produce-more-accurate-citations" data-n=""><a class="anchor" href="#q9-does-deeper-agentic-retrieval-actually-produce-more-accurate-citations" aria-label="Link to section"></a>Q9. Does deeper agentic retrieval actually produce more accurate citations?</h2>
 
@@ -556,13 +555,13 @@
 
 <p>The measured result runs the other way. Push an agent from 2 tool calls to 150 and average fact-check accuracy drops about 42% across two frontier models.</p>
 
-<p>MaximusLabs AI tracks <a href="/resources/research-reports/chatgpt-perplexity-gemini-citation-patterns/">citation sets</a> rather than tool-call depth, and what surfaces in our audits is that the same handful of URLs keeps appearing regardless of how long an agent searches.</p>
+<p>MaximusLabs AI tracks <a href="https://www.maximuslabs.ai/resources/research-reports/chatgpt-perplexity-gemini-citation-patterns/">citation sets</a> rather than tool-call depth, and what surfaces in our audits is that the same handful of URLs keeps appearing regardless of how long an agent searches.</p>
 
 <h4>⏰ Why agents cannot afford unlimited depth anyway</h4>
 
 <p>Accuracy is not the only ceiling. Latency is the other one.</p>
 
-<p>Microsoft's Web IQ grounding layer targets 164ms at the 95th percentile for its full pipeline. That budget does not permit exhaustive crawling of your content library, which is why <a href="/ai-search-101/technical/ai-crawlers/ai-crawlers-guide-optimization">AI crawler access and page speed</a> stop being hygiene items and start being eligibility items.</p>
+<p>Microsoft's Web IQ grounding layer targets 164ms at the 95th percentile for its full pipeline. That budget does not permit exhaustive crawling of your content library, which is why <a href="../../../technical/ai-crawlers/ai-crawlers-guide-optimization/">AI crawler access and page speed</a> stop being hygiene items and start being eligibility items.</p>
 
 <p>So the retrieval pass is shallow by design and degrading by depth. Both constraints point the same direction.</p>
 
@@ -578,7 +577,7 @@
 
 <p>Concentrated authority on a small set of high-intent questions survives a shallow pass. Two hundred awareness articles do not, because they never enter the early retrieval window for a buying question.</p>
 
-<p>MaximusLabs AI skips top-of-funnel content deliberately and opens every engagement with <a href="/resources/research-reports/b2b-saas-buyer-journey-ai-search/">bottom-of-funnel articles</a>, expanding to middle-of-funnel only once BOFU questions are exhausted.</p>
+<p>MaximusLabs AI skips top-of-funnel content deliberately and opens every engagement with <a href="https://www.maximuslabs.ai/resources/research-reports/b2b-saas-buyer-journey-ai-search/">bottom-of-funnel articles</a>, expanding to middle-of-funnel only once BOFU questions are exhausted.</p>
 
 <p>That sequencing is the exact inverse of a Google-era content calendar. Traditional agencies still build TOFU-first because impressions were the deliverable, and impressions were never the point.</p>
 
@@ -588,7 +587,7 @@
 
 <p>What I would not do is wait for cleaner data before reallocating. The downside of concentrating on revenue questions is small even if the decay finding weakens.</p>
 
-<p>MaximusLabs AI runs its own <a href="/generative-engine-optimization/geo-experimental-techniques/">controlled prompt experiments</a> rather than trusting published best practices, because the honest position is that most of what circulates about AI search has never been tested against a control group.</p>
+<p>MaximusLabs AI runs its own <a href="https://www.maximuslabs.ai/generative-engine-optimization/geo-experimental-techniques/">controlled prompt experiments</a> rather than trusting published best practices, because the honest position is that most of what circulates about AI search has never been tested against a control group.</p>
 
 <h2 id="q10-are-schema-llmstxt-and-machine-readable-rules-a-differentiator-or-is-velocity-the-real-variable" data-n=""><a class="anchor" href="#q10-are-schema-llmstxt-and-machine-readable-rules-a-differentiator-or-is-velocity-the-real-variable" aria-label="Link to section"></a>Q10. Are schema, llms.txt, and machine-readable rules a differentiator, or is velocity the real variable?</h2>
 
@@ -623,7 +622,7 @@
     </tr>
 </tbody></table></div></div>
 
-<p>MaximusLabs AI ships Article, FAQPage, Organization, SoftwareApplication, and Dataset <a href="/generative-engine-optimization/schema-markup-basics/">schema</a> plus llms.txt as a week-one checklist item, which sidesteps the debate by treating markup as table stakes rather than strategy.</p>
+<p>MaximusLabs AI ships Article, FAQPage, Organization, SoftwareApplication, and Dataset <a href="https://www.maximuslabs.ai/generative-engine-optimization/schema-markup-basics/">schema</a> plus llms.txt as a week-one checklist item, which sidesteps the debate by treating markup as table stakes rather than strategy.</p>
 
 <h4>🔧 The rule-encoding pattern, learned the annoying way</h4>
 
@@ -639,7 +638,7 @@
 
 <ul><li>Banned phrases, starting with "in today's ever-evolving digital landscape."</li><li>Every claim carries a named source and a year.</li><li>Paragraph ceiling of 40 to 60 words.</li><li>One brand mention per block, never two.</li><li>No invented client names or results, ever.</li></ul>
 
-<p>MaximusLabs AI maintains exactly this kind of rule file internally, which is what lets our <a href="/content-marketing/">content operation</a> scale volume without the quality collapse that follows bolting AI onto a 2019 process.</p>
+<p>MaximusLabs AI maintains exactly this kind of rule file internally, which is what lets our <a href="https://www.maximuslabs.ai/content-marketing/">content operation</a> scale volume without the quality collapse that follows bolting AI onto a 2019 process.</p>
 
 <h4>⚡ Why velocity beats markup depth</h4>
 
@@ -655,7 +654,7 @@
 
 <blockquote><cite>"The quality of outcomes is directly proportional to the number of iterations."</cite><br><cite>Dharmesh Shah, Co-founder and CTO, HubSpot, My First Million episode notes</cite></blockquote>
 
-<p>MaximusLabs AI completes the <a href="/generative-engine-optimization/technical-geo-implementation/">technical sprint</a> in week one, covering schema, JavaScript minimisation, and AI crawler access in robots.txt, then publishes the first live article within four days of signing. Velocity is the variable that compounds.</p>
+<p>MaximusLabs AI completes the <a href="https://www.maximuslabs.ai/generative-engine-optimization/technical-geo-implementation/">technical sprint</a> in week one, covering schema, JavaScript minimisation, and AI crawler access in robots.txt, then publishes the first live article within four days of signing. Velocity is the variable that compounds.</p>
 
 <h2 id="q11-how-do-you-become-the-answer-inside-an-agentic-workflow-instead-of-a-blue-link-outside-it" data-n=""><a class="anchor" href="#q11-how-do-you-become-the-answer-inside-an-agentic-workflow-instead-of-a-blue-link-outside-it" aria-label="Link to section"></a>Q11. How do you become the answer inside an agentic workflow instead of a blue link outside it?</h2>
 
@@ -667,7 +666,7 @@
 
 <p>An AI crawler should be able to travel: your website, then Wikidata, then LinkedIn, then Crunchbase, then G2, then back to your website. Every hop confirms the same facts.</p>
 
-<p>MaximusLabs AI audits Wikidata, LinkedIn, Crunchbase, G2, Capterra, and Gartner Peer Insights profiles as one <a href="/generative-engine-optimization/geo-knowledge-graphs/">connected entity loop</a>, because an agent that cannot verify who you are quietly leaves you out of the comparison shown to your buyer.</p>
+<p>MaximusLabs AI audits Wikidata, LinkedIn, Crunchbase, G2, Capterra, and Gartner Peer Insights profiles as one <a href="https://www.maximuslabs.ai/generative-engine-optimization/geo-knowledge-graphs/">connected entity loop</a>, because an agent that cannot verify who you are quietly leaves you out of the comparison shown to your buyer.</p>
 
 <h4>🧱 Expose your attribute data as text</h4>
 
@@ -675,7 +674,7 @@
 
 <p>Think about what follow-up questions actually look like. Not "best jacket," but best jacket with a specific closure, fabric, material, and neck style.</p>
 
-<p>For B2B the equivalents are integrations, compliance certifications, seat minimums, deployment options, and supported regions. Put them in text headers and labelled sections, not in a filter widget, which is exactly what a <a href="/technical-seo-website-audit/">technical audit</a> is for.</p>
+<p>For B2B the equivalents are integrations, compliance certifications, seat minimums, deployment options, and supported regions. Put them in text headers and labelled sections, not in a filter widget, which is exactly what a <a href="https://www.maximuslabs.ai/technical-seo-website-audit/">technical audit</a> is for.</p>
 
 <h4>🚪 The hard gates somebody has to toggle</h4>
 
@@ -687,13 +686,13 @@
 
 <ol><li><strong>Close the entity loop.</strong> Claim and cross-link Wikidata, LinkedIn, Crunchbase, and your review profiles with matching sameAs references.</li><li><strong>Surface your attributes.</strong> Move every filterable attribute into readable text with labelled subheads.</li><li><strong>Audit your inclusion flags.</strong> Check every feed and integration for eligibility booleans, then verify they are set correctly.</li></ol>
 
-<p>MaximusLabs AI covers G2, Capterra, and Gartner profile optimization as off-page work, alongside identifying the <a href="/answer-engine-optimizations/reddit-forum-aeo/">Reddit and Quora threads</a> engines already cite for a client's category.</p>
+<p>MaximusLabs AI covers G2, Capterra, and Gartner profile optimization as off-page work, alongside identifying the <a href="https://www.maximuslabs.ai/answer-engine-optimizations/reddit-forum-aeo/">Reddit and Quora threads</a> engines already cite for a client's category.</p>
 
 <h4>⚠️ Exclusion is the real competitive threat</h4>
 
 <p>Here is the thing I keep saying that the category avoids. Ranking second is survivable, and exclusion is not.</p>
 
-<p>If an agent is asked to buy a product, and it can navigate your site but not a competitor's, you win by default. Google-only SEO never had to model that outcome, because a blue link was always visible to a human who could click anyway. The mechanics of that shift sit in our <a href="/services/agentic-commerce/">agentic commerce work</a>.</p>
+<p>If an agent is asked to buy a product, and it can navigate your site but not a competitor's, you win by default. Google-only SEO never had to model that outcome, because a blue link was always visible to a human who could click anyway. The mechanics of that shift sit in our <a href="https://www.maximuslabs.ai/services/agentic-commerce/">agentic commerce work</a>.</p>
 
 <blockquote><cite>"Either you show up or you don't. If you're not in the actual citations in the answer that was given, you might as well not have played the game."</cite><br><cite>Dharmesh Shah, Co-founder and CTO, HubSpot, My First Million episode notes</cite></blockquote>
 
@@ -711,7 +710,7 @@
 
 <ul><li><strong>Prompt sets per engine:</strong> 30 or more buying questions, run repeatedly on each platform.</li><li><strong>Citation rate:</strong> the share of those prompts where your brand appears.</li><li><strong>Competitor share of voice:</strong> your appearance rate against named rivals.</li><li><strong>URL-level tracking:</strong> which exact pages get cited, yours or someone else's.</li><li><strong>GA4 referral segmentation:</strong> separate ChatGPT and Perplexity sources from organic.</li></ul>
 
-<p>MaximusLabs AI tracks <a href="/ai-search-101/geo/measurement/geo-metrics-kpis">share of voice</a> across thousands of question variants instead of single rankings, which is how the <a href="/company/case-studies/b2b-ai-saas/oliv-ai-case-study/">Oliv AI engagement</a> hit a 64% citation rate against decade-old competitors sitting near 30%.</p>
+<p>MaximusLabs AI tracks <a href="../../../geo/measurement/geo-metrics-kpis/">share of voice</a> across thousands of question variants instead of single rankings, which is how the <a href="https://www.maximuslabs.ai/company/case-studies/b2b-ai-saas/oliv-ai-case-study/">Oliv AI engagement</a> hit a 64% citation rate against decade-old competitors sitting near 30%.</p>
 
 <h4>💰 The conversion case, with the caveat attached</h4>
 
@@ -727,7 +726,7 @@
 
 <p>Your analytics will never record those mentions. That is the cleanest break from Google-era attribution, and it is why post-conversion surveys ("how did you hear about us") stop being optional.</p>
 
-<p>MaximusLabs AI reports citation rate and <a href="/generative-engine-optimization/calculating-roi-for-geo-initiatives-revenue-attribution/">pipeline influence</a> rather than impressions and pageviews, because a dashboard that only counts clicks will systematically undercount the channel doing the persuading.</p>
+<p>MaximusLabs AI reports citation rate and <a href="https://www.maximuslabs.ai/generative-engine-optimization/calculating-roi-for-geo-initiatives-revenue-attribution/">pipeline influence</a> rather than impressions and pageviews, because a dashboard that only counts clicks will systematically undercount the channel doing the persuading.</p>
 
 <h4>✅ The Monday sequence, in priority order</h4>
 
@@ -743,13 +742,26 @@
 
 <p>What I suspect matters more over a five-year horizon is brand. Model updates rewrite retrieval mechanics constantly, and the one signal that survives every update is being the company a category already recognises.</p>
 
-<p>If that is right, then <a href="/generative-engine-optimization-geo/">GEO work</a> is not a trick to game retrieval. It is how you get recognised fast enough to still be there when the mechanics change again.</p>
+<p>If that is right, then <a href="https://www.maximuslabs.ai/generative-engine-optimization-geo/">GEO work</a> is not a trick to game retrieval. It is how you get recognised fast enough to still be there when the mechanics change again.</p>
 
 <p>I could be wrong about the weighting. If you are tracking citation rate against brand search volume over time, I would genuinely like to compare notes: krishna@maximuslabs.ai</p></body></html>
     <section class="faq" id="faq"><div class="faq-h"><h2>Questions, answered</h2><span>7 questions</span></div><details open><summary><span>What are Claude Code developer tools and which surfaces do they run on?</span><i></i></summary><p>Claude Code is Anthropic's agentic coding tool. It reads a codebase, edits files, and runs commands inside a real environment rather than only suggesting snippets in a chat window. It ships across five surfaces: Terminal CLI: the full agentic loop, scriptable, with no editor required. Native VS Code extension: a sidebar panel, inline diffs, and permission controls. JetBrains: the same agent inside a different IDE, common in enterprise Java, Kotlin, and Python teams. Web and Slack: async task handoff away from the developer's machine. Two mechanics matter more than the surface count. Inline diffs put every proposed change in front of the developer before it lands, and checkpoints let a run be rewound without losing the conversation that produced it. Autonomy became acceptable because visibility came with it. MaximusLabs AI treats Claude Code as a search story rather than an engineering story, because the same retrieval machinery that decides which files an agent reads also decides which pages an answer engine reads. That is the premise behind our Anthropic Claude optimization work , where each engine gets treated as its own algorithm with its own trust signals.</p></details><details><summary><span>How do you install and configure Claude Code in VS Code?</span><i></i></summary><p>Setup is five steps, and the CLI plus the extension are separate installs, which is the first place teams trip. Run npm install -g @anthropic-ai/claude-code in your terminal. Open VS Code and click the Extensions icon. Search for Claude Code and click Install. Sign in with your Claude account. Open your project folder, not a loose file, and launch the sidebar panel. Then choose a permission mode. Ask before edits holds every change for approval. Edit automatically applies changes directly and shows diffs afterward. Plan mode produces a written strategy before any code is touched, which is the mode worth defaulting to on unfamiliar repositories. Finally, add a CLAUDE.md file at the project root. It holds permanent context: stack and framework versions, directory conventions, test and build commands, hard rules the agent must never break, and files to leave alone. Without it, the agent answers as though it has never seen your project. MaximusLabs AI uses the same rule-file discipline in content operations, encoding banned phrases, source requirements, and paragraph ceilings once instead of correcting output forever, which is how our content production engine scales volume without quality drift.</p></details><details><summary><span>How fast did Claude Code actually grow, and how reliable are the numbers?</span><i></i></summary><p>Two families of data tell different stories, and both are worth holding at once. Vendor disclosures: Anthropic reported a $1B annualised run rate roughly six months after launch, then over $2.5B as of February 12, 2026, with weekly active users doubled and business subscriptions quadrupled since January 1, 2026. Revenue mix: enterprise accounted for over half of Claude Code revenue, which reflects paid, repeated, contractual usage. Capital context: Anthropic raised $30 billion in Series G funding in February 2026 at a $380 billion post-money valuation. Independent survey: JetBrains' January 2026 AI Pulse found 18% work usage and 57% awareness among professional developers. Third-party analysis: roughly 4% of public GitHub commits attributed to Claude Code, which is directional rather than definitive. Vendor disclosures show a steep commercial curve while an independent survey shows adoption still under one in five professional developers at work. Developer surveys also skew toward AI-forward respondents, so the awareness figure deserves discounting rather than treatment as census data. MaximusLabs AI keeps a locked source hierarchy that places official docs, patents, and papers above secondary coverage and labels secondary sources as secondary, a habit documented in our trust-first content playbook .</p></details><details><summary><span>How does Claude Code compare to Cursor, GitHub Copilot, and OpenAI Codex?</span><i></i></summary><p>Each tool owns a different job, and entry pricing is close enough that features rarely decide the outcome. Claude Code: agentic multi-file work across five surfaces, near $20 per month on Claude Pro, best for teams wanting autonomy with rollback. Cursor: visual diffs inside a single editor, near $20 per month on Pro, best for developers who want one window. GitHub Copilot: in-IDE autocomplete plus GitHub ecosystem depth, near $10 per month on Pro, best for teams already deep in GitHub. OpenAI Codex: async delegated tasks, OpenAI-native, bundled with paid ChatGPT tiers, best for shops standardised on OpenAI. Feature parity is converging fast. Inline diffs, plan modes, multi-file edits, and terminal access now appear across all four, so a matrix built this quarter is stale next quarter. The axis that keeps widening is retrieval. Claude filters search results with executed code before anything reaches its context window, while ChatGPT enabled web search on only 34.5% of queries by early 2026, down from 46%. Two agents asked the same buying question can therefore return completely different vendor sets. MaximusLabs AI takes no position on which coding tool to buy, and builds versus and alternative pages that compare on the dimension deciding the deal.</p></details><details><summary><span>Why does Claude's code-based result filtering matter for content visibility?</span><i></i></summary><p>Because a page can be indexed, ranked first, and still never be read. Rather than pouring raw search results into its context window, Claude writes and runs code that filters those results first, so only what survives that filter reaches the model. That is not a ranking system; it is a gatekeeper with a script. Chunk-level clarity therefore decides visibility. Anthropic's Citations API documentation is specific about the constraints that clear the filter: 40 to 60 word paragraphs, with sentence-level chunking associated with up to 15% better recall accuracy. Question-form subheads, so the retrieval unit carries a label matching how people ask. Self-contained answers, with no reliance on phrases like as mentioned above. Labelled sections, including definitions, lists, and tables a model can lift whole. Named sources inline, so each claim carries its own provenance. MaximusLabs AI enforces a five-part structure on every H2 and opens each with a standalone extractable nugget, because the block is the retrieval unit and the article is not. The full pattern sits in our AEO content formatting guide .</p></details><details><summary><span>Does deeper agentic retrieval produce more accurate citations?</span><i></i></summary><p>No. Fact-check accuracy falls roughly 42% on average across two frontier models as tool calls scale from 2 to 150, so deeper retrieval produces worse grounding rather than better. Claude Opus 4.5 posted 77% fact-check accuracy, the highest of 14 models tested, which is genuinely strong and still 23% wrong. Latency compounds the constraint. Microsoft's Web IQ grounding layer targets 164ms at the 95th percentile for its full pipeline, a budget that does not permit exhaustive crawling of anybody's content library. The retrieval pass is shallow by design and degrading by depth, and both constraints point the same direction. The budgeting consequence is direct. Sources retrieved early carry disproportionate weight, so concentrated authority on a small set of high-intent questions survives a shallow pass while two hundred awareness articles never enter the early retrieval window for a buying question. MaximusLabs AI skips top-of-funnel content deliberately and opens every engagement with bottom-of-funnel articles , expanding to middle-of-funnel only once BOFU questions are exhausted. That sequencing is the exact inverse of a Google-era content calendar, where impressions were the deliverable and impressions were never the point.</p></details><details><summary><span>How do you measure AI citation share, and does that traffic convert?</span><i></i></summary><p>Rank position is the wrong unit, because there is no position one inside an answer. The working measurement stack has five layers: Prompt sets per engine: 30 or more buying questions, run repeatedly on each platform. Citation rate: the share of those prompts where your brand appears. Competitor share of voice: your appearance rate against named rivals. URL-level tracking: which exact pages get cited, yours or someone else's. GA4 referral segmentation: ChatGPT and Perplexity sources separated from organic. The economics justify the shift. Webflow reported roughly a 6x conversion rate difference between LLM traffic and Google search traffic, with 8% of all signups arriving from LLMs, because a 25-word conversational query carries far more context than a six-word search. Two caveats matter. AI referral volume follows a power law, with over 30% of ChatGPT referrals landing on just ten domains, so expect small, high-quality volume rather than traffic replacement. And since ChatGPT enabled web search on only 34.5% of queries in early 2026, analytics will never record most mentions, which makes post-conversion surveys non-optional. MaximusLabs AI reached a 64% citation rate across AI platforms within six months in the Oliv AI engagement , against decade-old competitors sitting near 30%.</p></details></section>
+    <form class="ask ask-inline reveal" action="../../../book-a-call/" data-ask data-guide="How Claude Code and VS Code turned Anthropic from a safety lab into a developer phenomenon" data-topic="Claude AI" data-url="platforms/claude/claude-code-developer-tools/">
+    <div class="ai-top"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="Krishna Kaanth M" width="52" height="52"><span><small>Author perspective · 15 min</small><b>Krishna Kaanth M <a class="ask-li" href="https://www.linkedin.com/company/maximus-labs-ai/" target="_blank" rel="noopener" aria-label="MaximusLabs on LinkedIn"><img src="../../../assets/live/platforms/linkedin.svg" alt="" width="13" height="13"></a></b><em>CEO, MaximusLabs</em></span></div>
+    <label for="ask-inline" class="ai-hook">Questions about Claude AI? Ask one and Krishna answers it on a 15 minute call.</label>
+    <div class="ai-field"><input id="ask-inline" name="q" maxlength="280" autocomplete="off" placeholder="Type your question…"><button type="submit" class="ask-btn"><span class="t-def">Book</span><span class="t-q">Book</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+  </form>
     <div class="author-box"><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="72" height="72"><div><small>Written by</small><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span></div></div>
   </article>
-  <aside class="author-rail"><div class="ar-in"><small>Written by</small><img src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="" width="56" height="56"><b>Krishna Kaanth M</b><span>CEO, MaximusLabs</span><hr><small>Share</small><div class="ar-share"><button type="button" class="ic-btn sm" data-copy aria-label="Copy link"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6.5 9.5l3-3M7 4.5l1.2-1.2a2.5 2.5 0 0 1 3.5 3.5L10.5 8M9 11.5l-1.2 1.2a2.5 2.5 0 0 1-3.5-3.5L5.5 8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></button></div></div></aside>
+  <aside class="author-rail"><form class="ask ask-rail" action="../../../book-a-call/" data-ask data-guide="How Claude Code and VS Code turned Anthropic from a safety lab into a developer phenomenon" data-topic="Claude AI" data-url="platforms/claude/claude-code-developer-tools/">
+  <div class="ask-glass cover" style="--gx:62%;--gy:5%" data-light><span class="ask-lab">Author perspective</span><span class="ask-chip"><i></i>15 min</span><img class="ask-photo" src="https://cdn.content.maximuslabs.ai/orgs/b1d51db9-8cca-46ac-a11c-e68ef32c3c6e/avatars/fa1c5268-30a6-464c-bafe-47ddb0f74a5f.png" alt="Krishna Kaanth M" width="64" height="64"></div>
+  <div class="ask-body">
+    <div class="ask-who"><b>Krishna Kaanth M <a class="ask-li" href="https://www.linkedin.com/company/maximus-labs-ai/" target="_blank" rel="noopener" aria-label="MaximusLabs on LinkedIn"><img src="../../../assets/live/platforms/linkedin.svg" alt="" width="13" height="13"></a></b><span>CEO, MaximusLabs · 124 guides</span></div>
+    <p class="ask-quote">“I help brands turn AI search into revenue engines, not vanity metrics.”</p>
+    <div class="ask-q"><label for="ask-rail">Questions about Claude AI?</label><textarea id="ask-rail" name="q" rows="3" maxlength="280" placeholder="Ask KK one question, he answers it on the call…"></textarea><button type="submit" class="ask-btn"><span class="t-def">Book a 15 min chat</span><span class="t-q">Book with my question</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    <div class="ask-proof"><small>Results with</small><span><img src="../../../assets/live/clients/explorium.png" alt="Explorium" height="14"><img src="../../../assets/live/clients/oliv-ai.svg" alt="Oliv AI" height="16"><img src="../../../assets/live/clients/luca.png" alt="Luca AI" height="14"></span></div>
+  </div>
+</form></aside>
 </div></section>
 
 <section class="vsec bt"><div class="vrail">

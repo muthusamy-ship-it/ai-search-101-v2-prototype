@@ -48,6 +48,19 @@ It is a design prototype only. It is not the production app, it does not write a
   - on phones, a sticky contents bar opens into a sheet
 - **Reduced motion:** visitors who ask for reduced motion get still frames everywhere.
 
+## Ask the author and Book a call
+
+- **Ask the author card:** on every guide, the right rail (or an inline card on phones) shows Krishna's card with a question tied to the guide's cluster.
+- **Typing a question:** the reader can type one question. It goes to `/book-a-call/` in session storage, never in the URL.
+- **Booking page:** the Book a call page embeds the real Cal.com event the live article button opens (`krishna-kaanth/exploring-aeo-geo`) and puts the question into the booking notes.
+- **LinkedIn:** every LinkedIn link goes to https://www.linkedin.com/company/maximus-labs-ai/.
+
+## Link check
+
+`node tools/check-links.mjs` checks every internal link, anchor, image, stylesheet and script on every page. Add `--external` to also test every outside URL and record where maximuslabs.ai links land.
+
+Guide bodies link to maximuslabs.ai with site-relative paths (for example `/services/geo/`). The build points AI Search 101 links at the matching prototype page and every other link at the live site.
+
 ## Run it
 
 ```bash
